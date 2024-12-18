@@ -33,7 +33,7 @@ const UniversityHeader = () => {
               className='mb-4'
             />
             {/* Description */}
-        <p className="text-base font-normal leading-[1.40rem] text-left text-white mb-4">
+        <p className="text-base font-normal leading-[1.40rem] text-left text-white mb-6">
           USAT Scholarly Journal xalqaro, har chorakda bir marta ko'rib
           chiqiladigan, jamoatchilikning sifatli tadqiqot kun tartibiga
           xizmat ko'rsatishga bag'ishlangan ochiq kirish jurnalidir.
@@ -43,19 +43,19 @@ const UniversityHeader = () => {
         <div className="flex gap-4">
           <a
             href="#"
-            className="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 hover:bg-[#ffc107] transition-colors group"
+            className="w-16 h-10 flex items-center justify-center p-3  rounded-full border-2 border-white hover:bg-[#ffc107] transition-colors group"
           >
             <Send className="w-5 h-5 group-hover:text-[#1d4164]" />
           </a>
           <a
             href="#"
-            className="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 hover:bg-[#ffc107] transition-colors group"
+            className="w-16 h-10 flex items-center justify-center p-3  rounded-full border-2 border-white hover:bg-[#ffc107] transition-colors group"
           >
             <Instagram className="w-5 h-5 group-hover:text-[#1d4164]" />
           </a>
           <a
             href="#"
-            className="w-12 h-12 flex items-center justify-center rounded-full border border-white/20 hover:bg-[#ffc107] transition-colors group"
+            className="w-16 h-10 flex items-center justify-center rounded-full p-3  border-2 border-white hover:bg-[#ffc107] transition-colors group"
           >
             <Facebook className="w-5 h-5 group-hover:text-[#1d4164]" />
           </a>

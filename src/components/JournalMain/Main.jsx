@@ -1,5 +1,6 @@
 import { ChevronDown, Search, Globe } from 'lucide-react';
 import UsatLogo from "../../assets/logos/usat_logo.svg";
+import LanguageSelector from '../LanguageSelector/App';
 const NavItem = ({ text, hasDropdown = false }) => {
   return (
     <div className="relative group">
@@ -60,10 +61,7 @@ const App = () => {
                 <Search className="absolute right-2 top-1/2 -translate-y-1/2 h-4 w-4 text-white/60" />
               </div>
               
-              <button className="flex items-center gap-1 text-white/90 hover:text-white">
-                <Globe className="h-4 w-4" />
-                <span>UZ</span>
-              </button>
+              <LanguageSelector></LanguageSelector>
             </div>
         </nav>
 

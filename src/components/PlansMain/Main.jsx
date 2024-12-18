@@ -1,27 +1,26 @@
 import { ChevronDown, Search, Globe } from 'lucide-react';
 import UsatLogo from "../../assets/logos/usat_logo.svg";
-import Jurnal from "../../assets/logos/jurnal.png";
 import LanguageSelector from '../LanguageSelector/App';
 const NavItem = ({ text, hasDropdown = false }) => {
   return (
     <div className="relative group">
       <button className="flex items-center gap-1 text-white/90 hover:text-white py-6">
-        <span className='font-manrope text-base font-normal leading-[1.37rem] text-left text-white'>{text}</span>
+        <span>{text}</span>
         {hasDropdown && <ChevronDown className="h-4 w-4 group-hover:rotate-180 transition-transform" />}
       </button>
       
       {hasDropdown && (
         <div className="absolute top-full left-0 w-48 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-          <a href="#" className="block px-4 py-2 font-manrope text-base font-normal leading-[1.37rem] text-left  hover:text-[#FFC82A]">
+          <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
             Jurnal haqida
           </a>
-          <a href="#" className="block px-4 py-2 font-manrope text-base font-normal leading-[1.37rem] text-left  hover:text-[#FFC82A]">
+          <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
             Jurnal tahririyati
           </a>
-          <a href="#" className="block px-4 py-2 font-manrope text-base font-normal leading-[1.37rem] text-left  hover:text-[#FFC82A]">
+          <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
             Tahririyat hay'ati
           </a>
-          <a href="#" className="block px-4 py-2 font-manrope text-base font-normal leading-[1.37rem] text-left  hover:text-[#FFC82A]">
+          <a href="#" className="block px-4 py-2 text-sm text-orange-500 hover:bg-gray-100">
             Konferensiyalar sayti
           </a>
         </div>
@@ -52,7 +51,7 @@ const App = () => {
             
             
           </div>
-          <div className="font-manrope  flex items-center gap-4 ml-4">
+          <div className="flex items-center gap-4 ml-4">
               <div className="relative">
                 <input
                   type="search"
@@ -66,23 +65,16 @@ const App = () => {
             </div>
         </nav>
 
-        <main className="flex-grow flex items-center justify-between gap-12 ">
-          <div className="w-1/2 space-y-6">
-            <h1 className="font-manrope text-5xl font-bold leading-[3.30rem] text-left text-white">
-              MUVAFFAQIYATLI KELAJAK SHU YERDAN BOSHLANADI
-            </h1>
-            <p className="font-manrope text-white/80 text-lg font-normal leading-[1.57rem] text-left">
-              USAT - Fan va Texnologiyalar Universiteti o'z ichiga zamonaviy va samarali jahon standartlari asosidagi ta'limni qamrab olgan.
-            </p>
+        <main className="flex-grow flex flex-col items-center justify-center -mt-20">
+          <div className='main_article_path text-base font-normal leading-[1.37rem] text-center text-white mb-6'>
+                Bosh sahifa / <span className='text-base font-normal leading-[1.37rem] text-left'>Biz haqimizda</span> / <span className='text-base font-normal leading-[1.37rem] text-left text-[#FFFFFF80]'>Rejalar va Vazifalar</span>
           </div>
-          
-          <div className="w-1/2 flex justify-center">
-              <img
-                src={Jurnal}
-                alt="University Journal"
-                className="w-64 h-80 object-cover rounded-lg"
-              />
-          </div>
+          <h2 className='w-2/3 main_article_title text-5xl font-bold leading-[3.30rem] text-center text-white uppercase mb-12'>
+          Biz haqimizda
+          </h2>
+          <p className='w-10/12 mx-auto text-lg font-normal leading-[1.57rem] text-center text-white'>
+          “Fan va Texnologiyalar universiteti” Ilmiy jurnali menejment, raqamli texnologiyalar, raqamli iqtisodiyot va pedagogika sohalariga ixtisoslashgan nashr bo‘lib, O‘zbekiston Respublikasi Prezidenti Administratsiyasi huzuridagi Axborot va ommaviy kommunikatsiyalar agentligi tomonidan 26.01.2024 sanada № 212842 raqamli guvohnoma bilan davlat ro‘yhatidan o‘tkazilgan
+          </p>
         </main>
       </header>
     </div>
