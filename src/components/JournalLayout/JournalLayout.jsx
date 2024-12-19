@@ -29,7 +29,7 @@ const ResearchPaper = ({ title, author, date, views, citations }) => {
 const CategorySection = ({ title, papers }) => {
   return (
     <div className="mb-8">
-      <h2 className="text-xl font-bold text-center mb-4   py-4 z-10">
+      <h2 className="text-xl font-bold text-center pb-4 z-10">
         {title}
       </h2>
       <div className="space-y-4">
@@ -78,26 +78,27 @@ const JournalLayout = () => {
 
   return (
     <div className="container mx-auto py-12 px-4">
-      <div className="max-w-[81.25rem] mx-auto">
-        <div className="flex gap-8">
+      <div className="max-w-[81.25rem] mx-auto h-[40.25rem] sticky top-0">
+        <div className="flex h-full gap-8">
           {/* Left Sidebar - Fixed */}
-          <div  className="w-4/12  flex-shrink-0 ">
-            <div className="sticky top-4 space-y-4">
+          <div  className="w-4/12  flex-shrink-0 h-full overflow-hidden">
+            <div className="space-y-4 overflow-y-auto">
               {/* Journal Cover */}
                 <img
                   src={Jurnal}
                   alt="Journal Cover"
-                  className="w-full h-auto"
+                  className="w-full h-auto "
                 />
              
               {/* Journal Info */}
-              <div className="flex gap-4 items-center justify-between">
+              <div className="flex gap-4 items-center justify-between pt-3">
                 <div className="flex items-center gap-2 text-gray-600">
                   <Calendar className="w-4 h-4" />
                   <span>10/10/2024</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-600">
                   <Eye className="w-4 h-4" />
+                  <span>14</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-600">
                   <Quote className="w-4 h-4" />
@@ -116,7 +117,7 @@ const JournalLayout = () => {
           </div>
 
           {/* Main Content - Scrollable */}
-          <div className="flex-grow">
+          <div className="flex-grow h-full overflow-y-auto scrollbar-hide pr-4">
             
             {categories.map((category, index) => (
               <CategorySection

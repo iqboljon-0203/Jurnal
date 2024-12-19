@@ -19,7 +19,7 @@ const UniversityHeader = () => {
         }
     ]
   return (
-    <div className="bg-[#1d4164] text-white">
+    <div className="bg-[#1d4164] text-white rounded-tl-2xl rounded-tr-2xl">
       <div className="container mx-auto px-4 py-12">
         {/* Top section with logo and navigation */}
         <div className="flex items-start justify-between ">
@@ -122,14 +122,15 @@ const UniversityHeader = () => {
           {/* License Images */}
           <div className="w-4/12 flex justify-end gap-4">
             {universityLicenses.map((item,index) => (
-              <img
-                key={index}
+              <a href='https://license.gov.uz/registry?filter%5Bnumber%5D=331658' className='hover:shadow-2xl' key={index}>
+                <img
                 src={item.link}
                 alt={item.name}
                 width={150}
                 height={210}
                 className="border border-white/20"
               />
+              </a>
             ))}
           </div>
         </div>

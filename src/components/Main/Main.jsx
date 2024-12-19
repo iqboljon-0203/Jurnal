@@ -5,9 +5,9 @@ import LanguageSelector from '../LanguageSelector/App';
 import NavItem from "../Navbar/Navbar";
 const App = () => {
   return (
-    <div className="h-[34.38rem] bg-[#1a365d]">
-      <header className="h-full  flex flex-col container mx-auto px-4 ">
-        <nav className="flex items-center justify-between py-4 bg-[#FFFFFF1A] px-6">
+    <div className="h-[34.38rem] bg-[#1a365d] rounded-bl-2xl rounded-br-2xl">
+      <header className="h-full  flex flex-col w-full ">
+        <nav className="flex items-center justify-between py-4 bg-[#FFFFFF1A] px-12">
           
             <img
               src={UsatLogo}
@@ -18,7 +18,7 @@ const App = () => {
           
           <div className="flex items-center gap-6">
             <NavItem text="Biz haqimizda" hasDropdown="about" />
-            <NavItem text="Maulliflar uchun" hasDropdown="authors" />
+            <NavItem text="Mualliflar uchun" hasDropdown="authors" />
             <NavItem text="Maqolalar" />
             <NavItem text="Arxiv" />
             <NavItem text="Bog'lanish" />
@@ -37,7 +37,7 @@ const App = () => {
             </div>
         </nav>
 
-        <main className="flex-grow flex items-center justify-between gap-12 ">
+        <main className="flex-grow flex items-center justify-between gap-12 container mx-auto px-4">
           <div className="w-1/2 space-y-6">
             <h1 className="font-manrope text-5xl font-bold leading-[3.30rem] text-left text-white">
               MUVAFFAQIYATLI KELAJAK SHU YERDAN BOSHLANADI

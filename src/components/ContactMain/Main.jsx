@@ -6,13 +6,13 @@ import NavItem from "../Navbar/Navbar";
 const App = () => {
   return (
     <div className="h-[28.38rem] bg-[#1a365d]">
-      <header className="h-full  flex flex-col container mx-auto px-4 ">
-        <nav className="flex items-center justify-between py-4 bg-[#FFFFFF1A] px-6">
+      <header className="h-full  flex flex-col w-full ">
+        <nav className="flex items-center justify-between py-4 bg-[#FFFFFF1A] px-12">
           <img src={UsatLogo} alt="University Logo" className="h-12 w-50" />
 
           <div className="flex items-center gap-6">
             <NavItem text="Biz haqimizda" hasDropdown="about" />
-            <NavItem text="Maulliflar uchun" hasDropdown="authors" />
+            <NavItem text="Mualliflar uchun" hasDropdown="authors" />
             <NavItem text="Maqolalar" />
             <NavItem text="Arxiv" />
             <NavItem text="Bog'lanish" />
@@ -31,7 +31,7 @@ const App = () => {
           </div>
         </nav>
 
-        <main className="flex-grow flex flex-col items-center justify-center -mt-20">
+        <main className="flex-grow flex flex-col items-center justify-center -mt-20 container mx-auto px-4">
           <div className="main_article_path text-base font-normal leading-[1.37rem] text-center text-white mb-6">
             Bosh sahifa /{" "}
             <span className="text-base font-normal leading-[1.37rem] text-left text-[#FFFFFF80]">

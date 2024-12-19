@@ -21,7 +21,7 @@ const PublisherScroll = () => {
     <div className="bg-[#1a365d] w-full overflow-hidden">
       
       
-    <div className="relative overflow-hidden py-8 bg-[#1a365d]">
+    <div className="relative overflow-hidden container mx-auto px-4 py-8 bg-[#1a365d]">
         <div className="flex animate-scroll">
           {duplicatedPublishers.map((publisher, index) => (
             <div
