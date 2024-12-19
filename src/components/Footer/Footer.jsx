@@ -42,19 +42,19 @@ const UniversityHeader = () => {
         {/* Social Media Icons */}
         <div className="flex gap-4">
           <a
-            href="#"
+            href="https://t.me/usatuzb"
             className="w-16 h-10 flex items-center justify-center p-3  rounded-full border-2 border-white hover:bg-[#ffc107] transition-colors group"
           >
             <Send className="w-5 h-5 group-hover:text-[#1d4164]" />
           </a>
           <a
-            href="#"
+            href="https://www.instagram.com/usatuz/"
             className="w-16 h-10 flex items-center justify-center p-3  rounded-full border-2 border-white hover:bg-[#ffc107] transition-colors group"
           >
             <Instagram className="w-5 h-5 group-hover:text-[#1d4164]" />
           </a>
           <a
-            href="#"
+            href="https://www.facebook.com/usatuz/"
             className="w-16 h-10 flex items-center justify-center rounded-full p-3  border-2 border-white hover:bg-[#ffc107] transition-colors group"
           >
             <Facebook className="w-5 h-5 group-hover:text-[#1d4164]" />
@@ -73,17 +73,22 @@ const UniversityHeader = () => {
                 </a>
                 <ul className="mt-4">
                   <li>
-                    <a href="#" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
+                    <a href="/journal" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
+                      Jurnal haqida
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/plans" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
                       Rejalar va Vazifalar
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
-                      Tahrirlyat hay'ati
+                    <a href="/editorial" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
+                      Tahririyat hay'ati
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
+                    <a href="/reviewers" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
                       Taqrizchilar kengashi
                     </a>
                   </li>
@@ -91,21 +96,21 @@ const UniversityHeader = () => {
               </li>
               <li className="relative group">
                 <a href="#" className="text-xl font-bold leading-7 text-lefthover:text-[#ffc107] hover:underline transition-colors">
-                  Mualliflar
+                  Mualliflar uchun
                 </a>
                 <ul className="mt-4 ">
                   <li>
-                    <a href="#" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
+                    <a href="/guidelines" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
                       Yo'riqnomalar
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
+                    <a href="/send_article" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
                       Maqola yuborish
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
+                    <a href="/checklist" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
                       Tekshirish ro'yhati
                     </a>
                   </li>

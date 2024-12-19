@@ -1,7 +1,5 @@
 import i18n from 'i18next';
-import Backend from 'i18next-http-backend';
 import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
 import translationUz from './public/uz/common.json';
 import translationRu from './public/ru/common.json';
 import translationEn from './public/en/common.json';
@@ -18,17 +16,14 @@ const resources = {
     },
 };
 
-i18n.use(Backend).use(LanguageDetector).use(initReactI18next)
-    if (typeof window !== 'undefined') {
-        i18n.init({
-            lng: language,
-            fallbackLng: 'uz',
-            preload:['uz','ru','en'],
-            resources,
-            interpolation: {
-                escapeValue: false,
-            },
-        });
+// `i18n` ni sozlash
+i18n.use(initReactI18next).init({
+    resources, // Resurslar
+    lng: language, // Default til
+    fallbackLng: "uz", // Zaxira til
+    interpolation: {
+      escapeValue: false // React uchun qochish qoidasi o'chirilgan
     }
-
-export default i18n;
+  });
+  
+  export default i18n;

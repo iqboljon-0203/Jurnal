@@ -1,32 +1,7 @@
-import { ChevronDown, Search, Globe } from 'lucide-react';
+import {  Search } from 'lucide-react';
 import UsatLogo from "../../assets/logos/usat_logo.svg";
-const NavItem = ({ text, hasDropdown = false }) => {
-  return (
-    <div className="relative group">
-      <button className="flex items-center gap-1 text-white/90 hover:text-white py-6">
-        <span>{text}</span>
-        {hasDropdown && <ChevronDown className="h-4 w-4 group-hover:rotate-180 transition-transform" />}
-      </button>
-      
-      {hasDropdown && (
-        <div className="absolute top-full left-0 w-48 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-          <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-            Jurnal haqida
-          </a>
-          <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-            Jurnal tahririyati
-          </a>
-          <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-            Tahririyat hay'ati
-          </a>
-          <a href="#" className="block px-4 py-2 text-sm text-orange-500 hover:bg-gray-100">
-            Konferensiyalar sayti
-          </a>
-        </div>
-      )}
-    </div>
-  );
-};
+import LanguageSelector from '../LanguageSelector/App';
+import NavItem from '../Navbar/Navbar';
 
 const App = () => {
   return (
@@ -42,8 +17,8 @@ const App = () => {
             
           
           <div className="flex items-center gap-6">
-            <NavItem text="Biz haqimizda" hasDropdown />
-            <NavItem text="Ma'rifat uchun" hasDropdown />
+            <NavItem text="Biz haqimizda" hasDropdown="about" />
+            <NavItem text="Maulliflar uchun" hasDropdown="authors" />
             <NavItem text="Maqolalar" />
             <NavItem text="Arxiv" />
             <NavItem text="Bog'lanish" />
@@ -51,19 +26,16 @@ const App = () => {
             
           </div>
           <div className="flex items-center gap-4 ml-4">
-              <div className="relative">
+          <div className="relative">
                 <input
                   type="search"
-                  placeholder="Search..."
-                  className="bg-white/10 text-white placeholder-white/60 rounded-md py-1 px-3 pr-8 focus:outline-none focus:ring-2 focus:ring-white/20"
+                  placeholder="Izlash..."
+                  className="bg-transparent text-white placeholder-white w-72 h-10 pt-2  pr-2  pb-2  pl-4  rounded-3xl border-2 border-white focus:outline-none focus:ring-1 focus:ring-white/70"
                 />
-                <Search className="absolute right-2 top-1/2 -translate-y-1/2 h-4 w-4 text-white/60" />
+                <Search className="rounded-3xl absolute  right-4 top-1/2 -translate-y-1/2 h-6 w-6 text-white" />
               </div>
               
-              <button className="flex items-center gap-1 text-white/90 hover:text-white">
-                <Globe className="h-4 w-4" />
-                <span>UZ</span>
-              </button>
+              <LanguageSelector></LanguageSelector>
             </div>
         </nav>
 

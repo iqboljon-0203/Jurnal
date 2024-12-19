@@ -52,6 +52,7 @@
 
 body{
     background-color:  #F5F6FA;
+    @apply font-sans;
 }
 @keyframes scroll {
     0% {

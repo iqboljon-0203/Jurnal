@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        manrope: ['Manrope', 'sans-serif'], // Manrope shriftini qo'shish
+        sans: ['Manrope', 'sans-serif'], // Manrope shriftini qo'shish
       },
       animation: {
         scroll: 'scroll 10s linear infinite',

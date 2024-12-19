@@ -1,79 +1,57 @@
-import { ChevronDown, Search, Globe } from 'lucide-react';
+import { Search } from "lucide-react";
 import UsatLogo from "../../assets/logos/usat_logo.svg";
-import LanguageSelector from '../LanguageSelector/App';
-const NavItem = ({ text, hasDropdown = false }) => {
-  return (
-    <div className="relative group">
-      <button className="flex items-center gap-1 text-white/90 hover:text-white py-6">
-        <span>{text}</span>
-        {hasDropdown && <ChevronDown className="h-4 w-4 group-hover:rotate-180 transition-transform" />}
-      </button>
-      
-      {hasDropdown && (
-        <div className="absolute top-full left-0 w-48 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-          <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-            Jurnal haqida
-          </a>
-          <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-            Jurnal tahririyati
-          </a>
-          <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-            Tahririyat hay'ati
-          </a>
-          <a href="#" className="block px-4 py-2 text-sm text-orange-500 hover:bg-gray-100">
-            Konferensiyalar sayti
-          </a>
-        </div>
-      )}
-    </div>
-  );
-};
+import LanguageSelector from "../LanguageSelector/App";
+import NavItem from "../Navbar/Navbar";
 
 const App = () => {
   return (
     <div className="h-[34.38rem] bg-[#1a365d]">
       <header className="h-full  flex flex-col container mx-auto px-4 ">
         <nav className="flex items-center justify-between py-4 bg-[#FFFFFF1A] px-6">
-          
-            <img
-              src={UsatLogo}
-              alt="University Logo"
-              className="h-12 w-50"
-            />
-            
-          
+          <img src={UsatLogo} alt="University Logo" className="h-12 w-50" />
+
           <div className="flex items-center gap-6">
-            <NavItem text="Biz haqimizda" hasDropdown />
-            <NavItem text="Ma'rifat uchun" hasDropdown />
+            <NavItem text="Biz haqimizda" hasDropdown="about" />
+            <NavItem text="Maulliflar uchun" hasDropdown="authors" />
             <NavItem text="Maqolalar" />
             <NavItem text="Arxiv" />
             <NavItem text="Bog'lanish" />
-            
-            
           </div>
           <div className="flex items-center gap-4 ml-4">
-              <div className="relative">
-                <input
-                  type="search"
-                  placeholder="Search..."
-                  className="bg-white/10 text-white placeholder-white/60 rounded-md py-1 px-3 pr-8 focus:outline-none focus:ring-2 focus:ring-white/20"
-                />
-                <Search className="absolute right-2 top-1/2 -translate-y-1/2 h-4 w-4 text-white/60" />
-              </div>
-              
-              <LanguageSelector></LanguageSelector>
+            <div className="relative">
+              <input
+                type="search"
+                placeholder="Izlash..."
+                className="bg-transparent text-white placeholder-white w-72 h-10 pt-2  pr-2  pb-2  pl-4  rounded-3xl border-2 border-white focus:outline-none focus:ring-1 focus:ring-white/70"
+              />
+              <Search className="rounded-3xl absolute  right-4 top-1/2 -translate-y-1/2 h-6 w-6 text-white" />
             </div>
+
+            <LanguageSelector></LanguageSelector>
+          </div>
         </nav>
 
         <main className="flex-grow flex flex-col items-center justify-center -mt-20">
-          <div className='main_article_path text-base font-normal leading-[1.37rem] text-center text-white mb-6'>
-                Bosh sahifa / <span className='text-base font-normal leading-[1.37rem] text-left'>Biz haqimizda</span> / <span className='text-base font-normal leading-[1.37rem] text-left text-[#FFFFFF80]'>Rejalar va Vazifalar</span>
+          <div className="main_article_path text-base font-normal leading-[1.37rem] text-center text-white mb-6">
+            Bosh sahifa /{" "}
+            <span className="text-base font-normal leading-[1.37rem] text-left">
+              Biz haqimizda
+            </span>{" "}
+            /{" "}
+            <span className="text-base font-normal leading-[1.37rem] text-left text-[#FFFFFF80]">
+              Rejalar va Vazifalar
+            </span>
           </div>
-          <h2 className='w-2/3 main_article_title text-5xl font-bold leading-[3.30rem] text-center text-white uppercase mb-12'>
-          Biz haqimizda
+          <h2 className="w-2/3 main_article_title text-5xl font-bold leading-[3.30rem] text-center text-white uppercase mb-12">
+            Biz haqimizda
           </h2>
-          <p className='w-10/12 mx-auto text-lg font-normal leading-[1.57rem] text-center text-white'>
-          “Fan va Texnologiyalar universiteti” Ilmiy jurnali menejment, raqamli texnologiyalar, raqamli iqtisodiyot va pedagogika sohalariga ixtisoslashgan nashr bo‘lib, O‘zbekiston Respublikasi Prezidenti Administratsiyasi huzuridagi Axborot va ommaviy kommunikatsiyalar agentligi tomonidan 26.01.2024 sanada № 212842 raqamli guvohnoma bilan davlat ro‘yhatidan o‘tkazilgan
+          <p className="w-10/12 mx-auto text-lg font-normal leading-[1.57rem] text-center text-white">
+            “Fan va Texnologiyalar universiteti” Ilmiy jurnali menejment,
+            raqamli texnologiyalar, raqamli iqtisodiyot va pedagogika sohalariga
+            ixtisoslashgan nashr bo‘lib, O‘zbekiston Respublikasi Prezidenti
+            Administratsiyasi huzuridagi Axborot va ommaviy kommunikatsiyalar
+            agentligi tomonidan 26.01.2024 sanada № 212842 raqamli guvohnoma
+            bilan davlat ro‘yhatidan o‘tkazilgan
           </p>
         </main>
       </header>
@@ -82,4 +60,3 @@ const App = () => {
 };
 
 export default App;
-

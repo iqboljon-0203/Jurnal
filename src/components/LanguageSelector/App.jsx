@@ -1,29 +1,22 @@
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import 'flag-icons/css/flag-icons.min.css';
 import "./LangSec.css";
-interface Language {
-  code: string;
-  label: string;
-  flag: string;
-}
 import { useTranslation } from 'react-i18next';
 
-const languages: Language[] = [
+const languages = [
     { code: 'uz', label: 'UZ', flag: 'uz' },
     { code: 'ru', label: 'RU', flag: 'ru' },
-    { code: 'en', label: 'ENG', flag: 'gb' },
+    { code: 'en', label: 'EN', flag: 'gb' },
 ];
 
-const LanguageSelector: React.FC = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState<Language>(languages[0]);
+const LanguageSelector = () => {
+  const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
   const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
-  const {i18n} = useTranslation()
-  const newLang = localStorage.getItem("i18nextLng")||'uz' 
-
-  
-  const handleClickOutside = (event: MouseEvent) => {
-    if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+  const dropdownRef = useRef(null);
+  const {i18n} = useTranslation();
+  const newLang = localStorage.getItem("i18nextLng") || 'uz';
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
       setIsOpen(false);
     }
   };
@@ -39,10 +32,10 @@ const LanguageSelector: React.FC = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleLanguageChange = (language: Language) => {
-      setSelectedLanguage(language)
-      i18n.changeLanguage(language.code)
-      setIsOpen(false)
+  const handleLanguageChange = (language) => {
+      setSelectedLanguage(language);
+      localStorage.setItem("i18nextLng", language.code);
+      setIsOpen(false);
   };
 
   return (
@@ -50,7 +43,7 @@ const LanguageSelector: React.FC = () => {
           <button
               id="selector"
               type="button"
-              className="w-full 2xl:py-4 xl:py-2 lg:py-2 md:py-2 sm:py-2 py-2 px-2  text-white  ps-4 bg-transparent gap-[0.13rem] rounded-3xl opacity-[0.00rem]  border-2 border-white  hover:border-white-500  shadow leading-tight focus:outline-none focus:shadow-outline flex items-center justify-between"
+              className="w-full pt-2  pr-2  pb-2  pl-4 text-white  rounded-3xl border-2 border-white hover:border-white-500 shadow leading-tight focus:outline-none focus:shadow-outline flex items-center justify-between"
               onClick={toggleDropdown}
           >
               <span
@@ -58,7 +51,7 @@ const LanguageSelector: React.FC = () => {
               ></span>
               {newLang?.toUpperCase() === selectedLanguage.label
                   ? selectedLanguage.label
-                  : i18n.language?.toUpperCase()}
+                  : localStorage.getItem("i18nextLng").toUpperCase()}
               <svg
                   className="fill-current h-4 w-4 ml-2"
                   xmlns="http://www.w3.org/2000/svg"
@@ -71,7 +64,7 @@ const LanguageSelector: React.FC = () => {
               <ul className="absolute mt-1 w-full bg-white border border-gray-400 rounded shadow-lg z-10">
                   {languages.map(language => (
                       <li
-                          key={newLang}
+                          key={language.code}
                           className="px-4 py-2 hover:bg-gray-100 cursor-pointer flex items-center"
                           onClick={() => handleLanguageChange(language)}
                       >
@@ -88,3 +81,4 @@ const LanguageSelector: React.FC = () => {
 };
 
 export default LanguageSelector;
+
