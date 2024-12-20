@@ -90,7 +90,7 @@ const JournalLayout = () => {
                   className="w-full h-auto "
                 />
              
-              {/* Journal Info */}
+              {/* Journal Info new*/}
               <div className="flex gap-4 items-center justify-between pt-3">
                 <div className="flex items-center gap-2 text-gray-600">
                   <Calendar className="w-4 h-4" />
