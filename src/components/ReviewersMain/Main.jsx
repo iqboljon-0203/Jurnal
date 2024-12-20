@@ -2,15 +2,18 @@ import { Search } from "lucide-react";
 import UsatLogo from "../../assets/logos/usat_logo.svg";
 import LanguageSelector from "../LanguageSelector/App";
 import NavItem from "../Navbar/Navbar";
-
+import { Link } from "react-router-dom";
 const App = () => {
   return (
     <div className="h-[34.38rem] bg-[#1a365d]">
       <header className="h-full w-full  flex flex-col ">
         <nav className="flex items-center justify-between py-4 bg-[#FFFFFF1A] px-12">
-          <img src={UsatLogo} alt="University Logo" className="h-12 w-50" />
+        <Link to={"/"}>
+            <img src={UsatLogo} alt="University Logo" className="h-12 w-50" />
+          </Link>
 
           <div className="flex items-center gap-6">
+            <NavItem text="Bosh sahifa" />
             <NavItem text="Biz haqimizda" hasDropdown="about" />
             <NavItem text="Mualliflar uchun" hasDropdown="authors" />
             <NavItem text="Maqolalar" />

@@ -1,9 +1,11 @@
 import JurnalSoni1 from "../../assets/logos/jurnal_soni1.png";
 import JurnalSoni2 from "../../assets/logos/jurnal_soni2.png";
 import JurnalSoni3 from "../../assets/logos/jurnal_soni3.png";
+import {Link} from 'react-router-dom'
 const JournalCover = ({ imageUrl }) => {
   return (
-    <div className="group cursor-pointer">
+    <Link to={"/journal"}>
+      <div className="group cursor-pointer">
       <div className="aspect-[3/4] rounded-lg shadow-md overflow-hidden transition-transform duration-300 group-hover:shadow-lg group-hover:-translate-y-1">
         <img 
           src={imageUrl} 
@@ -12,6 +14,7 @@ const JournalCover = ({ imageUrl }) => {
         />
       </div>
     </div>
+    </Link>
   );
 };
 

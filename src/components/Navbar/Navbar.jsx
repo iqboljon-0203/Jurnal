@@ -4,7 +4,7 @@ export default function NavItem({ text, hasDropdown = false }){
     return (
       <div className="relative group">
         <button className="flex items-center gap-1 text-white/90 hover:text-white py-6">
-          <Link to={text==="Maqolalar"?"/article":text==="Bog'lanish"?"/contact":text==="Arxiv"?"/archive":"/"}>
+          <Link to={text==="Bosh sahifa"?"/":text==="Maqolalar"?"/article":text==="Bog'lanish"?"/contact":text==="Arxiv"?"/archive":"/"}>
           <span className='font-manrope text-base font-normal leading-[1.37rem] text-left text-white hover:text-[#FFC82A]'>{text}</span>
           </Link>
           {hasDropdown && <ChevronDown className="h-4 w-4 group-hover:rotate-180 transition-transform" />}

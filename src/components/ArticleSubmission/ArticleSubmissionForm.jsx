@@ -7,7 +7,7 @@ const AuthorForm = ({ onRemove, index }) => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <input
           type="text"
-          placeholder="Adullo"
+          placeholder="Ismi"
           className="w-full px-3 py-2 border border-gray-300 rounded-md"
         />
         <input
@@ -20,13 +20,15 @@ const AuthorForm = ({ onRemove, index }) => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <input
           type="text"
-          placeholder="*Daraja"
+          placeholder="*Davlat"
           className="w-full px-3 py-2 border border-gray-300 rounded-md"
+          required
         />
         <input
           type="text"
           placeholder="*Shahar"
           className="w-full px-3 py-2 border border-gray-300 rounded-md"
+          required
         />
       </div>
       
@@ -44,8 +46,9 @@ const AuthorForm = ({ onRemove, index }) => {
         />
         <input
           type="tel"
-          placeholder="Telefon raqami"
+          placeholder="*Telefon raqami"
           className="w-full px-3 py-2 border border-gray-300 rounded-md"
+          required
         />
         <input
           type="text"
@@ -54,9 +57,18 @@ const AuthorForm = ({ onRemove, index }) => {
         />
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         <select className="w-full px-3 py-2 border border-gray-300 rounded-md">
-          <option value="">Ilmiy unvon</option>
+          <option value="ilmiy_daraja">Ilmiy daraja</option>
+          <option value="iqtisod_nomzodi">(PhD), Iqtisod fanlari nomzodi</option>
+          <option value="pedagogika_nomzodi">(PhD), Pedagogika fanlari nomzodi</option>
+          <option value="texnika_nomzodi">(PhD), Texnika fanlari nomzodi</option>
+          <option value="iqtisod_doktori">(DSc), Iqtisod fanlari doktori</option>
+          <option value="pedagogika_doktori">(DSc), Pedagogika fanlari doktori</option>
+          <option value="texnika_doktori">(DSc), Texnika fanlari doktori</option>
+        </select>
+        <select className="w-full px-3 py-2 border border-gray-300 rounded-md">
+          <option value="ilmiy_unvon">Ilmiy unvon</option>
           <option value="professor">Professor</option>
           <option value="dotsent">Dotsent</option>
         </select>
