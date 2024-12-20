@@ -1,5 +1,5 @@
 import { Mail, Phone, MapPin, Send, Instagram } from 'lucide-react'
-
+import {Link} from "react-router-dom";
 export default function ContactSection() {
   return (
     <div className="max-w-[81.25rem] mx-auto px-4 py-12">
@@ -7,26 +7,26 @@ export default function ContactSection() {
         {/* Contact Information */}
         <div className="space-y-4">
           {/* Email */}
-          <a 
-            href="mailto:journal@usat.uz" 
+          <Link 
+            to="mailto:journal@usat.uz" 
             className="flex items-center gap-4 bg-white p-3 rounded-2xl group hover:bg-[#21466D] hover:text-white transition-colors duration-200"
           >
             <div className="bg-[#21466D] group-hover:bg-white group-hover:text-[#21466D] text-white p-3 rounded-lg">
               <Mail size={20} />
             </div>
             <span className="text-base font-normal leading-[1.40rem] text-left">journal@usat.uz</span>
-          </a>
+          </Link>
 
           {/* Phone */}
-          <a 
-            href="tel:78888388" 
+          <Link 
+            to="tel:+99878888388" 
             className="flex items-center gap-4 bg-white p-3 rounded-2xl group hover:bg-[#21466D] hover:text-white transition-colors duration-200"
           >
             <div className="bg-[#21466D] group-hover:bg-white group-hover:text-[#21466D] text-white p-3 rounded-lg">
               <Phone size={20} />
             </div>
             <span className="text-base font-normal leading-[1.40rem] text-left">78 888 38 88</span>
-          </a>
+          </Link>
 
           {/* Address */}
           <div className="flex items-center gap-4 bg-white p-3 rounded-2xl group hover:bg-[#21466D] hover:text-white transition-colors duration-200">
@@ -37,26 +37,26 @@ export default function ContactSection() {
           </div>
 
           {/* Telegram */}
-          <a 
-            href="#" 
+          <Link 
+            to="https://t.me/usatuzb" 
             className="flex items-center gap-4 bg-white p-3 rounded-2xl  group hover:bg-[#21466D] hover:text-white transition-colors duration-200"
           >
             <div className="bg-[#21466D] group-hover:bg-white group-hover:text-[#21466D] text-white p-3 rounded-lg">
               <Send size={20} />
             </div>
             <span className="text-base font-normal leading-[1.40rem] text-left">Telegram</span>
-          </a>
+          </Link>
 
           {/* Instagram */}
-          <a 
-            href="#" 
+          <Link 
+            to="https://www.instagram.com/usatuz/" 
             className="flex items-center gap-4 bg-white p-3 rounded-2xl group hover:bg-[#21466D] hover:text-white transition-colors duration-200"
           >
             <div className="bg-[#21466D] group-hover:bg-white group-hover:text-[#21466D] text-white p-3 rounded-lg">
               <Instagram size={20} />
             </div>
             <span className="text-base font-normal leading-[1.40rem] text-left">Instagram</span>
-          </a>
+          </Link>
         </div>
 
         {/* Map Section */}
