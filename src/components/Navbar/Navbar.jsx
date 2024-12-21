@@ -4,7 +4,7 @@ export default function NavItem({ text, hasDropdown = false }){
     return (
       <div className="relative group">
         <button className="flex items-center gap-1 text-white/90 hover:text-white py-6">
-          <Link to={text==="Bosh sahifa"?"/":text==="Maqolalar"?"/article":text==="Bog'lanish"?"/contact":text==="Arxiv"?"/archive":"/"}>
+          <Link to={text==="Bosh sahifa"?"/":text==="Maqolalar"?"/article":text==="So'ngi nashr"?"/journal":text==="Bog'lanish"?"/contact":text==="Arxiv"?"/archive":"/"}>
           <span className='font-manrope text-base font-normal leading-[1.37rem] text-left text-white hover:text-[#FFC82A]'>{text}</span>
           </Link>
           {hasDropdown && <ChevronDown className="h-4 w-4 group-hover:rotate-180 transition-transform" />}
@@ -12,9 +12,6 @@ export default function NavItem({ text, hasDropdown = false }){
         
         {hasDropdown==="about" ? (
           <div className="absolute top-full left-0 w-48 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
-            <Link to="/journal" className="block px-4 py-2 font-manrope text-base font-normal leading-[1.37rem] text-left  hover:text-[#FFC82A]">
-              Jurnal haqida
-            </Link>
             <Link to="/plans" className="block px-4 py-2 font-manrope text-base font-normal leading-[1.37rem] text-left  hover:text-[#FFC82A]">
               Rejalar va vazifalar
             </Link>
@@ -28,6 +25,9 @@ export default function NavItem({ text, hasDropdown = false }){
           </div>
         ): hasDropdown==="authors" ? (
           <div className="absolute top-full left-0 w-48 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+            <Link to="/authors" className="block px-4 py-2 font-manrope text-base font-normal leading-[1.37rem] text-left  hover:text-[#FFC82A]">
+              Mualliflar ro'yxati
+            </Link>
             <Link to="/guidelines" className="block px-4 py-2 font-manrope text-base font-normal leading-[1.37rem] text-left  hover:text-[#FFC82A]">
               Yo'riqnomalar
             </Link>
@@ -37,7 +37,6 @@ export default function NavItem({ text, hasDropdown = false }){
             <Link to="/checklist" className="block px-4 py-2 font-manrope text-base font-normal leading-[1.37rem] text-left  hover:text-[#FFC82A]">
               Tekshirish ro'yxati
             </Link>
-            
           </div>
         ):false}
       </div>

@@ -16,7 +16,7 @@ const App = () => {
   };
   return (
     <div className="h-[34.38rem] bg-[#1a365d]">
-      <header className="h-full w-full flex flex-col ">
+      <header className="h-full w-full  flex flex-col ">
         <nav className="flex items-center justify-between py-4 bg-[#FFFFFF1A] px-12">
         <Link to={"/"}>
             <img src={UsatLogo} alt="University Logo" className="h-12 w-50" />
@@ -50,14 +50,23 @@ const App = () => {
 
         <main className="flex-grow flex flex-col items-center justify-center -mt-20 container mx-auto px-4 ">
           <div className="main_article_path text-base font-normal leading-[1.37rem] text-center text-white mb-6">
-          <Link className="hover:text-[#FFC82A]" to={"/"}>Bosh sahifa</Link> /{" "}
+            <Link className="hover:text-[#FFC82A]" to={"/"}>Bosh sahifa</Link> /{" "}
+            <Link className="hover:text-[#FFC82A]" to={"/"}>
+            <span className="text-base font-normal leading-[1.37rem] text-left">
+              Mualliflar uchun
+            </span>
+            </Link>{" "}
+            /{" "}
             <span className="text-base font-normal leading-[1.37rem] text-left text-[#FFFFFF80]">
-              Maqolalar bo'limi
+              Mualliflar ro'yxati
             </span>
           </div>
-          <h2 className="w-2/3 main_article_title text-5xl font-bold leading-[3.30rem] text-center text-white uppercase">
-            Jurnallarda chop etilgan barcha maqolalar to’plami
+          <h2 className="w-2/3 main_article_title text-5xl font-bold leading-[3.30rem] text-center text-white uppercase mb-12">
+          Mualliflar ro'yxati
           </h2>
+          <p className="w-10/12 mx-auto text-lg font-normal leading-[1.57rem] text-center text-white">
+          "Fan va Texnologiyalar universiteti" ilmiy jurnalida e’lon qilinadigan ilmiy maqolalar mualliflari ro'yxati
+          </p>
         </main>
       </header>
     </div>

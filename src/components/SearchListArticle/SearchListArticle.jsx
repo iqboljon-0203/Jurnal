@@ -1,19 +1,14 @@
 import  { useState } from 'react';
 import { Download, Eye, Quote } from 'lucide-react';
-import { Link } from 'react-router-dom';
-import { createSlug } from './utils/slugUtils';
-const ResearchPaperCard = ({  title, author, date, views, citations }) => {
-  const paperSlug = createSlug(title);
+
+const ResearchPaperCard = ({ date, views, citations }) => {
   return (
     <div className="bg-white p-4 rounded-lg shadow-sm mb-4 hover:shadow-md transition-shadow">
-      <Link to={`/article/${paperSlug}`} className="block">
       <h2 className="text-[#1d4164] font-semibold mb-2">
-        {title}
+        MODERN METHODS OF MATHEMATICAL MODELING IN BIOMEDICAL RESEARCH
       </h2>
-      </Link>
-      
       <p className="text-gray-600 text-sm mb-3">
-        {author}
+        Samarqand Uchun Harmonlashga Sharxsizot
       </p>
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4 text-sm text-gray-500">
@@ -43,8 +38,6 @@ const ResearchPapersList = () => {
   
   // Sample data array with 16 items
   const papers = Array(16).fill({
-    title: 'MODERN METHODS OF MATHEMATICAL MODELING IN BIOMEDICAL RESEARCH',
-    author: 'Samarqand Uchun Harmonlashga Sharxsizot',
     date: '10/10/2024',
     views: 9,
     citations: 11
@@ -59,8 +52,6 @@ const ResearchPapersList = () => {
       <div className="space-y-4">
         {papers.slice(0, visibleItems).map((paper, index) => (
           <ResearchPaperCard
-            title={paper.title}
-            author={paper.author}
             key={index}
             date={paper.date}
             views={paper.views}

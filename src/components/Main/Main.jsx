@@ -4,13 +4,23 @@ import Jurnal from "../../assets/logos/jurnal.png";
 import LanguageSelector from '../LanguageSelector/App';
 import NavItem from "../Navbar/Navbar";
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 const App = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const navigate = useNavigate();
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/search?s=${encodeURIComponent(searchQuery.trim())}`);
+    }
+  };
   return (
     <div className="h-[34.38rem] bg-[#1a365d] rounded-bl-2xl rounded-br-2xl">
       <header className="h-full  flex flex-col w-full ">
         <nav className="flex items-center justify-between py-4 bg-[#FFFFFF1A] px-12">
           
-        <Link to={"/"}>
+          <Link to={"/"}>
             <img src={UsatLogo} alt="University Logo" className="h-12 w-50" />
           </Link>
             
@@ -20,18 +30,22 @@ const App = () => {
             <NavItem text="Biz haqimizda" hasDropdown="about" />
             <NavItem text="Mualliflar uchun" hasDropdown="authors" />
             <NavItem text="Maqolalar" />
+            <NavItem text="So'ngi nashr" />
             <NavItem text="Arxiv" />
             <NavItem text="Bog'lanish" />
           </div>
           <div className="font-manrope  flex items-center gap-4 ml-4">
-              <div className="relative">
+              <form onSubmit={handleSearch} className="relative">
                 <input
                   type="search"
                   placeholder="Izlash..."
+                  onChange={(e) => setSearchQuery(e.target.value)}
                   className="bg-transparent text-white placeholder-white w-72 h-10 pt-2  pr-2  pb-2  pl-4  rounded-3xl border-2 border-white focus:outline-none focus:ring-1 focus:ring-white/70"
                 />
+                <button type='submit'>
                 <Search className="rounded-3xl absolute  right-4 top-1/2 -translate-y-1/2 h-6 w-6 text-white" />
-              </div>
+                </button>
+              </form>
               
               <LanguageSelector></LanguageSelector>
             </div>

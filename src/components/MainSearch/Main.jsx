@@ -3,6 +3,7 @@ import UsatLogo from "../../assets/logos/usat_logo.svg";
 import LanguageSelector from "../LanguageSelector/App";
 import NavItem from "../Navbar/Navbar";
 import { Link } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 const App = () => {
@@ -14,6 +15,9 @@ const App = () => {
       navigate(`/search?s=${encodeURIComponent(searchQuery.trim())}`);
     }
   };
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const query = searchParams.get('s');
   return (
     <div className="h-[34.38rem] bg-[#1a365d]">
       <header className="h-full w-full flex flex-col ">
@@ -52,12 +56,15 @@ const App = () => {
           <div className="main_article_path text-base font-normal leading-[1.37rem] text-center text-white mb-6">
           <Link className="hover:text-[#FFC82A]" to={"/"}>Bosh sahifa</Link> /{" "}
             <span className="text-base font-normal leading-[1.37rem] text-left text-[#FFFFFF80]">
-              Maqolalar bo'limi
+              Search
             </span>
           </div>
-          <h2 className="w-2/3 main_article_title text-5xl font-bold leading-[3.30rem] text-center text-white uppercase">
-            Jurnallarda chop etilgan barcha maqolalar to’plami
+          <h2 className="w-2/3 main_article_title text-5xl font-bold leading-[3.30rem] text-center text-white uppercase mb-6">
+            Qidiruv bo'yicha jurnallarda chop etilgan  barcha maqolalar to'plami
           </h2>
+          <p className="text-lg font-normal leading-[1.57rem] text-center text-[#FFFFFF]">
+            “{query}” so'zi bo'yicha topilgan natijalar
+          </p>
         </main>
       </header>
     </div>

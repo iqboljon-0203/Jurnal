@@ -5,7 +5,8 @@ import NavItem from "../Navbar/Navbar";
 import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-const App = () => {
+const App = ({slug}) => {
+ 
   const [searchQuery, setSearchQuery] = useState('');
   const navigate = useNavigate();
   const handleSearch = (e) => {
@@ -50,14 +51,21 @@ const App = () => {
 
         <main className="flex-grow flex flex-col items-center justify-center -mt-20 container mx-auto px-4 ">
           <div className="main_article_path text-base font-normal leading-[1.37rem] text-center text-white mb-6">
-          <Link className="hover:text-[#FFC82A]" to={"/"}>Bosh sahifa</Link> /{" "}
+            <Link className="hover:text-[#FFC82A]" to={"/"}>Bosh sahifa</Link> /{" "}
+            <Link className="hover:text-[#FFC82A]" to={"/article"}>
+            <span className="text-base font-normal leading-[1.37rem] text-left">
+              Maqolalar
+            </span>
+            </Link>{" "}
+            /{" "}
             <span className="text-base font-normal leading-[1.37rem] text-left text-[#FFFFFF80]">
-              Maqolalar bo'limi
+              {slug}
             </span>
           </div>
-          <h2 className="w-2/3 main_article_title text-5xl font-bold leading-[3.30rem] text-center text-white uppercase">
-            Jurnallarda chop etilgan barcha maqolalar to’plami
+          <h2 className="w-2/3 main_article_title text-5xl font-bold leading-[3.30rem] text-center text-white uppercase mb-6">
+            {slug}
           </h2>
+          
         </main>
       </header>
     </div>

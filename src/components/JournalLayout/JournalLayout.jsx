@@ -1,5 +1,6 @@
 import { Download, Eye, Quote, Calendar, Users } from 'lucide-react';
 import Jurnal from "../../assets/logos/jurnal.png";
+import { useRef, useEffect } from 'react';
 const ResearchPaper = ({ title, author, date, views, citations }) => {
   return (
     <div className="bg-white p-4 rounded-lg shadow-sm mb-4 hover:shadow-md transition-shadow">
@@ -42,7 +43,29 @@ const CategorySection = ({ title, papers }) => {
 };
 
 const JournalLayout = () => {
-  
+  const containerRef = useRef(null);
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    const content = contentRef.current;
+
+    if (!container || !content) return;
+
+    const handleScroll = () => {
+      const containerRect = container.getBoundingClientRect();
+      const contentRect = content.getBoundingClientRect();
+
+      if (containerRect.bottom >= contentRect.bottom) {
+        container.style.position = 'relative';
+      } else {
+        container.style.position = 'sticky';
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
   const categories = [
     {
       title: 'TEXNIKA FANLARI',
@@ -78,7 +101,7 @@ const JournalLayout = () => {
 
   return (
     <div className="container mx-auto py-12 px-4">
-      <div className="max-w-[81.25rem] mx-auto h-[40.25rem] sticky top-0">
+      <div ref={containerRef} className="max-w-[81.25rem] mx-auto h-[40.25rem] sticky top-0">
         <div className="flex h-full gap-8">
           {/* Left Sidebar - Fixed */}
           <div  className="w-4/12  flex-shrink-0 h-full overflow-hidden">
@@ -117,7 +140,7 @@ const JournalLayout = () => {
           </div>
 
           {/* Main Content - Scrollable */}
-          <div className="flex-grow h-full overflow-y-auto scrollbar-hide pr-4">
+          <div ref={contentRef} className="flex-grow h-full overflow-y-auto scrollbar-hide pr-4">
             
             {categories.map((category, index) => (
               <CategorySection
