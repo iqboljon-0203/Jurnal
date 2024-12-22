@@ -18,15 +18,18 @@ import ArchivePage from './pages/ArchivePage/ArchivePage.jsx'
 import ContactPage from "./pages/ContactPage/ContactPage.jsx";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {NextUIProvider} from "@nextui-org/react";
-
+import { Provider } from 'react-redux';
+import { store } from "./app/store";
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <Provider store={store}>
+
     <NextUIProvider>
     <Router>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/article" element={<ArticlePage />} />
-        <Route path="/article/:slug" element={<ArticleDetilPage />} />
+        <Route path="/article/:id/:slug" element={<ArticleDetilPage />} />
         <Route path="/authors" element={<AuthorsPage />} />
         <Route path="/search" element={<SearchArticlePage />} />
         <Route path="/send_article" element={<SendArticlePage />} />
@@ -41,5 +44,6 @@ createRoot(document.getElementById('root')).render(
       </Routes>
     </Router>
     </NextUIProvider>
+    </Provider>
   </StrictMode>,
 )

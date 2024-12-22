@@ -1,8 +1,11 @@
-import JurnalSoni1 from "../../assets/logos/jurnal_soni1.png";
-import JurnalSoni2 from "../../assets/logos/jurnal_soni2.png";
-import JurnalSoni3 from "../../assets/logos/jurnal_soni3.png";
+
 import {Link} from 'react-router-dom';
+import { fetchJournalIssues } from '../../features/jurnalIssueSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from "react";
 const JournalCover = ({ imageUrl }) => {
+
+ 
   return (
     <Link to="/archive">
       <div className="group cursor-pointer">
@@ -19,12 +22,23 @@ const JournalCover = ({ imageUrl }) => {
 };
 
 const LatestIssues = () => {
-  const covers = [
-    JurnalSoni1,
-    JurnalSoni2,
-    JurnalSoni3
-  ];
+  const { issues } = useSelector(state => state.journalIssues);
+  const dispatch = useDispatch();
+  const { status, error } = useSelector(state => state.journalIssues);
+  useEffect(() => {
+    if (status === 'idle') {
+      dispatch(fetchJournalIssues());
+    }
+  }, [status,dispatch]);
 
+  if (status === 'loading') {
+    return <div>Yuklanmoqda...</div>;
+  }
+
+  if (status === 'failed') {
+    return <div>Xatolik: {error}</div>;
+  }
+  
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="flex justify-between items-center mb-12">
@@ -40,8 +54,8 @@ const LatestIssues = () => {
       </div>
 
       <div className="max-w-[62.50rem] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {covers.map((cover, index) => (
-          <JournalCover key={index} imageUrl={cover} />
+        {issues.map((cover, index) => (
+          <JournalCover key={index} imageUrl={cover.image} />
         ))}
       </div>
     </div>

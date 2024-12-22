@@ -1,24 +1,27 @@
 import ArticleCard from './ArticleCard';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { fetchBooks } from '../../features/articleLatest';
+import { useSelector } from 'react-redux';
 const Articles = () => {
-  const articles = [
-    {
-      title: "OLIY TA'LIMNI BOSHQARISH VA MONITORINGINI YURITISH JARAYONLARINI RAQAMLASHTIRISH MASALASI VA ISTIQBOLLARI",
-      subtitle: "Xalqaro/milliy Oliy ta'lim/ilm-fan/ta'lim, Abdulaev Alisher Sultonov Xurshid"
-    },
-    {
-      title: "OLIY TA'LIMNI BOSHQARISH VA MONITORINGINI YURITISH JARAYONLARINI RAQAMLASHTIRISH MASALASI VA ISTIQBOLLARI",
-      subtitle: "Xalqaro/milliy Oliy ta'lim/ilm-fan/ta'lim, Abdulaev Alisher Sultonov Xurshid"
-    },
-    {
-      title: "OLIY TA'LIMNI BOSHQARISH VA MONITORINGINI YURITISH JARAYONLARINI RAQAMLASHTIRISH MASALASI VA ISTIQBOLLARI",
-      subtitle: "Xalqaro/milliy Oliy ta'lim/ilm-fan/ta'lim, Abdulaev Alisher Sultonov Xurshid"
-    },
-    {
-      title: "OLIY TA'LIMNI BOSHQARISH VA MONITORINGINI YURITISH JARAYONLARINI RAQAMLASHTIRISH MASALASI VA ISTIQBOLLARI",
-      subtitle: "Xalqaro/milliy Oliy ta'lim/ilm-fan/ta'lim, Abdulaev Alisher Sultonov Xurshid"
+  const dispatch = useDispatch();
+  const { books, status, error } = useSelector(state => state.articleLatest);
+  useEffect(() => {
+    if (status === 'idle') {
+      dispatch(fetchBooks());
     }
-  ];
+  }, [status, dispatch]);
+
+  if (status === 'loading') {
+    return <div>Loading...</div>;
+  }
+
+  if (status === 'failed') {
+    return <div>Error: {error}</div>;
+  }
+
+  
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -38,11 +41,13 @@ const Articles = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {articles.map((article, index) => (
+        {books.map((article, index) => (
           <ArticleCard
             key={index}
             title={article.title}
-            subtitle={article.subtitle}
+            subtitle={article.authors?.map(author => {
+              return author.first_name + ' ' + author.last_name
+            }).join(', ')}
           />
         ))}
       </div>
