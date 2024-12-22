@@ -3,9 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import {
   fetchArticleDetails,
-  incrementViewCount,
-  incrementDownloadCount,
 } from "../../features/articleDetailsSlice";
+import {Link} from "react-router-dom";
 import { useEffect } from "react";
 const ProfileDetails = () => {
   const { id } = useParams();
@@ -18,18 +17,11 @@ const ProfileDetails = () => {
     if (id) {
       dispatch(fetchArticleDetails(id));
     }
-  }, [id, dispatch]);
+  }, [id,dispatch]);
 
-  useEffect(() => {
-    if (article) {
-      dispatch(incrementViewCount());
-    }
-  }, [article, dispatch]);
+ 
 
-  const handleDownload = () => {
-    dispatch(incrementDownloadCount());
-    // Yuklab olish logikasi
-  };
+ 
 
   if (status === "loading") {
     return <div>Yuklanmoqda...</div>;
@@ -73,7 +65,7 @@ const ProfileDetails = () => {
               Yashash joyi:
             </h3>
             <p className="text-[#21466D] text-xl font-normal leading-7 text-left">
-              `${author.country},${author.city}`
+              {author.country}, {author.city}
             </p>
           </div>
           <div>
@@ -136,14 +128,14 @@ const ProfileDetails = () => {
       </div>
 
       {/* Journal Info */}
-      <div className="mt-8 grid grid-cols-2 gap-x-8">
+      <div className="mt-8 grid grid-cols-2 gap-x-8 mb-12">
         <div>
           <h3 className="text-[#21466D] text-xl font-bold leading-5 text-left mb-1">
             Jurnal soni:
           </h3>
           <p className="text-[#21466D] text-xl font-normal leading-7 text-left">
-            `${article?.journal_issue?.volume_number} jild , $
-            {article?.journal_issue?.issue_number} soni`
+            {article?.journal_issue?.volume_number} jild , 
+            {article?.journal_issue?.issue_number} soni
           </p>
         </div>
         <div>
@@ -151,19 +143,21 @@ const ProfileDetails = () => {
             Sana:
           </h3>
           <p className="text-[#21466D] text-xl font-normal leading-7 text-left">
-            {article.publication_date}
+            {article.publication_date.slice(0, 10)}
           </p>
         </div>
       </div>
 
       {/* Download Button */}
       <div className="mt-8 flex justify-start">
+        <Link to={article.download_url}>
         <button className="flex items-center gap-2 px-6 py-3 bg-[#ffc107] hover:bg-[#ffcd38] text-black rounded-md transition-colors">
           <Download className="w-5 h-5" />
           <span className="text-[#21466D] text-base font-medium leading-[0.85rem] text-left">
             Yuklab olish
           </span>
         </button>
+        </Link>
       </div>
     </div>
   );

@@ -7,8 +7,9 @@ import { fetchArticles } from '../../features/articlesSlice';
 import { useEffect } from 'react';
 const ResearchPaperCard = ({  id,title, author, date, views,pages, citations,download_url }) => {
   const paperSlug = createSlug(title);
+  
   return (
-    <Link to={`/article/:${id}/${paperSlug}`} className="block ">
+    <Link to={`/article/${id}/${paperSlug}`} className="block ">
     <div className="bg-white p-4 rounded-lg shadow-sm mb-4 hover:shadow-md transition-shadow">
       <h2 className="text-[#1d4164] font-semibold mb-2">
         {title}
@@ -37,7 +38,7 @@ const ResearchPaperCard = ({  id,title, author, date, views,pages, citations,dow
             <span>{citations}</span>
           </div>
         </div>
-        <Link to={download_url} className="flex items-center gap-2  px-4 py-2 bg-[#ffc107] hover:bg-[#ffcd38] text-black rounded-md transition-colors">
+        <Link to={download_url} onClick={(event) => event.stopPropagation()} className="flex items-center gap-2  px-4 py-2 bg-[#ffc107] hover:bg-[#ffcd38] text-black rounded-md transition-colors">
           <Download className="w-4 h-4" />
           <span>Yuklab olish</span>
         </Link>
