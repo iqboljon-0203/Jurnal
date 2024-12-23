@@ -5,9 +5,11 @@ import NavItem from '../Navbar/Navbar';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 const App = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const navigate = useNavigate();
+  const { t } = useTranslation();
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
@@ -25,13 +27,12 @@ const App = () => {
             
           
           <div className="flex items-center gap-6">
-            <NavItem text="Bosh sahifa" />
-            <NavItem text="Biz haqimizda" hasDropdown="about" />
-            <NavItem text="Mualliflar uchun" hasDropdown="authors" />
-            <NavItem text="Maqolalar" />
-            <NavItem text="So'ngi nashr" />
-            <NavItem text="Arxiv" />
-            <NavItem text="Bog'lanish" />
+           <NavItem text={t("home_page")}/>
+                       <NavItem text={t("about_us")} hasDropdown="about" />
+                       <NavItem text={t("for_authors")} hasDropdown="authors" />
+                       <NavItem text={t("articles")} />
+                       <NavItem text={t("archive")} />
+                       <NavItem text={t("contacts")} />
             
             
           </div>
@@ -39,7 +40,7 @@ const App = () => {
               <form onSubmit={handleSearch} className="relative">
                 <input
                   type="search"
-                  placeholder="Izlash..."
+                  placeholder={t("search")}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="bg-transparent text-white placeholder-white w-72 h-10 pt-2  pr-2  pb-2  pl-4  rounded-3xl border-2 border-white focus:outline-none focus:ring-1 focus:ring-white/70"
                 />

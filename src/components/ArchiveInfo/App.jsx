@@ -1,10 +1,11 @@
-import JurnalSoni1 from "../../assets/logos/jurnal_soni1.png";
-import JurnalSoni2 from "../../assets/logos/jurnal_soni2.png";
-import JurnalSoni3 from "../../assets/logos/jurnal_soni3.png";
+
 import {Link} from 'react-router-dom'
-const JournalCover = ({ imageUrl }) => {
+import  { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchArchiveJournalIssues } from '../../features/archiveJournalIssueSlice.js';
+const JournalCover = ({ imageUrl,id }) => {
   return (
-    <Link to={"/journal"}>
+    <Link to={`/archieve/${id}`}>
       <div className="group cursor-pointer">
       <div className="aspect-[3/4] rounded-lg shadow-md overflow-hidden transition-transform duration-300 group-hover:shadow-lg group-hover:-translate-y-1">
         <img 
@@ -19,17 +20,29 @@ const JournalCover = ({ imageUrl }) => {
 };
 
 const LatestIssues = () => {
-  const covers = [
-    JurnalSoni1,
-    JurnalSoni2,
-    JurnalSoni3
-  ];
+  const dispatch = useDispatch();
+  const { issues, status, error } = useSelector((state) => state.archiveJournalIssue);
+
+  useEffect(() => {
+    if (status === 'idle') {
+      dispatch(fetchArchiveJournalIssues());
+    }
+  }, [status, dispatch]);
+
+  if (status === 'loading') {
+    return <div>Yuklanmoqda...</div>;
+  }
+
+  if (status === 'failed') {
+    return <div>Xatolik: {error}</div>;
+  }
+ 
 
   return (
     <div className="max-w-[81.25rem] mx-auto px-4 py-12">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {covers.map((cover, index) => (
-          <JournalCover key={index} imageUrl={cover} />
+        {issues.map((cover) => (
+          <JournalCover key={cover.id} id={cover.id} imageUrl={cover.image} />
         ))}
       </div>
     </div>

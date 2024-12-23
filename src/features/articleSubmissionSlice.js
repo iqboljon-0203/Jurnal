@@ -2,40 +2,35 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const submitArticle = createAsyncThunk(
   'articleSubmission/submitArticle',
-  async (formData, { rejectWithValue }) => {
+  async (data, { rejectWithValue }) => {
     try {
-      // Create FormData object for file upload
-      const submitData = new FormData();
-      
-      // Add the file
-      if (formData.file) {
-        submitData.append('file', formData.file);
-      }
+      const formData = new FormData();
 
-      // Add other form data as JSON
-      const articleData = {
-        direction_id: formData.direction_id,
-        title: formData.title,
-        keywords: formData.keywords,
-        annotation: formData.annotation,
-        authors_data: formData.authors_data
-      };
+      // Append all string and number fields
+      formData.append('direction_id', data.direction_id.toString());
+      formData.append('title', data.title);
+      formData.append('keywords', data.keywords);
+      formData.append('annotation', data.annotation);
 
-      submitData.append('data', JSON.stringify(articleData));
+      // Append the file
+      formData.append('original_file', data.original_file);
 
-      const response = await fetch('YOUR_API_ENDPOINT_HERE', {
+      // Convert authors_data to JSON and append
+      formData.append('authors_data', JSON.stringify(data.authors_data));
+
+      const response = await fetch('https://journal.usat-test.uz/api/v1/articles/submit/', {
         method: 'POST',
-        body: submitData,
+        body: formData,
       });
 
       if (!response.ok) {
         throw new Error('Server Error');
       }
 
-      const data = await response.json();
-      return data;
+      const result = await response.json();
+      return result;
     } catch (error) {
-      return rejectWithValue('Maqolani yuborishda xatolik yuz berdi');
+      return rejectWithValue(error.message);
     }
   }
 );
@@ -43,7 +38,7 @@ export const submitArticle = createAsyncThunk(
 const initialState = {
   status: 'idle',
   error: null,
-  submissionResult: null,
+  result: null,
 };
 
 const articleSubmissionSlice = createSlice({
@@ -53,17 +48,19 @@ const articleSubmissionSlice = createSlice({
     resetSubmission: (state) => {
       state.status = 'idle';
       state.error = null;
-      state.submissionResult = null;
-    }
+      state.result = null;
+    },
   },
   extraReducers: (builder) => {
     builder
       .addCase(submitArticle.pending, (state) => {
         state.status = 'loading';
+        state.error = null;
       })
       .addCase(submitArticle.fulfilled, (state, action) => {
         state.status = 'succeeded';
-        state.submissionResult = action.payload;
+        state.result = action.payload;
+        state.error = null;
       })
       .addCase(submitArticle.rejected, (state, action) => {
         state.status = 'failed';
@@ -73,4 +70,6 @@ const articleSubmissionSlice = createSlice({
 });
 
 export const { resetSubmission } = articleSubmissionSlice.actions;
+
 export default articleSubmissionSlice.reducer;
+

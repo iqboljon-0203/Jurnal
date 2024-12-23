@@ -3,8 +3,8 @@ import {Link} from 'react-router-dom';
 import { fetchJournalIssues } from '../../features/jurnalIssueSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from "react";
+import { useTranslation } from 'react-i18next';
 const JournalCover = ({ imageUrl }) => {
-
  
   return (
     <Link to="/archive">
@@ -22,6 +22,8 @@ const JournalCover = ({ imageUrl }) => {
 };
 
 const LatestIssues = () => {
+  const { t } = useTranslation();
+
   const { issues } = useSelector(state => state.journalIssues);
   const dispatch = useDispatch();
   const { status, error } = useSelector(state => state.journalIssues);
@@ -42,14 +44,14 @@ const LatestIssues = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="flex justify-between items-center mb-12">
-        <h2 className="text-[#1a365d] text-4xl font-bold leading-[2.40rem] text-left">
-          SO'NGGI SONI
+        <h2 className="text-[#1a365d] text-4xl font-bold leading-[2.40rem] text-left uppercase">
+          {t("latest_issues")}
         </h2>
         <Link 
           to="/archive" 
           className="text-lg font-semibold leading-[1.57rem] text-left text-[#21466D59] hover:text-[#FFC82A]"
         >
-          Barcha sonlar &gt;
+          {t("all_issues")} &gt;
         </Link>
       </div>
 

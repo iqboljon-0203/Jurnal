@@ -4,7 +4,9 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchBooks } from '../../features/articleLatest';
 import { useSelector } from 'react-redux';
+import { useTranslation } from 'react-i18next';
 const Articles = () => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const { books, status, error } = useSelector(state => state.articleLatest);
   useEffect(() => {
@@ -27,8 +29,8 @@ const Articles = () => {
     <div className="container mx-auto px-4 py-8">
       <div className="flex justify-between items-center mb-12">
         <Link to="/article">
-        <h2 className="text-[#21466D] text-4xl font-bold leading-[2.20rem] text-left hover:underline">
-            MAQOLALAR
+        <h2 className="text-[#21466D] text-4xl font-bold leading-[2.20rem] uppercase text-left hover:underline">
+            {t("articles")}
         </h2>
         </Link>
 
@@ -36,7 +38,7 @@ const Articles = () => {
           to="/article" 
           className="text-lg font-semibold leading-[1.57rem] text-left text-[#21466D59] hover:text-[#FFC82A]"
         >
-          Barcha maqolalar &gt;
+          {t("all_articles") } &gt;
         </Link>
       </div>
 

@@ -17,13 +17,15 @@ const resources = {
 };
 
 // `i18n` ni sozlash
-i18n.use(initReactI18next).init({
-    resources, // Resurslar
-    lng: language, // Default til
-    fallbackLng: "uz", // Zaxira til
+i18n
+  .use(initReactI18next) // React uchun i18n integratsiyasi
+  .init({
+    resources,
+    lng: language, // Standart til
+    fallbackLng: 'en', // Fallback til
     interpolation: {
-      escapeValue: false // React uchun qochish qoidasi o'chirilgan
-    }
+      escapeValue: false, // React bilan xavfsiz
+    },
   });
-  
-  export default i18n;
+
+export default i18n;

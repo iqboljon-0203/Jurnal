@@ -2,7 +2,9 @@ import Wiley from "../../assets/logos/brand_logo.png";
 import IEEE from "../../assets/logos/brand_logo1.png";
 import Taylor from "../../assets/logos/brand_logo2.png";
 import Springer from "../../assets/logos/brand_logo3.png";
+import { useTranslation } from 'react-i18next'; 
 const PublisherScroll = () => {
+  const { t } = useTranslation();
   const publishers = [
     { name: 'Wiley', logo: Wiley },
     { name: 'IEEE', logo:IEEE },
@@ -16,7 +18,7 @@ const PublisherScroll = () => {
   return (
     <>
     <div className="container mx-auto px-4 py-2">
-        <h2 className="text-[#21466D] text-4xl font-bold leading-[2.40rem] text-left mb-4">INDEKSATSIYA</h2>
+        <h2 className="text-[#21466D] text-4xl font-bold leading-[2.40rem] text-left mb-4 uppercase">{t("indexing")}</h2>
       </div>
     <div className="bg-[#1a365d] w-full overflow-hidden">
       

@@ -1,36 +1,57 @@
-import { Download, Eye, Quote, Calendar, Users } from 'lucide-react';
+import { Download, Eye, User,Calendar,FileText} from 'lucide-react';
 import Jurnal from "../../assets/logos/jurnal.png";
 import { useRef, useEffect } from 'react';
-const ResearchPaper = ({ title, author, date, views, citations }) => {
+import { useSelector } from 'react-redux';
+import {Link} from "react-router-dom";
+import { createSlug } from '../../components/ListArticle/utils/slugUtils';
+const ResearchPaper = ({ id,title, authors, start_page, end_page, views_count, downloads_count,download_url,publication_date }) => {
+  const paperSlug = createSlug(title);
   return (
+    <Link to={`/article/${id}/${paperSlug}`} className="block ">
     <div className="bg-white p-4 rounded-lg shadow-sm mb-4 hover:shadow-md transition-shadow">
       <h3 className="text-[#1d4164] font-semibold mb-2">{title}</h3>
-      <p className="text-gray-600 text-sm mb-3">{author}</p>
+      <div className='flex items-center gap-4'>
+        <User className="w-4 h-4" />
+        <p className="text-gray-600 text-sm">{authors.map((author) => {
+          return (
+            author.first_name + ' ' + author.last_name
+          )
+        }).join(', ')}</p>
+      </div>
+      
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-4 text-sm text-gray-500">
-          <span>{date}</span>
+          <div className="flex items-center gap-1">
+            <Calendar className="w-4 h-4" />
+            <span>{publication_date.slice(0, 10)}</span>
+          </div>
           <div className="flex items-center gap-1">
             <Eye className="w-4 h-4" />
-            <span>{views}</span>
+            <span>{views_count}</span>
           </div>
           <div className="flex items-center gap-1">
-            <Quote className="w-4 h-4" />
-            <span>{citations}</span>
+            <FileText className="w-4 h-4" />
+            <span>{start_page}-{end_page}</span>
+          </div>
+          <div className="flex items-center gap-1">
+            <Download className="w-4 h-4" />
+            <span>{downloads_count}</span>
           </div>
         </div>
-        <button className="flex items-center gap-2 px-4 py-2 bg-[#ffc107] hover:bg-[#ffcd38] text-black rounded-md transition-colors">
+        <Link to={download_url} onClick={(event) => event.stopPropagation()} className="flex items-center gap-2 px-4 py-2 bg-[#ffc107] hover:bg-[#ffcd38] text-black rounded-md transition-colors">
           <Download className="w-4 h-4" />
           <span>Yuklab olish</span>
-        </button>
+        </Link>
       </div>
     </div>
+    </Link>
   );
 };
 
 const CategorySection = ({ title, papers }) => {
   return (
     <div className="mb-8">
-      <h2 className="text-xl font-bold text-center pb-4 z-10">
+      <h2 className="text-2xl font-bold leading-[2.70rem] mb-6 text-[#21466D] text-center uppercase">
         {title}
       </h2>
       <div className="space-y-4">
@@ -43,6 +64,8 @@ const CategorySection = ({ title, papers }) => {
 };
 
 const JournalLayout = () => {
+  
+  
   const containerRef = useRef(null);
   const contentRef = useRef(null);
 
@@ -66,39 +89,11 @@ const JournalLayout = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  const categories = [
-    {
-      title: 'TEXNIKA FANLARI',
-      papers: Array(4).fill({
-        title: 'MODERN METHODS OF MATHEMATICAL MODELING IN BIOMEDICAL RESEARCH',
-        author: 'Samarqand Uchun Harmonlashga Sharxsizot',
-        date: '10/10/2024',
-        views: 9,
-        citations: 11
-      })
-    },
-    {
-      title: 'IJTIMOIY FANLAR',
-      papers: Array(3).fill({
-        title: 'MODERN METHODS OF MATHEMATICAL MODELING IN BIOMEDICAL RESEARCH',
-        author: 'Samarqand Uchun Harmonlashga Sharxsizot',
-        date: '10/10/2024',
-        views: 9,
-        citations: 11
-      })
-    },
-    {
-      title: 'MATEMATIKA VA FIZIKA FANLARI',
-      papers: Array(3).fill({
-        title: 'MODERN METHODS OF MATHEMATICAL MODELING IN BIOMEDICAL RESEARCH',
-        author: 'Samarqand Uchun Harmonlashga Sharxsizot',
-        date: '10/10/2024',
-        views: 9,
-        citations: 11
-      })
-    }
-  ];
 
+  const { issueDetail } = useSelector((state) => state.journalIssueDetail);
+  
+
+  if (!issueDetail) return null;
   return (
     <div className="container mx-auto py-12 px-4">
       <div ref={containerRef} className="max-w-[81.25rem] mx-auto h-[40.25rem] sticky top-0">
@@ -117,24 +112,21 @@ const JournalLayout = () => {
               <div className="flex gap-4 items-center justify-between pt-3">
                 <div className="flex items-center gap-2 text-gray-600">
                   <Calendar className="w-4 h-4" />
-                  <span>10/10/2024</span>
+                  <span>{issueDetail?.publication_date.slice(0, 10)}</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-600">
                   <Eye className="w-4 h-4" />
-                  <span>14</span>
+                  <span>{issueDetail?.views_count}</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-600">
-                  <Quote className="w-4 h-4" />
-                  <span>11</span>
+                  <FileText className="w-4 h-4" />
+                  <span>{issueDetail?.start_page}-{issueDetail?.end_page}</span>
                 </div>
-                <div className="flex items-center gap-2 text-gray-600">
-                  <Users className="w-4 h-4" />
-                  <span>5</span>
-                </div>
-                <button className="flex items-center justify-center gap-2 px-4 py-2 bg-[#ffc107] hover:bg-[#ffcd38] text-black rounded-md transition-colors">
+                
+                <Link to={issueDetail?.download_url} className="flex items-center justify-center gap-2 px-4 py-2 bg-[#ffc107] hover:bg-[#ffcd38] text-black rounded-md transition-colors">
                   <Download className="w-4 h-4" />
                   <span>Yuklab olish</span>
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -142,11 +134,11 @@ const JournalLayout = () => {
           {/* Main Content - Scrollable */}
           <div ref={contentRef} className="flex-grow h-full overflow-y-auto scrollbar-hide pr-4">
             
-            {categories.map((category, index) => (
+            {issueDetail?.directions.map((category, index) => (
               <CategorySection
                 key={index}
-                title={category.title}
-                papers={category.papers}
+                title={category.name}
+                papers={category.articles}
               />
             ))}
           </div>

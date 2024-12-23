@@ -14,6 +14,7 @@ const LanguageSelector = () => {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
   const {i18n} = useTranslation();
+  
   const newLang = localStorage.getItem("i18nextLng") || 'uz';
   const handleClickOutside = (event) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -34,6 +35,7 @@ const LanguageSelector = () => {
 
   const handleLanguageChange = (language) => {
       setSelectedLanguage(language);
+      i18n.changeLanguage(language.code);
       localStorage.setItem("i18nextLng", language.code);
       setIsOpen(false);
   };

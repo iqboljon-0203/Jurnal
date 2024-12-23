@@ -4,7 +4,9 @@ import LicenseUz from "../../assets/logos/license1.png";
 import LicenseRus from "../../assets/logos/license2.png";
 import LicenseEng from "../../assets/logos/license3.png";
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 const UniversityHeader = () => {
+  const {t}=useTranslation();  
     const universityLicenses=[
         {
             name:"Uzbek",
@@ -70,49 +72,46 @@ const UniversityHeader = () => {
             <ul className="flex flex-col lg:flex-row gap-6">
               <li className="relative group">
                 <Link to="#" className="text-xl font-bold leading-7 text-left hover:text-[#ffc107] hover:underline transition-colors">
-                  Biz haqimizda
+                  {t("about_us")}
                 </Link>
                 <ul className="mt-4">
                   <li>
                     <Link to="/journal" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
-                      Jurnal haqida
+                      {t("about_journal")}
                     </Link>
                   </li>
                   <li>
                     <Link to="/plans" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
-                      Rejalar va Vazifalar
+                      {t("editorial_board")}
                     </Link>
                   </li>
                   <li>
                     <Link to="/editorial" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
-                      Tahririyat hay'ati
+                      {t("review_board")}
                     </Link>
                   </li>
-                  <li>
-                    <Link to="/reviewers" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
-                      Taqrizchilar kengashi
-                    </Link>
-                  </li>
+                  
                 </ul>
               </li>
               <li className="relative group">
                 <Link to="#" className="text-xl font-bold leading-7 text-lefthover:text-[#ffc107] hover:underline transition-colors">
-                  Mualliflar uchun
+                  {t("for_authors")}
                 </Link>
                 <ul className="mt-4 ">
+                  
                   <li>
                     <Link to="/guidelines" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
-                      Yo'riqnomalar
+                      {t("instructions")}
                     </Link>
                   </li>
                   <li>
                     <Link to="/send_article" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
-                      Maqola yuborish
+                      {t("send_article")}
                     </Link>
                   </li>
                   <li>
                     <Link to="/checklist" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
-                      Tekshirish ro'yhati
+                      {t("checklist")}
                     </Link>
                   </li>
                 </ul>
