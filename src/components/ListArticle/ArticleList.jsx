@@ -1,15 +1,14 @@
 import  { useState } from 'react';
 import { Download, Eye, User,Calendar,FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { createSlug } from './utils/slugUtils';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchArticles } from '../../features/articlesSlice';
 import { useEffect } from 'react';
-const ResearchPaperCard = ({  id,title, author, date, views,pages, citations,download_url }) => {
-  const paperSlug = createSlug(title);
+const ResearchPaperCard = ({  paperSlug,title, author, date, views,pages, citations,download_url }) => {
+  
   
   return (
-    <Link to={`/article/${id}/${paperSlug}`} className="block ">
+    <Link to={`/article/${paperSlug}`} className="block ">
     <div className="bg-white p-4 rounded-lg shadow-sm mb-4 hover:shadow-md transition-shadow">
       <h2 className="text-[#1d4164] font-semibold mb-2">
         {title}
@@ -51,6 +50,7 @@ const ResearchPaperCard = ({  id,title, author, date, views,pages, citations,dow
 const ResearchPapersList = () => {
   const dispatch = useDispatch();
   const { articles, status, error } = useSelector(state => state.articles);
+  
   const [visibleItems, setVisibleItems] = useState(8);
   useEffect(() => {
     if (status === 'idle') {
@@ -76,7 +76,7 @@ const ResearchPapersList = () => {
       <div className="space-y-4">
         {papers.slice(0, visibleItems).map((paper, index) => (
           <ResearchPaperCard
-            id={paper.id}
+            paperSlug={paper.slug}
             title={paper.title}
             author={paper.authors.map(author => {
               return author.first_name + ' ' + author.last_name

@@ -8,8 +8,10 @@ import articleSubmissionReducer from '../features/articleSubmissionSlice.js';
 import authorsReducer from '../features/authorsSlice.js';
 import archiveJournalIssueReducer from '../features/archiveJournalIssueSlice.js';
 import journalIssueDetailReducer from '../features/journalIssueDetailSlice.js';
+import languageReducer from '../features/languageSlice.js';
 export const store = configureStore({
   reducer: {
+    language: languageReducer,
     articleLatest: articleLatestReducer,
     journalIssues: journalIssuesReducer,
     articles: articlesReducer,

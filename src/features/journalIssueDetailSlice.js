@@ -3,8 +3,14 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 // Async thunk yaratish
 export const fetchJournalIssueDetail = createAsyncThunk(
   'journalIssueDetail/fetchJournalIssueDetail',
-  async (issueId) => {
-    const response = await fetch(`https://journal.usat-test.uz/api/v1/journals/issue/${issueId}/detail/`);
+  async (issueId,{ getState }) => {
+    const state = getState();
+    const language = state.language.currentLanguage;
+    const response = await fetch(`https://journal-admin.usat.uz/api/v1/journals/issue/${issueId}/detail/`,{
+      headers: {
+        'Accept-Language': language,
+      },
+    });
     if (!response.ok) {
       throw new Error('Jurnal soni ma\'lumotlarini olishda xatolik yuz berdi');
     }

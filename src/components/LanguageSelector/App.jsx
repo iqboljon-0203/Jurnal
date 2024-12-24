@@ -2,7 +2,8 @@ import { useState, useRef, useEffect } from 'react';
 import 'flag-icons/css/flag-icons.min.css';
 import "./LangSec.css";
 import { useTranslation } from 'react-i18next';
-
+import { useDispatch } from 'react-redux';
+import { setLanguage } from '../../features/languageSlice.js';
 const languages = [
     { code: 'uz', label: 'UZ', flag: 'uz' },
     { code: 'ru', label: 'RU', flag: 'ru' },
@@ -10,6 +11,7 @@ const languages = [
 ];
 
 const LanguageSelector = () => {
+    const dispatch = useDispatch();
   const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -36,6 +38,7 @@ const LanguageSelector = () => {
   const handleLanguageChange = (language) => {
       setSelectedLanguage(language);
       i18n.changeLanguage(language.code);
+      dispatch(setLanguage(language.code));
       localStorage.setItem("i18nextLng", language.code);
       setIsOpen(false);
   };

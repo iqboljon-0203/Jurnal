@@ -3,11 +3,11 @@ import Jurnal from "../../assets/logos/jurnal.png";
 import { useRef, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import {Link} from "react-router-dom";
-import { createSlug } from '../../components/ListArticle/utils/slugUtils';
-const ResearchPaper = ({ id,title, authors, start_page, end_page, views_count, downloads_count,download_url,publication_date }) => {
-  const paperSlug = createSlug(title);
+import { useTranslation } from 'react-i18next';
+const ResearchPaper = ({ title,slug, authors, start_page, end_page, views_count, downloads_count,download_url,publication_date }) => {
+  const { t } = useTranslation();
   return (
-    <Link to={`/article/${id}/${paperSlug}`} className="block ">
+    <Link to={`/article/${slug}`} className="block ">
     <div className="bg-white p-4 rounded-lg shadow-sm mb-4 hover:shadow-md transition-shadow">
       <h3 className="text-[#1d4164] font-semibold mb-2">{title}</h3>
       <div className='flex items-center gap-4'>
@@ -40,7 +40,7 @@ const ResearchPaper = ({ id,title, authors, start_page, end_page, views_count, d
         </div>
         <Link to={download_url} onClick={(event) => event.stopPropagation()} className="flex items-center gap-2 px-4 py-2 bg-[#ffc107] hover:bg-[#ffcd38] text-black rounded-md transition-colors">
           <Download className="w-4 h-4" />
-          <span>Yuklab olish</span>
+          <span>{t("download")}</span>
         </Link>
       </div>
     </div>
@@ -64,7 +64,7 @@ const CategorySection = ({ title, papers }) => {
 };
 
 const JournalLayout = () => {
-  
+  const { t } = useTranslation();
   
   const containerRef = useRef(null);
   const contentRef = useRef(null);
@@ -125,7 +125,7 @@ const JournalLayout = () => {
                 
                 <Link to={issueDetail?.download_url} className="flex items-center justify-center gap-2 px-4 py-2 bg-[#ffc107] hover:bg-[#ffcd38] text-black rounded-md transition-colors">
                   <Download className="w-4 h-4" />
-                  <span>Yuklab olish</span>
+                  <span>{t("download")}</span>
                 </Link>
               </div>
             </div>

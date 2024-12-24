@@ -1,7 +1,8 @@
 import  { useState, useRef, useEffect } from 'react';
 import { Check, ChevronLeft, ChevronRight } from 'lucide-react';
-
+import { useTranslation } from 'react-i18next';
 function CardSlider() {
+  const { t } = useTranslation();
   const [scrollPosition, setScrollPosition] = useState(0);
   const containerRef = useRef(null);
 
@@ -26,29 +27,29 @@ function CardSlider() {
 
   const cards = [
     {
-      title: "BIZNING QADRLAYMIZ",
-      content: "Taqdim etilgan maqolalar sifati, asosilligi va ahamiyatini shu sohadagi mutaxassislar baholaydigan o'zaro baholash jarayonini qo'llash bizning qadriyatimiz. Bundan tashqari, biz ilmiy tadqiqotlarni arxivlashning tizimli va tashkiliy usulini taqdim etamiz."
+      title: t("plans_info_title"),
+      content: t("plans_info_text")
     },
     {
-      title: "BIZNING VAZIFAMIZ",
-      content: "Bizning asosiy vazifamiz yangi va muhim tadqiqot natijalarini tarqatish uchun mualliflarga to'liq xizmat qilishdir. Biz tadqiqotchilarga o'z ishlarini kengroq ilmiy jamoatchilikka yetkazish uchun vositalarni taqdim etishni maqsad qilganmiz."
+      title: t("plans_info_title"),
+      content: t("plans_info_text")
     },
     {
-      title: "BIZNING REJALARIMIZ",
-      content: "Biz tadqiqotchilar, akademiklar, amaliyotchilar, siyosatchilar va keng jamoatchilikni o'zaro va xilma-xil auditoriyasini qamrab olish orqali global ta'sirga ega bo'lishga intilamiz. Bizning maqsadimiz xalqaro hamkorlikni rivojlantirish va bilimlarning global miqyosda tarqalishini rag'batlantirishni o'z ichiga oladi."
+      title: t("plans_info_title"),
+      content: t("plans_info_text")
     },
     {
-        title: "BIZNING REJALARIMIZ",
-        content: "Biz tadqiqotchilar, akademiklar, amaliyotchilar, siyosatchilar va keng jamoatchilikni o'zaro va xilma-xil auditoriyasini qamrab olish orqali global ta'sirga ega bo'lishga intilamiz. Bizning maqsadimiz xalqaro hamkorlikni rivojlantirish va bilimlarning global miqyosda tarqalishini rag'batlantirishni o'z ichiga oladi."
+      title: t("plans_info_title"),
+      content: t("plans_info_text")
     },
     {
-        title: "BIZNING VAZIFAMIZ",
-        content: "Bizning asosiy vazifamiz yangi va muhim tadqiqot natijalarini tarqatish uchun mualliflarga to'liq xizmat qilishdir. Biz tadqiqotchilarga o'z ishlarini kengroq ilmiy jamoatchilikka yetkazish uchun vositalarni taqdim etishni maqsad qilganmiz."
-      },
-      {
-        title: "BIZNING REJALARIMIZ",
-        content: "Biz tadqiqotchilar, akademiklar, amaliyotchilar, siyosatchilar va keng jamoatchilikni o'zaro va xilma-xil auditoriyasini qamrab olish orqali global ta'sirga ega bo'lishga intilamiz. Bizning maqsadimiz xalqaro hamkorlikni rivojlantirish va bilimlarning global miqyosda tarqalishini rag'batlantirishni o'z ichiga oladi."
-      },
+      title: t("plans_info_title"),
+      content: t("plans_info_text")
+    },
+    {
+      title: t("plans_info_title"),
+      content: t("plans_info_text")
+    },
       
   ];
 

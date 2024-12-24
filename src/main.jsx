@@ -29,7 +29,7 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/article" element={<ArticlePage />} />
-        <Route path="/article/:id/:slug" element={<ArticleDetilPage />} />
+        <Route path="/article/:slug" element={<ArticleDetilPage />} />
         <Route path="/authors" element={<AuthorsPage />} />
         <Route path="/search" element={<SearchArticlePage />} />
         <Route path="/send_article" element={<SendArticlePage />} />

@@ -22,12 +22,11 @@ const JournalCover = ({ imageUrl,id }) => {
 const LatestIssues = () => {
   const dispatch = useDispatch();
   const { issues, status, error } = useSelector((state) => state.archiveJournalIssue);
-
   useEffect(() => {
     if (status === 'idle') {
       dispatch(fetchArchiveJournalIssues());
     }
-  }, [status, dispatch]);
+  }, [status,dispatch]);
 
   if (status === 'loading') {
     return <div>Yuklanmoqda...</div>;
@@ -41,8 +40,8 @@ const LatestIssues = () => {
   return (
     <div className="max-w-[81.25rem] mx-auto px-4 py-12">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {issues.map((cover) => (
-          <JournalCover key={cover.id} id={cover.id} imageUrl={cover.image} />
+        {issues.map((cover,index) => (
+          <JournalCover key={index} id={cover.slug} imageUrl={cover.image} />
         ))}
       </div>
     </div>

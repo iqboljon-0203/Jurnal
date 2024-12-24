@@ -6,18 +6,21 @@ import {
 } from "../../features/articleDetailsSlice";
 import {Link} from "react-router-dom";
 import { useEffect } from "react";
+import { useTranslation } from 'react-i18next';
 const ProfileDetails = () => {
-  const { id } = useParams();
+  const { t } = useTranslation();
+  const {slug} = useParams();
+  
   const dispatch = useDispatch();
   const { article, status, error } = useSelector(
     (state) => state.articleDetails
   );
 
   useEffect(() => {
-    if (id) {
-      dispatch(fetchArticleDetails(id));
+    if (slug) {
+      dispatch(fetchArticleDetails(slug));
     }
-  }, [id,dispatch]);
+  }, [slug,dispatch]);
 
  
 
@@ -44,7 +47,7 @@ const ProfileDetails = () => {
           {/* Personal Information */}
           <div>
             <h3 className="text-[#21466D] text-xl font-bold leading-5 text-left mb-1">
-              Ismi:
+              {t("name")}
             </h3>
             <p className="text-[#21466D] text-xl font-normal leading-7 text-left">
               {author.first_name}
@@ -52,7 +55,7 @@ const ProfileDetails = () => {
           </div>
           <div>
             <h3 className="text-[#21466D] text-xl font-bold leading-5 text-left mb-1">
-              Familiya:
+              {t("last_name")}
             </h3>
             <p className="text-[#21466D] text-xl font-normal leading-7 text-left">
               {author.last_name}
@@ -62,7 +65,7 @@ const ProfileDetails = () => {
           {/* Location and Work */}
           <div>
             <h3 className="text-[#21466D] text-xl font-bold leading-5 text-left mb-1">
-              Yashash joyi:
+              {t("country")}
             </h3>
             <p className="text-[#21466D] text-xl font-normal leading-7 text-left">
               {author.country}, {author.city}
@@ -70,7 +73,7 @@ const ProfileDetails = () => {
           </div>
           <div>
             <h3 className="text-[#21466D] text-xl font-bold leading-5 text-left mb-1">
-              Ish joyi:
+              {t("workplace")}
             </h3>
             <p className="text-[#21466D] text-xl font-normal leading-7 text-left">
               {author.workplace}
@@ -80,7 +83,7 @@ const ProfileDetails = () => {
           {/* Academic Information */}
           <div>
             <h3 className="text-[#21466D] text-xl font-bold leading-5 text-left mb-1">
-              Ilmiy darajasi:
+              {t("academic_degree")}:
             </h3>
             <p className="text-[#21466D] text-xl font-normal leading-7 text-left">
               {author.academic_degree}
@@ -88,7 +91,7 @@ const ProfileDetails = () => {
           </div>
           <div>
             <h3 className="text-[#21466D] text-xl font-bold leading-5 text-left mb-1">
-              Ilmiy unvoni:
+              {t("academic_title")}
             </h3>
             <p className="text-[#21466D] text-xl font-normal leading-7 text-left">
               {author.academic_title}
@@ -98,7 +101,7 @@ const ProfileDetails = () => {
           {/* ORCID - Full Width */}
           <div className="col-span-2 border-none">
             <h3 className="text-[#21466D] text-xl font-bold leading-5 text-left mb-1">
-              ORCID raqami:
+              {t("orcid")}
             </h3>
             <p className="text-[#21466D] text-xl font-normal leading-7 text-left">
               {author.orcid}
@@ -110,7 +113,7 @@ const ProfileDetails = () => {
       {/* Keywords Section */}
       <div className="mt-8">
         <h3 className="text-[#21466D] text-xl font-bold leading-5 text-left mb-2">
-          Kalit so'zlar:
+          {t("keyword_title")}
         </h3>
         <p className="text-[#21466D] text-xl font-normal leading-7 text-left">
           {article.keywords}
@@ -120,7 +123,7 @@ const ProfileDetails = () => {
       {/* Abstract Section */}
       <div className="mt-8">
         <h3 className="text-[#21466D] text-xl font-bold leading-5 text-left mb-2">
-          Annotatsiya:
+          {t("annotation")} 
         </h3>
         <p className="text-[#21466D] text-xl font-normal leading-7 text-left">
           {article.annotation}
@@ -131,7 +134,7 @@ const ProfileDetails = () => {
       <div className="mt-8 grid grid-cols-2 gap-x-8 mb-12">
         <div>
           <h3 className="text-[#21466D] text-xl font-bold leading-5 text-left mb-1">
-            Jurnal soni:
+            {t("count_journal")}
           </h3>
           <p className="text-[#21466D] text-xl font-normal leading-7 text-left">
             {article?.journal_issue?.volume_number} jild , 
@@ -140,7 +143,7 @@ const ProfileDetails = () => {
         </div>
         <div>
           <h3 className="text-[#21466D] text-xl font-bold leading-5 text-left mb-1">
-            Sana:
+            {t("publication_data")}
           </h3>
           <p className="text-[#21466D] text-xl font-normal leading-7 text-left">
             {article.publication_date.slice(0, 10)}
@@ -154,7 +157,7 @@ const ProfileDetails = () => {
         <button className="flex items-center gap-2 px-6 py-3 bg-[#ffc107] hover:bg-[#ffcd38] text-black rounded-md transition-colors">
           <Download className="w-5 h-5" />
           <span className="text-[#21466D] text-base font-medium leading-[0.85rem] text-left">
-            Yuklab olish
+            {t("download")}
           </span>
         </button>
         </Link>

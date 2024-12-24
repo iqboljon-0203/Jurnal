@@ -3,8 +3,14 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 // Asinxron action yaratish
 export const fetchArticleDetails = createAsyncThunk(
   'articleDetails/fetchArticleDetails',
-  async (articleId) => {
-    const response = await fetch(`https://journal.usat-test.uz/api/v1/articles/${articleId}/detail/`);
+  async (articleId,{ getState }) => {
+    const state = getState();
+    const language = state.language.currentLanguage;
+    const response = await fetch(`https://journal-admin.usat.uz/api/v1/articles/${articleId}/detail/`,{
+      headers: {
+        'Accept-Language': language,
+      },
+    });
     if (!response.ok) {
       throw new Error('Server xatosi!');
     }

@@ -1,6 +1,7 @@
 import React from 'react';
-
+import { useTranslation } from 'react-i18next';
 function OrganizationStructure() {
+  const { t } = useTranslation();
   const editorialBoard = [
     { title: "t.f.d., prof. O'tkir Xamdamov (hay'at raisi)" },
     { title: "t.f.f.d., Muhriddin Muroddinov (hay'at raisi o'rinbosari)" },
@@ -65,7 +66,7 @@ function OrganizationStructure() {
     <div className="max-w-[75.00rem] mx-auto px-4 py-12">
       {/* Editorial Board Section */}
       <div className="w-full flex items-start justify-between mb-8">
-        <h2 className="w-1/2 text-4xl font-bold leading-[1.80rem] text-left text-[#21466D]">Tahririyat hay'ati</h2>
+        <h2 className="w-1/2 text-4xl font-bold leading-[1.80rem] text-left text-[#21466D]">{t('editorial_board')}</h2>
         <ol className="w-1/2 list-decimal list-outside space-y-2 ml-12">
           {editorialBoard.map((member, index) => (
             <li key={index} className="text-xl font-normal leading-[1.88rem] text-left text-[#21466D]">
@@ -77,7 +78,7 @@ function OrganizationStructure() {
 
       {/* Public Council Section */}
       <div className='w-full flex items-start justify-between'>
-        <h2 className="w-1/2 text-4xl font-bold leading-[1.80rem] text-left text-[#21466D]">Jamoatchilik kengashi</h2>
+        <h2 className="w-1/2 text-4xl font-bold leading-[1.80rem] text-left text-[#21466D]">{t('editorial_social')}</h2>
         <ol className="w-1/2 list-decimal list-outside space-y-2 ml-12">
           {publicCouncil.map((member, index) => (
             <li key={index} className="text-xl font-normal leading-[1.88rem] text-left text-[#21466D]">

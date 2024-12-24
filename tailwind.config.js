@@ -13,6 +13,9 @@ export default {
       animation: {
         scroll: 'scroll 10s linear infinite',
       },
+      screens: {
+        '3xl': '1440px',
+      },
     },
   },
   darkMode: "class",

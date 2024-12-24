@@ -1,9 +1,10 @@
 import React from 'react';
-
+import { useTranslation } from 'react-i18next';
 function ResearchCategories() {
+  const { t } = useTranslation();
   const categories = [
     {
-      title: "Raqamli texnologiyalar va sun'iy intellektning muammolari va yechimlari",
+      title: t("economics"),
       members: [
         "Mirat Raxmatullayev",
         "Fazliddin Maxmudov",
@@ -12,7 +13,7 @@ function ResearchCategories() {
       ]
     },
     {
-      title: "Ma'lumotlarni boshqarish va axborot xavfsizligi",
+      title: t("pedagogics"),
       members: [
         "Shahnoza Muksinova",
         "Shabir Ahmad",
@@ -21,7 +22,7 @@ function ResearchCategories() {
       ]
     },
     {
-      title: "Raqamli iqtisodiyot va moliya texnologiyalari",
+      title: t("it_management_graphics"),
       members: [
         "Shahnoza Muksinova",
         "Shabir Ahmad",
@@ -29,24 +30,7 @@ function ResearchCategories() {
         "Jamshid Elov"
       ]
     },
-    {
-      title: "Kommunikatsiya va tarmoq texnologiyalari",
-      members: [
-        "Shahnoza Muksinova",
-        "Shabir Ahmad",
-        "Abdinabi Muhammadiyev",
-        "Jamshid Elov"
-      ]
-    },
-    {
-      title: "Ijtimoiy-gumanitar, linguistik masalalar va yechimlar",
-      members: [
-        "Shahnoza Muksinova",
-        "Shabir Ahmad",
-        "Abdinabi Muhammadiyev",
-        "Jamshid Elov"
-      ]
-    }
+ 
   ];
 
   return (

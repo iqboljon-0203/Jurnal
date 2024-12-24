@@ -1,23 +1,23 @@
 import { Facebook, Instagram, Send } from 'lucide-react';
 import UsatLogo from "../../assets/logos/usat_logo.svg";
-import LicenseUz from "../../assets/logos/license1.png";
-import LicenseRus from "../../assets/logos/license2.png";
-import LicenseEng from "../../assets/logos/license3.png";
+import LicenseUz from "../../assets/logos/license1.jpg";
+import LicenseRus from "../../assets/logos/license2.jpg";
+import LicenseEng from "../../assets/logos/license3.jpg";
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 const UniversityHeader = () => {
   const {t}=useTranslation();  
     const universityLicenses=[
         {
-            name:"Uzbek",
+            name:"uz",
             link:LicenseUz
         },
         {
-            name:"Russian",
+            name:"ru",
             link:LicenseRus
         },
         {
-            name:"English",
+            name:"en",
             link:LicenseEng
         }
     ]
@@ -37,9 +37,7 @@ const UniversityHeader = () => {
             />
             {/* Description */}
         <p className="text-base font-normal leading-[1.40rem] text-left text-white mb-6">
-          USAT Scholarly Journal xalqaro, har chorakda bir marta ko'rib
-          chiqiladigan, jamoatchilikning sifatli tadqiqot kun tartibiga
-          xizmat ko'rsatishga bag'ishlangan ochiq kirish jurnalidir.
+          {t("footer_text")}
         </p>
 
         {/* Social Media Icons */}
@@ -122,7 +120,7 @@ const UniversityHeader = () => {
           {/* License Images */}
           <div className="w-4/12 flex justify-end gap-4">
             {universityLicenses.map((item,index) => (
-              <Link to='https://license.gov.uz/registry?filter%5Bnumber%5D=331658' className='hover:shadow-2xl' key={index}>
+              <Link target='_blank' to={`https://document.licenses.uz/certificate/uuid/bd531c8c-8983-4295-b251-cc4f688a1f08/pdf?language=${item.name}`} className='hover:shadow-2xl' key={index}>
                 <img
                 src={item.link}
                 alt={item.name}

@@ -72,3 +72,16 @@ body{
     animation-play-state: paused;
   }
   
+@media screen and (max-width: 1440px) {
+  .navbar_inner{
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .input_inner{
+    width: 200px;
+  }
+  .list_inner{
+    gap: 15px;
+  }
+  
+}

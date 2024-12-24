@@ -1,4 +1,7 @@
+import React from "react";
+import { useTranslation } from "react-i18next";
 export default function ContentCard() {
+  const { t } = useTranslation();
   return (
     <div className="max-w-[81.25rem] mx-auto px-4 py-12">
       <div className="w-full">
@@ -7,7 +10,7 @@ export default function ContentCard() {
           {/* Yellow border on the left */}
           <div className="absolute left-0 top-0 bottom-0 w-1 bg-yellow-400"></div>
           <p className="text-xl font-semibold leading-7 text-left text-[#21466D]"> {/* Added left padding to accommodate the border */}
-            Fan va Texnologiyalar Universiteti kirishni tanlagan barcha abiturientlar uchun bir nechta ta'lim formatlari mavjud. Ulardan biri - Kechki ta'lim. Kunduzgi ta'lim bilan band bo'lgan talabalari uchun. Fan va Texnologiyalar Universiteti eng zamonaviy va samarali xalqaro ta'lim standartlarini o'z ichiga olgan. Fan va Texnologiyalar Universiteti kirishni tanlagan barcha abiturientlar uchun bir nechta ta'lim formatlari mavjud. Ulardan biri - Kechki ta'lim. Kunduzgi ta'lim bilan band bo'lgan talabalari uchun.
+            {t("checklist_info_title")}
           </p>
         </div>
         

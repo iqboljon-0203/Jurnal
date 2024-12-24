@@ -1,7 +1,9 @@
 import { fetchAuthors } from '../../features/authorsSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 function ResearchCategories() {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
   const { authors, status, error } = useSelector((state) => state.authors);
 
@@ -27,7 +29,7 @@ function ResearchCategories() {
             {/* Category Title */}
             <div className="w-1/2 pr-4">
               <h2 className="text-3xl font-bold leading-[1.80rem] text-left text-[#21466D]">
-               Mualliflar ro'yxati
+               {t("list_of_authors")}
               </h2>
             </div>
             
