@@ -4,7 +4,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 export const fetchArticles = createAsyncThunk(
   'articles/fetchArticles',
   async () => {
-    const response = await fetch('https://journal-admin.usat.uz/api/v1/articles/all/');
+    const response = await fetch('https://journal.usat-test.uz/api/v1/articles/all/');
     if (!response.ok) {
       throw new Error('Server xatosi!');
     }

@@ -18,7 +18,7 @@ export const submitArticle = createAsyncThunk(
       // Convert authors_data to JSON and append
       formData.append('authors_data', JSON.stringify(data.authors_data));
 
-      const response = await fetch('https://journal-admin.usat.uz/api/v1/articles/submit/', {
+      const response = await fetch('https://journal.usat-test.uz/api/v1/articles/submit/', {
         method: 'POST',
         body: formData,
       });

@@ -1,6 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
 import 'flag-icons/css/flag-icons.min.css';
-import "./LangSec.css";
 import { useTranslation } from 'react-i18next';
 import { useDispatch } from 'react-redux';
 import { setLanguage } from '../../features/languageSlice.js';
@@ -10,7 +9,7 @@ const languages = [
     { code: 'en', label: 'EN', flag: 'gb' },
 ];
 
-const LanguageSelector = () => {
+const LanguageSelector = ({inner}) => {
     const dispatch = useDispatch();
   const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
   const [isOpen, setIsOpen] = useState(false);
@@ -48,7 +47,7 @@ const LanguageSelector = () => {
           <button
               id="selector"
               type="button"
-              className="w-full pt-2  pr-2  pb-2  pl-4 text-white  rounded-3xl border-2 border-white hover:border-white-500 shadow leading-tight focus:outline-none focus:shadow-outline flex items-center justify-between"
+              className={`w-full ${inner?"h-10  rounded-xl":""} pt-2  pr-2  pb-2  pl-4 text-white  rounded-3xl border-2 border-white hover:border-white-500 shadow leading-tight focus:outline-none focus:shadow-outline flex items-center justify-between`}
               onClick={toggleDropdown}
           >
               <span

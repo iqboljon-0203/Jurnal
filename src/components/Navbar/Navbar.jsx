@@ -1,7 +1,7 @@
 import { ChevronDown } from 'lucide-react';
 import {Link} from "react-router-dom";
 import { useTranslation } from 'react-i18next';
-export default function NavItem({ text, hasDropdown = false }){
+export default function NavItem({ text, hasDropdown = false, isResponsive = false }) {
   const {t}=useTranslation();
     return (
       <div className="relative group">
@@ -13,7 +13,7 @@ export default function NavItem({ text, hasDropdown = false }){
         </button>
         
         {hasDropdown==="about" ? (
-          <div className="absolute top-full left-0 w-48 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+          <div className={`absolute ${isResponsive ?"left-full  top-0":"top-full left-0"} w-48 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all`}>
             <Link to="/plans" className="block px-4 py-2 font-manrope text-base font-normal leading-[1.37rem] text-left  hover:text-[#FFC82A]">
               {t("about_journal")}
             </Link>
@@ -26,7 +26,7 @@ export default function NavItem({ text, hasDropdown = false }){
             
           </div>
         ): hasDropdown==="authors" ? (
-          <div className="absolute top-full left-0 w-48 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all">
+          <div className={`absolute ${isResponsive ?"left-full  top-0":"top-full left-0"} w-48 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all`}>
             <Link to="/authors" className="block px-4 py-2 font-manrope text-base font-normal leading-[1.37rem] text-left  hover:text-[#FFC82A]">
               {t("list_of_authors")}
             </Link>

@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 // Async thunk yaratish
 export const fetchAuthors = createAsyncThunk('authors/fetchAuthors', async () => {
-  const response = await fetch('https://journal-admin.usat.uz/api/v1/authors/all/');
+  const response = await fetch('https://journal.usat-test.uz/api/v1/authors/all/');
   if (!response.ok) {
     throw new Error('Foydalanuvchilarni olishda xatolik yuz berdi');
   }
