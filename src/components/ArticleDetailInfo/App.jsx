@@ -42,7 +42,7 @@ const ProfileDetails = () => {
       {article?.authors.map((author, index) => (
         <div
           key={index}
-          className="grid md:grid-cols-2 gap-x-8 gap-y-6 pb-6 border-b-[#21466D59] border-b mb-6"
+          className="grid grid-cols-2 gap-x-8 gap-y-6 pb-6 border-b-[#21466D59] border-b mb-6"
         >
           {/* Personal Information */}
           <div>
@@ -100,8 +100,8 @@ const ProfileDetails = () => {
 
           {/* ORCID - Full Width */}
           <div className="col-span-2 border-none">
-            <h3 className="text-[#21466D] text-xl font-bold leading-5 text-left mb-1">
-              {t("orcid")}
+            <h3 className="text-[#21466D] text-xl font-bold leading-5  text-left mb-1">
+              {t("orcid_number")}
             </h3>
             <p className="text-[#21466D] text-xl font-normal leading-7 text-left">
               {author.orcid}

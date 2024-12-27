@@ -4,7 +4,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 export const fetchBooks = createAsyncThunk(
   'books/fetchBooks',
   async () => {
-    const response = await fetch('https://journal.usat-test.uz/api/v1/articles/latest/');
+    const response = await fetch('https://journal-admin.usat.uz/api/v1/articles/latest/');
     if (!response.ok) {
       throw new Error('Server error!');
     }

@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchArticles } from '../../features/articlesSlice';
 import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 const ResearchPaperCard = ({  paperSlug,title, author, date, views,pages, citations,download_url }) => {
-  
-  
-  
+  const {t} = useTranslation();
+
   return (
     <Link to={`/article/${paperSlug}`} className="block ">
     <div className="bg-white p-4 rounded-lg shadow-sm mb-4 hover:shadow-md transition-shadow">
-      <h2 className="text-[#1d4164] font-semibold mb-2">
+      <h2 className="text-[#1d4164]  font-semibold mb-2">
         {title}
       </h2>
       
@@ -21,7 +21,7 @@ const ResearchPaperCard = ({  paperSlug,title, author, date, views,pages, citati
         {author}
       </p>
       <div className="flex items-center justify-between gap-2">
-        <div className="flex items-center gap-4 text-sm text-gray-500">
+        <div className="flex items-center sm:gap-4 gap-2 text-sm text-gray-500">
           <div className="flex items-center gap-1">
             <Calendar className="w-4 h-4" />
             <span>{date}</span>
@@ -34,14 +34,14 @@ const ResearchPaperCard = ({  paperSlug,title, author, date, views,pages, citati
             <FileText className="w-4 h-4" />
             <span>{pages}</span>
           </div>
-          <div className="flex items-center gap-1">
+          <div className="sm:flex items-center gap-1 hidden">
             <Download className="w-4 h-4" />
             <span>{citations}</span>
           </div>
         </div>
-        <Link to={download_url} onClick={(event) => event.stopPropagation()} className="flex items-center gap-2  px-4 py-2 bg-[#ffc107] hover:bg-[#ffcd38] text-black rounded-md transition-colors">
+        <Link to={download_url} onClick={(event) => event.stopPropagation()} className="flex items-center sm:gap-2 gap-1  sm:px-4 px-2 py-2 bg-[#ffc107] hover:bg-[#ffcd38] text-black rounded-md transition-colors">
           <Download className="w-4 h-4" />
-          <span>Yuklab olish</span>
+          <span>{t('download')}</span>
         </Link>
       </div>
     </div>
@@ -50,13 +50,12 @@ const ResearchPaperCard = ({  paperSlug,title, author, date, views,pages, citati
 };
 
 const ResearchPapersList = () => {
-  const location = useLocation();
-
-  
-  const searchParams = new URLSearchParams(location.search);
-  const query = searchParams.get('s');
+  const {t} = useTranslation();
   const dispatch = useDispatch();
   const { articles, status, error } = useSelector(state => state.articles);
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const query = searchParams.get('s');
   
   const [visibleItems, setVisibleItems] = useState(8);
   useEffect(() => {
@@ -79,10 +78,10 @@ const ResearchPapersList = () => {
   };
 
   return (
-    <div className="container mx-auto py-12 px-4">
+    <div className="container mx-auto py-8 px-4">
       <div className="space-y-4">
-        {papers.slice(0, visibleItems).map((paper, index) => {
-          if (paper.title.toLowerCase().includes(query.toLowerCase())) {
+        {papers.slice(0, visibleItems).map((paper, index) =>{
+          if(paper.title.toLowerCase().includes(query.toLowerCase())) {
             return (
               <ResearchPaperCard
                 paperSlug={paper.slug}
@@ -97,9 +96,9 @@ const ResearchPapersList = () => {
                 citations={paper.downloads_count}
                 download_url={paper.download_url}
               />
-            );
+            )
           }
-        })}
+        } )}
       </div>
       
       {visibleItems < papers.length && (
@@ -109,7 +108,7 @@ const ResearchPapersList = () => {
             className="flex items-center px-6 py-3 mx-auto bg-[#1d4164] text-white rounded-md hover:bg-[#2a5885] transition-colors"
           >
             <Download className="w-4 h-4 me-2" />
-            <span>Ko'proq yuklash</span>
+            <span>{t('download_more')}</span>
           </button>
         </div>
       )}

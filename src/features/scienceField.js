@@ -11,7 +11,7 @@ export const fetchScienceFields = createAsyncThunk(
   async (lang, { rejectWithValue }) => {
     
     try {
-      const response = await fetch('https://journal.usat-test.uz/api/v1/directions/all/', {
+      const response = await fetch('https://journal-admin.usat.uz/api/v1/directions/all/', {
         headers: {
           'Accept-Language': lang,
         },

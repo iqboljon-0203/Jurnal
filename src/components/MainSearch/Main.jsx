@@ -106,16 +106,16 @@ const App = () => {
           </div>
         </div>
         <main className="flex-grow flex flex-col items-center justify-center -mt-20 container mx-auto px-4 ">
-          <div className="main_article_path text-base font-normal leading-[1.37rem] text-center text-white mb-6">
+          <div className="main_article_path md:text-base text-sm font-normal leading-[1.37rem] text-center text-white mb-6">
           <Link className="hover:text-[#FFC82A]" to={"/"}>{t("home_page")}</Link> /{" "}
-            <span className="text-base font-normal leading-[1.37rem] text-left text-[#FFFFFF80]">
+            <span className="md:text-base text-sm font-normal leading-[1.37rem] text-left text-[#FFFFFF80]">
               {t("search")}
             </span>
           </div>
-          <h2 className="w-2/3 main_article_title text-5xl font-bold leading-[3.30rem] text-center text-white uppercase mb-6">
+          <h2 className="lg:w-2/3 w-full main_article_title lg:text-5xl md:text-4xl text-3xl font-bold leading-[3.30rem] text-center text-white uppercase mb-6">
             {t("search_text")}
           </h2>
-          <p className="text-lg font-normal leading-[1.57rem] text-center text-[#FFFFFF]">
+          <p className="w-full lg:text-lg text-md font-normal leading-[1.57rem] text-center text-[#FFFFFF]">
             {lang==="uz"?`"${query}" ${" - "} ${t("search_info")}`:`${t("search_info")} ${" - "}"${query}"`}
           </p>
         </main>
