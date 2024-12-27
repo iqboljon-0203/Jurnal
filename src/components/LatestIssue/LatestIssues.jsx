@@ -44,12 +44,12 @@ const LatestIssues = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="flex justify-between items-center mb-12">
-        <h2 className="text-[#1a365d] text-4xl font-bold leading-[2.40rem] text-left uppercase">
+        <h2 className="text-[#1a365d] xl:text-4xl lg:text-3xl md:text-2xl  text-xl  font-bold leading-[2.40rem] text-left uppercase">
           {t("latest_issues")}
         </h2>
         <Link 
           to="/archive" 
-          className="text-lg font-semibold leading-[1.57rem] text-left text-[#21466D59] hover:text-[#FFC82A]"
+          className="xl:text-lg md:text-md text-md font-semibold leading-[1.57rem] text-left text-[#21466D59] hover:text-[#FFC82A]"
         >
           {t("all_issues")} &gt;
         </Link>

@@ -29,14 +29,14 @@ const Articles = () => {
     <div className="container mx-auto px-4 py-8">
       <div className="flex justify-between items-center mb-12">
         <Link to="/article">
-        <h2 className="text-[#21466D] text-4xl font-bold leading-[2.20rem] uppercase text-left hover:underline">
+        <h2 className="xl:text-4xl text-[#21466D] lg:text-3xl md:text-2xl  text-xl font-bold leading-[2.20rem] uppercase text-left hover:underline">
             {t("articles")}
         </h2>
         </Link>
 
         <Link 
           to="/article" 
-          className="text-lg font-semibold leading-[1.57rem] text-left text-[#21466D59] hover:text-[#FFC82A]"
+          className="xl:text-lg md:text-md text-md font-semibold leading-[1.57rem] text-left text-[#21466D59] hover:text-[#FFC82A]"
         >
           {t("all_articles") } &gt;
         </Link>

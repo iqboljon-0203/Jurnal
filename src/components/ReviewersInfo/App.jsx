@@ -34,22 +34,22 @@ function ResearchCategories() {
   ];
 
   return (
-    <div className="max-w-[81.25rem] mx-auto px-4 py-12">
+    <div className="max-w-[81.25rem] mx-auto xl:px-4 px-8 py-12">
       <div className="space-y-8">
         {categories.map((category, index) => (
-          <div key={index} className="flex">
+          <div key={index} className="flex sm:flex-row flex-col justify-center items-center sm:items-start sm:justify-between">
             {/* Category Title */}
-            <div className="w-1/2 pr-4">
-              <h2 className="text-3xl font-bold leading-[1.80rem] text-left text-[#21466D]">
+            <div className="sm:w-1/2 pr-4">
+              <h2 className="lg:text-4xl md:text-3xl sm:text-2xl text-2xl sm:mb-0 mb-4  font-bold leading-[1.80rem] sm:text-left text-center text-[#21466D]">
                 {category.title}
               </h2>
             </div>
             
             {/* Members List */}
-            <div className="w-1/2">
-              <ol className="list-decimal list-outside pl-12 space-y-2">
+            <div className="sm:w-1/2">
+              <ol className="list-decimal sm:list-outside list-inside space-y-2 sm:ml-12 ml-0">
                 {category.members.map((member, memberIndex) => (
-                  <li key={memberIndex} className="text-xl font-normal leading-[1.88rem] text-left text-[#21466D]">
+                  <li key={memberIndex} className="lg:text-xl text-lg  font-normal leading-[1.88rem] text-left text-[#21466D]">
                     {member}
                   </li>
                 ))}

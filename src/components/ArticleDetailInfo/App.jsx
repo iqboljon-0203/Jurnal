@@ -38,11 +38,11 @@ const ProfileDetails = () => {
     return null;
   }
   return (
-    <div className="max-w-[81.25rem] mx-auto px-4 py-12">
+    <div className="max-w-[81.25rem] mx-auto xl:px-4 px-8 py-12">
       {article?.authors.map((author, index) => (
         <div
           key={index}
-          className="grid grid-cols-2 gap-x-8 gap-y-6 pb-6 border-b-[#21466D59] border-b mb-6"
+          className="grid md:grid-cols-2 gap-x-8 gap-y-6 pb-6 border-b-[#21466D59] border-b mb-6"
         >
           {/* Personal Information */}
           <div>

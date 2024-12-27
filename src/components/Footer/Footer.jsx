@@ -25,23 +25,23 @@ const UniversityHeader = () => {
     <div className="bg-[#1d4164] text-white rounded-tl-2xl rounded-tr-2xl">
       <div className="container mx-auto px-4 py-12">
         {/* Top section with logo and navigation */}
-        <div className="flex items-start justify-between ">
+        <div className="flex lg:flex-nowrap flex-wrap items-start justify-between ">
           {/* Logo and name */}
-            <div className='w-4/12'>
+            <div className='xl:w-4/12 lg:w-3/12 sm:w-5/12 w-full'>
             <img
               src={UsatLogo}
               alt="University Logo"
               width={300}
               height={60}
-              className='mb-4'
+              className='mb-4 sm:ms-0 mx-auto'
             />
             {/* Description */}
-        <p className="text-base font-normal leading-[1.40rem] text-left text-white mb-6">
+        <p className="text-base font-normal leading-[1.40rem] sm:text-left text-center text-white mb-6">
           {t("footer_text")}
         </p>
 
         {/* Social Media Icons */}
-        <div className="flex gap-4">
+        <div className="flex sm:justify-start justify-center sm:mb-0 mb-6 gap-4">
           <Link
             to="https://t.me/usatuzb"
             className="w-16 h-10 flex items-center justify-center p-3  rounded-full border-2 border-white hover:bg-[#ffc107] transition-colors group"
@@ -66,13 +66,13 @@ const UniversityHeader = () => {
             
 
           {/* Navigation */}
-          <nav className="w-4/12 flex justify-center">
-            <ul className="flex flex-col lg:flex-row gap-6">
+          <nav className="xl:w-4/12 lg:w-5/12 sm:w-7/12 w-full flex justify-center">
+            <ul className="flex sm:flex-col lg:flex-row flex-row lg:gap-6 sm:gap-4 gap-12">
               <li className="relative group">
-                <Link to="#" className="text-xl font-bold leading-7 text-left hover:text-[#ffc107] hover:underline transition-colors">
+                <Link to="#" className="sm:text-xl text-lg font-bold leading-7 text-left hover:text-[#ffc107] hover:underline transition-colors">
                   {t("about_us")}
                 </Link>
-                <ul className="mt-4">
+                <ul className="lg:mt-4 sm:mt-2 mt-4">
                   <li>
                     <Link to="/journal" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
                       {t("about_journal")}
@@ -92,10 +92,10 @@ const UniversityHeader = () => {
                 </ul>
               </li>
               <li className="relative group">
-                <Link to="#" className="text-xl font-bold leading-7 text-lefthover:text-[#ffc107] hover:underline transition-colors">
+                <Link to="#" className="sm:text-xl text-lg font-bold leading-7 text-lefthover:text-[#ffc107] hover:underline transition-colors">
                   {t("for_authors")}
                 </Link>
-                <ul className="mt-4 ">
+                <ul className="lg:mt-4 sm:mt-2 mt-4">
                   
                   <li>
                     <Link to="/guidelines" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
@@ -118,7 +118,7 @@ const UniversityHeader = () => {
           </nav>
 
           {/* License Images */}
-          <div className="w-4/12 flex justify-end gap-4">
+          <div className="lg:w-4/12 w-full lg:mt-0 mt-8 flex items-center lg:justify-end justify-center gap-4 ">
             {universityLicenses.map((item,index) => (
               <Link target='_blank' to={`https://document.licenses.uz/certificate/uuid/bd531c8c-8983-4295-b251-cc4f688a1f08/pdf?language=${item.name}`} className='hover:shadow-2xl' key={index}>
                 <img

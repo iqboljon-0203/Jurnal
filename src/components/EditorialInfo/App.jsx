@@ -63,13 +63,13 @@ function OrganizationStructure() {
   ];
 
   return (
-    <div className="max-w-[75.00rem] mx-auto px-4 py-12">
+    <div className="max-w-[75.00rem] mx-auto xl:px-4 px-8 py-12">
       {/* Editorial Board Section */}
-      <div className="w-full flex items-start justify-between mb-8">
-        <h2 className="w-1/2 text-4xl font-bold leading-[1.80rem] text-left text-[#21466D]">{t('editorial_board')}</h2>
-        <ol className="w-1/2 list-decimal list-outside space-y-2 ml-12">
+      <div className="w-full flex sm:flex-row flex-col justify-center items-center sm:items-start sm:justify-between mb-8">
+        <h2 className="sm:w-1/2 lg:text-4xl md:text-3xl sm:text-2xl text-3xl sm:mb-0 mb-4 font-bold leading-[1.80rem] sm:text-left text-center text-[#21466D]">{t('editorial_board')}</h2>
+        <ol className="sm:w-1/2 list-decimal sm:list-outside list-inside space-y-2 sm:ml-12 ml-0">
           {editorialBoard.map((member, index) => (
-            <li key={index} className="text-xl font-normal leading-[1.88rem] text-left text-[#21466D]">
+            <li key={index} className="lg:text-xl text-lg  font-normal leading-[1.88rem] sm:text-left text-center text-[#21466D]">
               {member.title}
             </li>
           ))}
@@ -77,11 +77,11 @@ function OrganizationStructure() {
       </div>
 
       {/* Public Council Section */}
-      <div className='w-full flex items-start justify-between'>
-        <h2 className="w-1/2 text-4xl font-bold leading-[1.80rem] text-left text-[#21466D]">{t('editorial_social')}</h2>
-        <ol className="w-1/2 list-decimal list-outside space-y-2 ml-12">
+      <div className='w-full flex sm:flex-row flex-col justify-center items-center sm:items-start sm:justify-between'>
+        <h2 className="sm:w-1/2  lg:text-4xl md:text-3xl sm:text-2xl text-3xl sm:mb-0 mb-4 font-bold leading-[1.80rem] sm:text-left text-center text-[#21466D]">{t('editorial_social')}</h2>
+        <ol className="sm:w-1/2  list-decimal sm:list-outside list-inside space-y-2 sm:ml-12 ml-0">
           {publicCouncil.map((member, index) => (
-            <li key={index} className="text-xl font-normal leading-[1.88rem] text-left text-[#21466D]">
+            <li key={index} className="lg:text-xl text-lg  font-normal leading-[1.88rem] sm:text-left text-center text-[#21466D]">
               {member.name}
             </li>
           ))}
