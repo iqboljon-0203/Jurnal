@@ -106,7 +106,7 @@ const App = () => {
         </div>
         <main className="hero_main flex-grow flex items-center justify-between gap-12 container mx-auto px-4 ">
           <div className="hero_item w-1/2 space-y-6">
-            <h1 className="hero_title font-manrope text-5xl font-bold leading-[3.30rem] text-left text-white">
+            <h1 className="hero_title font-manrope xl:text-5xl  text-4xl font-bold leading-[3.30rem] text-left text-white">
               {t("hero_title")}
             </h1>
             <p className="hero_text font-manrope text-white/80 text-lg font-normal leading-[1.57rem] text-left">
