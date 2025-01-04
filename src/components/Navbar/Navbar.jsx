@@ -6,7 +6,7 @@ export default function NavItem({ text, hasDropdown = false, isResponsive = fals
     return (
       <div className="relative group">
         <button className="flex items-center gap-1 text-white/90 hover:text-white py-6">
-          <Link to={text===t("home_page")?"/":text===t("about_us")?"/":text===t("for_authors")?"/":text===t("articles")?"/article":text===t("archive")?"/archive":text===t("contacts")?"/contact":"/"}>
+          <Link to={text===t("home_page")?"/":text===t("about_us")?"#":text===t("for_authors")?"#":text===t("articles")?"/article":text===t("archive")?"/archive":text===t("contacts")?"/contact":"/"}>
           <span className='font-manrope text-base font-normal leading-[1.37rem] text-left text-white hover:text-[#FFC82A]'>{text}</span>
           </Link>
           {hasDropdown && <ChevronDown className="h-4 w-4 group-hover:rotate-180 transition-transform" />}

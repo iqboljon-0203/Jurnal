@@ -1,5 +1,5 @@
 import { Download, Eye, User,Calendar,FileText} from 'lucide-react';
-import Jurnal from "../../assets/logos/jurnal.png";
+import Jurnal from "../../assets/logos/jurnal.webp";
 import { useRef, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import {Link} from "react-router-dom";

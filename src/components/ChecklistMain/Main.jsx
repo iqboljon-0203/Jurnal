@@ -1,5 +1,5 @@
 import { Search, Menu, X } from "lucide-react";
-import UsatLogo from "../../assets/logos/usat_logo.svg";
+import UsatLogo from "../../assets/logos/usat_logo.webp";
 import LanguageSelector from "../LanguageSelector/App";
 import { Download } from "lucide-react";
 import NavItem from "../Navbar/Navbar";
@@ -129,7 +129,7 @@ const App = () => {
             </div>
           </div>
         </div>
-        <main className="flex-grow flex flex-col items-center justify-center 2xl:-mt-20 container mx-auto px-4">
+        <main className="flex-grow flex flex-col items-center justify-center 2xl:-mt-20 mt-4 container mx-auto px-4 py-4">
           <div className="main_article_path md:text-base text-sm font-normal leading-[1.37rem] text-center text-white mb-6">
             <Link className="hover:text-[#FFC82A]" to={"/"}>
               {t("home_page")}
@@ -148,21 +148,21 @@ const App = () => {
           <h2 className="lg:w-2/3 w-full main_article_title lg:text-5xl md:text-4xl text-3xl font-bold leading-[3.30rem] text-center text-white uppercase mb-6">
             {t("checklist")}
           </h2>
-          <p className="lg:w-1/2 w-9/12 xl:text-lg text-md font-normal leading-[1.57rem] text-left text-white mb-6">
+          <p className="lg:w-1/2 w-11/12 xl:text-lg text-base font-normal leading-[1.57rem] text-left text-white mb-6">
             <ol className="list-decimal list-inside">
-              <p className="xl:text-lg text-md font-normal leading-[1.57rem] text-left text-white mb-2">
+              <p className="xl:text-lg text-base font-normal leading-[1.57rem] text-left text-white mb-2">
                 {t("checklist_info_top")}
               </p>
-              <li className="xl:text-lg text-md font-normal leading-[1.57rem] text-left text-white mb-1">
+              <li className="xl:text-lg text-base font-normal leading-[1.57rem] text-left text-white mb-1">
                 {t("checklist_info1")}
               </li>
-              <li className="xl:text-lg text-md font-normal leading-[1.57rem] text-left text-white  mb-1">
+              <li className="xl:text-lg text-base font-normal leading-[1.57rem] text-left text-white  mb-1">
                 {t("checklist_info2")}
               </li>
-              <li className="xl:text-lg text-md font-normal leading-[1.57rem] text-left text-white  mb-1">
+              <li className="xl:text-lg text-base font-normal leading-[1.57rem] text-left text-white  mb-1">
                 {t("checklist_info3")}
               </li>
-              <li className="xl:text-lg text-md font-normal leading-[1.57rem] text-left text-white  mb-1">
+              <li className="xl:text-lg text-base font-normal leading-[1.57rem] text-left text-white  mb-1">
                 {t("checklist_info4")}
               </li>
             </ol>
