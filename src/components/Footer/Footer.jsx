@@ -1,5 +1,5 @@
 import { Facebook, Instagram, Send } from 'lucide-react';
-import UsatLogo from "../../assets/logos/usat_logo.webp";
+import UsatLogo from "../../assets/logos/usat_logo.svg";
 import LicenseUz from "../../assets/logos/license1.jpg";
 import LicenseRus from "../../assets/logos/license2.jpg";
 import LicenseEng from "../../assets/logos/license3.jpg";

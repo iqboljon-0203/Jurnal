@@ -1,5 +1,5 @@
 import { Search, Menu, X } from "lucide-react";
-import UsatLogo from "../../assets/logos/usat_logo.webp";
+import UsatLogo from "../../assets/logos/usat_logo.svg";
 import LanguageSelector from "../LanguageSelector/App";
 import { Download } from "lucide-react";
 import NavItem from "../Navbar/Navbar";
@@ -142,11 +142,11 @@ const App = () => {
             </Link>{" "}
             /{" "}
             <span className="md:text-base text-sm font-normal leading-[1.37rem] text-left text-[#FFFFFF80]">
-              {t("checklist")}
+              {t("journal_requirements")}
             </span>
           </div>
           <h2 className="lg:w-2/3 w-full main_article_title lg:text-5xl md:text-4xl text-3xl font-bold leading-[3.30rem] text-center text-white uppercase mb-6">
-            {t("checklist")}
+            {t("journal_requirements")}
           </h2>
           <p className="lg:w-1/2 w-11/12 xl:text-lg text-base font-normal leading-[1.57rem] text-left text-white mb-6">
             <ol className="list-decimal list-inside">

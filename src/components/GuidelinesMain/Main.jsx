@@ -1,11 +1,8 @@
 import { Search, Menu, X } from "lucide-react";
-import UsatLogo from "../../assets/logos/usat_logo.webp";
+import UsatLogo from "../../assets/logos/usat_logo.svg";
 import LanguageSelector from "../LanguageSelector/App";
-import { Download } from "lucide-react";
 import NavItem from "../Navbar/Navbar";
 import { Link } from "react-router-dom";
-import  { useCallback } from 'react';
-import fileUrl from "../../assets/files/nizom.pdf";
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -13,14 +10,7 @@ import { useEffect } from 'react';
 const App = () => {
   const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const handleDownload = useCallback(() => {
-    const link = document.createElement('a');
-    link.href = fileUrl;
-    link.download = 'yoriqnoma.pdf'; // You can change the file name here
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  }, []);
+
   const [searchQuery, setSearchQuery] = useState('');
   const navigate = useNavigate();
   const handleSearch = (e) => {
@@ -127,10 +117,7 @@ const App = () => {
           <h2 className="lg:w-2/3 w-full main_article_title lg:text-5xl md:text-4xl text-3xl font-bold leading-[3.30rem] text-center text-white uppercase mb-6">
           {t("instructions")}
           </h2>
-          <button onClick={handleDownload} className="flex items-center justify-center gap-2 pt-3.5  pr-6  pb-3.5  pl-6  rounded-full bg-[#ffc107] hover:bg-[#ffcd38] text-black  transition-colors">
-            <Download className="w-4 h-4" />
-            <span>{t("download")}</span>
-          </button>
+          
         </main>
       </header>
     </div>

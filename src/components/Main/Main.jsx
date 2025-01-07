@@ -1,5 +1,5 @@
 import { Search, Menu, X } from 'lucide-react';
-import UsatLogo from "../../assets/logos/usat_logo.webp";
+import UsatLogo from "../../assets/logos/usat_logo.svg";
 import Jurnal from "../../assets/logos/jurnal.webp";
 import LanguageSelector from '../LanguageSelector/App';
 import NavItem from "../Navbar/Navbar";
@@ -32,7 +32,7 @@ const App = () => {
   }, [isMenuOpen]);
 
   return (
-    <div  className="h-[34.38rem] main_wrapper bg-[#1a365d] rounded-bl-2xl rounded-br-2xl">
+    <div  className="h-[44.38rem] main_wrapper bg-[#1a365d] rounded-bl-2xl rounded-br-2xl">
       <header  className="h-full  flex flex-col w-full ">
         <nav style={{position: 'relative', zIndex: 20}}  className=" navbar_main py-4 bg-[#FFFFFF1A] px-12">
           <div className='w-full flex items-center justify-between  navbar_inner'>
@@ -104,17 +104,17 @@ const App = () => {
             </div>
           </div>
         </div>
-        <main className="hero_main flex-grow flex items-center justify-between gap-12 container mx-auto px-4 ">
-          <div className="hero_item w-1/2 space-y-6">
-            <h1 className="hero_title font-manrope xl:text-5xl  text-4xl font-bold leading-[3.30rem] text-left text-white">
+        <main className="hero_main flex-grow flex items-center justify-between gap-12 container mx-auto px-4">
+          <div className="hero_item w-7/12 space-y-6">
+            <h1 className="hero_title font-manrope xl:text-5xl lg:text-4xl sm:text-3xl text-3xl font-bold lg:leading-[3.30rem] leading-[2.80rem] text-left text-white">
               {t("hero_title")}
             </h1>
-            <p className="hero_text font-manrope text-white/80 text-lg font-normal leading-[1.57rem] text-left">
+            <p className="hero_text font-manrope text-white/80 md:text-lg text-base font-normal leading-[1.57rem] text-left sm:block hidden">
               {t("hero_text")}
             </p>
           </div>
           
-          <div className="hero_item w-1/2 flex justify-center">
+          <div className="hero_item w-5/12 flex justify-center">
               <img
                 src={Jurnal}
                 alt="University Journal"

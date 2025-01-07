@@ -33,11 +33,11 @@ createRoot(document.getElementById('root')).render(
         <Route path="/search" element={<SearchArticlePage />} />
         <Route path="/send_article" element={<SendArticlePage />} />
         <Route path="/archieve/:id" element={<JournalPage />} />
-        <Route path="/plans" element={<PlansPage />} />
+        <Route path="/about_journal" element={<PlansPage />} />
         <Route path="/editorial" element={<EditorialPage />} />
         <Route path="/reviewers" element={<ReviewersPage />} />
         <Route path="/guidelines" element={<GuidelinesPage />} />
-        <Route path="/checklist" element={<ChecklistPage />} />
+        <Route path="/requirements" element={<ChecklistPage />} />
         <Route path="/archive" element={<ArchivePage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>

@@ -14,7 +14,7 @@ export default function NavItem({ text, hasDropdown = false, isResponsive = fals
         
         {hasDropdown==="about" ? (
           <div className={`absolute ${isResponsive ?"left-full  top-0":"top-full left-0"} w-48 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all`}>
-            <Link to="/plans" className="block px-4 py-2 font-manrope text-base font-normal leading-[1.37rem] text-left  hover:text-[#FFC82A]">
+            <Link to="/about_journal" className="block px-4 py-2 font-manrope text-base font-normal leading-[1.37rem] text-left  hover:text-[#FFC82A]">
               {t("about_journal")}
             </Link>
             <Link to="/editorial" className="block px-4 py-2 font-manrope text-base font-normal leading-[1.37rem] text-left  hover:text-[#FFC82A]">
@@ -27,18 +27,20 @@ export default function NavItem({ text, hasDropdown = false, isResponsive = fals
           </div>
         ): hasDropdown==="authors" ? (
           <div className={`absolute ${isResponsive ?"left-full  top-0":"top-full left-0"} w-48 bg-white rounded-md shadow-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all`}>
-            <Link to="/authors" className="block px-4 py-2 font-manrope text-base font-normal leading-[1.37rem] text-left  hover:text-[#FFC82A]">
-              {t("list_of_authors")}
+             <Link to="/send_article" className="block px-4 py-2 font-manrope text-base font-normal leading-[1.37rem] text-left  hover:text-[#FFC82A]">
+              {t("send_article")}
+            </Link>
+            <Link to="/requirements" className="block px-4 py-2 font-manrope text-base font-normal leading-[1.37rem] text-left  hover:text-[#FFC82A]">
+              {t("journal_requirements")}
             </Link>
             <Link to="/guidelines" className="block px-4 py-2 font-manrope text-base font-normal leading-[1.37rem] text-left  hover:text-[#FFC82A]">
               {t("instructions")}
             </Link>
-            <Link to="/send_article" className="block px-4 py-2 font-manrope text-base font-normal leading-[1.37rem] text-left  hover:text-[#FFC82A]">
-              {t("send_article")}
+            <Link to="/authors" className="block px-4 py-2 font-manrope text-base font-normal leading-[1.37rem] text-left  hover:text-[#FFC82A]">
+              {t("list_of_authors")}
             </Link>
-            <Link to="/checklist" className="block px-4 py-2 font-manrope text-base font-normal leading-[1.37rem] text-left  hover:text-[#FFC82A]">
-              {t("checklist")}
-            </Link>
+           
+           
           </div>
         ):false}
       </div>

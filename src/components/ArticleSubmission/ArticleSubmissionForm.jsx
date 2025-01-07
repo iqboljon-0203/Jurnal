@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { Plus, Upload } from 'lucide-react';
+import { Plus, Upload,Check } from 'lucide-react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchScienceFields } from '../../features/scienceField.js';
 import { submitArticle } from '../../features/articleSubmissionSlice.js';
@@ -197,7 +197,7 @@ const ArticleSubmissionForm = () => {
     <div className="container mx-auto px-4 py-12">
       <form className="space-y-6" onSubmit={handleSubmit}>
         <div className="space-y-6">
-          <h2 className="text-lg font-semibold text-[#1d4164]">{t("editor")}</h2>
+          <h2 className="sm:text-2xl text-xl font-bold leading-[1.80rem] text-left text-[#21466D] uppercase">{t("editor")}</h2>
           {authors.map((author, index) => (
             <AuthorForm key={author.id} index={index} />
           ))}
@@ -205,15 +205,17 @@ const ArticleSubmissionForm = () => {
           <button
             type="button"
             onClick={addAuthor}
-            className="flex items-center gap-2 text-[#1d4164] hover:text-[#2a5885] transition-colors"
+            className="flex items-center gap-2 text-[#1d4164] hover:text-[#2a5885] transition-colors "
           >
-            <Plus className="w-5 h-5" />
-            <span>{t("add_author")}</span>
+            <div className='bg-[#21466D] pt-3  pr-6  pb-3  pl-6  rounded-xl'>
+            <Plus className="w-5 h-5 text-white " />
+            </div>
+            <span className='sm:text-2xl text-xl font-bold leading-[1.80rem] text-left text-[#21466D] uppercase'>{t("add_author")}</span>
           </button>
         </div>
 
-        <div className="space-y-4">
-          <h2 className="text-lg font-semibold text-[#1d4164]">{t("article_title_inner")}</h2>
+        <div className="space-y-4 pt-6">
+          <h2 className="sm:text-2xl text-xl font-bold leading-[1.80rem] text-left text-[#21466D] uppercase">{t("article_title_inner")}</h2>
           <input
             type="text"
             name="title"
@@ -223,7 +225,7 @@ const ArticleSubmissionForm = () => {
         </div>
 
         <div className="space-y-4">
-          <h2 className="text-lg font-semibold text-[#1d4164]">{t("keyword_title")}</h2>
+          <h2 className="sm:text-2xl text-xl font-bold leading-[1.80rem] text-left text-[#21466D] uppercase">{t("keyword_title")}</h2>
           <input
             type="text"
             name="keywords"
@@ -233,7 +235,7 @@ const ArticleSubmissionForm = () => {
         </div>
 
         <div className="space-y-4">
-          <h2 className="text-lg font-semibold text-[#1d4164]">{t("annotation")}</h2>
+          <h2 className="sm:text-2xl text-xl font-bold leading-[1.80rem] text-left text-[#21466D] uppercase">{t("annotation")}</h2>
           <textarea
             name="annotation"
             placeholder={t("annotation")}
@@ -247,7 +249,7 @@ const ArticleSubmissionForm = () => {
             type="file"
             ref={fileInputRef}
             onChange={handleFileUpload}
-            accept=".doc,.docx,.pdf"
+            accept=".doc,.docx,.txt,.odt"
             className="hidden"
           />
           <button
@@ -267,13 +269,11 @@ const ArticleSubmissionForm = () => {
 
         <button
           type="submit"
-          className="w-full md:w-auto px-8 py-2 bg-[#ffc107] text-black rounded-md hover:bg-[#ffcd38] transition-colors"
+          className={`md:w-auto px-8 ${status === 'succeeded' ? 'flex items-center bg-[#21466D59]' : 'block'} py-2 bg-[#ffc107] text-[#21466D] text-base font-medium  text-left rounded-md mx-auto hover:bg-[#ffcd38] transition-colors  gap-2`}
         >
-          {t("submit")}
+          {status==='succeeded' && <Check className="w-5 h-5" />}
+          {status==="loading" ? t("loading") : status==="succeeded" ? t("submitted") : t("submit")}
         </button>
-        {status === 'loading' && <p>Yuborilmoqda...</p>}
-        {status === 'succeeded' && <p>Muvaffaqiyatli yuborildi!</p>}
-        {status === 'failed' && <p>Xato yuz berdi: {error}</p>}
       </form>
     </div>
   );

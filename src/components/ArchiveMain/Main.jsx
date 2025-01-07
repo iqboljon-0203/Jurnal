@@ -1,5 +1,5 @@
 import { Search, Menu, X } from "lucide-react";
-import UsatLogo from "../../assets/logos/usat_logo.webp";
+import UsatLogo from "../../assets/logos/usat_logo.svg";
 import LanguageSelector from "../LanguageSelector/App";
 import NavItem from "../Navbar/Navbar";
 import {Link} from "react-router-dom";

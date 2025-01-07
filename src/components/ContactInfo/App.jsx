@@ -16,31 +16,31 @@ export default function ContactSection() {
             <div className="bg-[#21466D] group-hover:bg-white group-hover:text-[#21466D] text-white p-3 rounded-lg">
               <Mail size={20} />
             </div>
-            <span className="text-base font-normal leading-[1.40rem] text-left">journal.usat.uz</span>
+            <span className="text-base font-normal leading-[1.40rem] text-left">journal@usat.uz</span>
           </Link>
 
           {/* Phone */}
           <Link 
-            to="tel:+99878888388" 
+            to="tel:+998884112045" 
             className="flex items-center gap-4 bg-white p-3 rounded-2xl group hover:bg-[#21466D] hover:text-white transition-colors duration-200"
           >
             <div className="bg-[#21466D] group-hover:bg-white group-hover:text-[#21466D] text-white p-3 rounded-lg">
               <Phone size={20} />
             </div>
-            <span className="text-base font-normal leading-[1.40rem] text-left">78 888 38 88</span>
+            <span className="text-base font-normal leading-[1.40rem] text-left">88 411 20 45</span>
           </Link>
 
           {/* Address */}
-          <div className="flex items-center gap-4 bg-white p-3 rounded-2xl group hover:bg-[#21466D] hover:text-white transition-colors duration-200">
+          <Link to="https://maps.app.goo.gl/B75TfzHVBtop9HLN9" className="flex items-center gap-4 bg-white p-3 rounded-2xl group hover:bg-[#21466D] hover:text-white transition-colors duration-200">
             <div className="bg-[#21466D] group-hover:bg-white group-hover:text-[#21466D] text-white p-3 rounded-lg">
               <MapPin size={20} />
             </div>
             <span className="text-base font-normal leading-[1.40rem] text-left">{t("address")}</span>
-          </div>
+          </Link>
 
           {/* Telegram */}
           <Link 
-            to="https://t.me/usatuzb" 
+            to="https://t.me/journal_usat" 
             className="flex items-center gap-4 bg-white p-3 rounded-2xl  group hover:bg-[#21466D] hover:text-white transition-colors duration-200"
           >
             <div className="bg-[#21466D] group-hover:bg-white group-hover:text-[#21466D] text-white p-3 rounded-lg">
