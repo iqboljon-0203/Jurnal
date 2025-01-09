@@ -18,6 +18,9 @@ function SubmissionGuidelinesFull() {
         <li className="lg:text-xl text-lg font-normal leading-[1.88rem] text-left text-[#21466D]">
         {t("guidelines_title1_info3")}
         </li>
+        <li className="lg:text-xl text-lg font-normal leading-[1.88rem] text-left text-[#21466D]">
+        {t("guidelines_title1_info4")}
+        </li>
       </ol>
 
       <div className="space-y-6">
@@ -30,7 +33,7 @@ function SubmissionGuidelinesFull() {
 
         <section>
           <h2 className="lg:text-2xl text-xl font-bold leading-[1.88rem] text-left text-[#21466D] mb-2">{t("guidelines_title3")}</h2>
-          <p className="lg:text-xl text-lg font-normal leading-[1.88rem] text-left text-[#21466D]">
+          <p  className="lg:text-xl text-lg font-normal leading-[1.88rem] text-left text-[#21466D]">
           {t("guidelines_title3_info1")}
           </p>
         </section>

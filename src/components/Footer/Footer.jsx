@@ -96,20 +96,25 @@ const UniversityHeader = () => {
                   {t("for_authors")}
                 </Link>
                 <ul className="lg:mt-4 sm:mt-2 mt-4">
-                  
-                  <li>
-                    <Link to="/guidelines" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
-                      {t("instructions")}
-                    </Link>
-                  </li>
                   <li>
                     <Link to="/send_article" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
                       {t("send_article")}
                     </Link>
                   </li>
                   <li>
-                    <Link to="/checklist" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
-                      {t("checklist")}
+                    <Link to="/requirements" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
+                      {t("journal_requirements")}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/guidelines" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
+                      {t("instructions")}
+                    </Link>
+                  </li>
+                  
+                  <li>
+                    <Link to="/authors" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
+                      {t("list_of_authors")}
                     </Link>
                   </li>
                 </ul>
