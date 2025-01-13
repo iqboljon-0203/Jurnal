@@ -122,20 +122,7 @@ const UniversityHeader = () => {
             </ul>
           </nav>
 
-          {/* License Images */}
-          <div className="lg:w-4/12 w-full lg:mt-0 mt-8 flex items-center lg:justify-end justify-center gap-4 ">
-            {universityLicenses.map((item,index) => (
-              <Link target='_blank' to={`https://document.licenses.uz/certificate/uuid/bd531c8c-8983-4295-b251-cc4f688a1f08/pdf?language=${item.name}`} className='hover:shadow-2xl' key={index}>
-                <img
-                src={item.link}
-                alt={item.name}
-                width={150}
-                height={210}
-                className="border border-white/20"
-              />
-              </Link>
-            ))}
-          </div>
+        
         </div>
 
         

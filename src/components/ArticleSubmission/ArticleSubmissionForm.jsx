@@ -33,12 +33,14 @@ const AuthorForm = ({ onRemove, index }) => {
           name={`firstName${index}`}
           placeholder={t("name")}
           className="w-full px-3 py-2 border border-gray-300 rounded-md"
+          required
         />
         <input
           type="text"
           name={`lastName${index}`}
           placeholder={t("last_name")}
           className="w-full px-3 py-2 border border-gray-300 rounded-md"
+          required
         />
       </div>
 
@@ -64,6 +66,7 @@ const AuthorForm = ({ onRemove, index }) => {
         name={`workplace${index}`}
         placeholder={t("workplace")}
         className="w-full px-3 py-2 border border-gray-300 rounded-md"
+        required
       />
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -72,10 +75,13 @@ const AuthorForm = ({ onRemove, index }) => {
           name={`email${index}`}
           placeholder={t("email")}
           className="w-full px-3 py-2 border border-gray-300 rounded-md"
+          required
         />
         <input
-          type="tel"
+          type="text"
           name={`phone${index}`}
+          defaultValue={'+998'}
+          
           placeholder={t("phone_number")}
           className="w-full px-3 py-2 border border-gray-300 rounded-md"
           required
@@ -89,7 +95,8 @@ const AuthorForm = ({ onRemove, index }) => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        <select name={`academicDegree${index}`} className="w-full px-3 py-2 border border-gray-300 rounded-md">
+        <select required name={`academicDegree${index}`} className="w-full px-3 py-2 border border-gray-300 rounded-md">
+          <option value={null} >{t("academic_degree")}</option>
           <option value="PHD_ECON">{t("phd_economics")}</option>
           <option value="PHD_PED">{t("phd_pedagogics")}</option>
           <option value="PHD_TECH">{t("phd_technical")}</option>
@@ -97,11 +104,15 @@ const AuthorForm = ({ onRemove, index }) => {
           <option value="DSC_PED">{t("dsc_pedagogics")}</option>
           <option value="DSC_TECH">{t("dsc_technical")}</option>
         </select>
-        <select name={`academicTitle${index}`} className="w-full px-3 py-2 border border-gray-300 rounded-md">
+        <select required name={`academicTitle${index}`} className="w-full px-3 py-2 border border-gray-300 rounded-md">
+          <option value={null}>{t("academic_title")}</option>
           <option value="DOCENT">{t("associate_professor")}</option>
           <option value="PROFESSOR">{t("professor")}</option>
+          <option value="ACADEMIC">{t("academic")}</option>
         </select>
         <input
+          required
+          maxLength={16}
           type="text"
           name={`orcid${index}`}
           placeholder={t("orcid_number")}
@@ -109,9 +120,10 @@ const AuthorForm = ({ onRemove, index }) => {
         />
       </div>
       <div className="grid grid-cols-1  gap-4">
-        <select name={`scienceField${index}`} className="w-full px-3 py-2 border border-gray-300 rounded-md">
+        <select required name={`scienceField${index}`} className="w-full px-3 py-2 border border-gray-300 rounded-md">
+          <option value="">{t("direction")}</option>
           {fields.map((field) => (
-            <option key={field.id} value={field.id}>{field.name} ({field.code})</option>
+            <option  key={field.id} value={field.id}>{field.name} ({field.code})</option>
           ))}
         </select>
       </div>
@@ -124,10 +136,13 @@ const ArticleSubmissionForm = () => {
   const [authors, setAuthors] = useState([{ id: 1 }]);
   const [file, setFile] = useState(null);
   const fileInputRef = useRef(null);
+  const filePlagatRef = useRef(null);
+  const [plagat, setPlagat] = useState(null);
   const dispatch = useDispatch();
   const { status, error, result } = useSelector((state) => state.articleSubmission);
  
   const addAuthor = () => {
+    if(authors.length >= 5) return;
     setAuthors([...authors, { id: authors.length + 1 }]);
   };
 
@@ -135,10 +150,21 @@ const ArticleSubmissionForm = () => {
     const uploadedFile = event.target.files[0];
     if (uploadedFile) {
       const fileExtension = uploadedFile.name.split('.').pop().toLowerCase();
-      if (['doc', 'docx', 'txt',"odt"].includes(fileExtension)) {
+      if (['docx'].includes(fileExtension)) {
         setFile(uploadedFile);
       } else {
-        alert('Faqat doc, docx, txt va odt kabi fayl turlariga ruxsat beriladi');
+        alert(t("article_file"));
+      }
+    }
+  };
+  const handlePlagatFileUpload = (event) => {
+    const uploadedFile = event.target.files[0];
+    if (uploadedFile) {
+      const fileExtension = uploadedFile.name.split('.').pop().toLowerCase();
+      if (["pdf"].includes(fileExtension)) {
+        setPlagat(uploadedFile);
+      } else {
+        alert(t("article_file_new"));
       }
     }
   };
@@ -146,12 +172,19 @@ const ArticleSubmissionForm = () => {
   const triggerFileUpload = () => {
     fileInputRef.current.click();
   };
+  const triggerPlagatFileUpload = () => {
+    filePlagatRef.current.click();
+  };
 
   const resetForm = () => {
     setAuthors([{ id: 1 }]);
     setFile(null);
+    setPlagat(null);
     if (fileInputRef.current) {
       fileInputRef.current.value = '';
+    }
+    if (filePlagatRef.current) {
+      filePlagatRef.current.value = '';
     }
     // Form elementini topib, uning barcha inputlarini tozalaymiz
     const form = document.querySelector('form');
@@ -168,6 +201,8 @@ const ArticleSubmissionForm = () => {
       title: event.target.title.value,
       keywords: event.target.keywords.value,
       annotation: event.target.annotation.value,
+      references: event.target.annotation_new.value,
+      anti_plagiarism_certificate: plagat,
       original_file: file,
       authors_data: authors.map((author, index) => ({
         first_name: event.target[`firstName${index}`].value,
@@ -237,19 +272,51 @@ const ArticleSubmissionForm = () => {
         <div className="space-y-4">
           <h2 className="sm:text-2xl text-xl font-bold leading-[1.80rem] text-left text-[#21466D] uppercase">{t("annotation")}</h2>
           <textarea
+            maxLength={100}
             name="annotation"
             placeholder={t("annotation")}
             rows={6}
             className="w-full px-3 py-2 border border-gray-300 rounded-md resize-none"
           />
         </div>
-
+        
+        <div className="space-y-4">
+          <h2 className="sm:text-2xl text-xl font-bold leading-[1.80rem] text-left text-[#21466D] uppercase">{t("annotation_new")}</h2>
+          <textarea
+            name="annotation_new"
+            placeholder={t("annotation_new")}
+            rows={6}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md resize-none"
+          />
+        </div>
+        <div className="space-y-4">
+          <input
+            type="file"
+            ref={filePlagatRef}
+            onChange={handlePlagatFileUpload}
+            accept=".pdf"
+            className="hidden"
+          />
+          <button
+            type="button"
+            onClick={triggerPlagatFileUpload}
+            className="flex items-center gap-2 px-4 py-2 border border-[#1d4164] text-[#1d4164] rounded-md hover:bg-gray-50 transition-colors"
+          >
+            <Upload className="w-5 h-5" />
+            <span>{plagat ? plagat.name : t("article_file_title_new")}</span>
+          </button>
+          <p className="text-sm text-gray-500">
+            {plagat
+              ? `${t("article_file_placeholder")}: ${plagat.name}`
+              : t("article_file_new")}
+          </p>
+        </div>
         <div className="space-y-4">
           <input
             type="file"
             ref={fileInputRef}
             onChange={handleFileUpload}
-            accept=".doc,.docx,.txt,.odt"
+            accept=".docx"
             className="hidden"
           />
           <button
@@ -265,8 +332,8 @@ const ArticleSubmissionForm = () => {
               ? `${t("article_file_placeholder")}: ${file.name}`
               : t("article_file")}
           </p>
-        </div>
-
+        </div> 
+      
         <button
           type="submit"
           className={`md:w-auto px-8 ${status === 'succeeded' ? 'flex items-center bg-[#21466D59]' : 'block'} py-2 bg-[#ffc107] text-[#21466D] text-base font-medium  text-left rounded-md mx-auto hover:bg-[#ffcd38] transition-colors  gap-2`}

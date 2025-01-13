@@ -11,6 +11,9 @@ export const submitArticle = createAsyncThunk(
       formData.append('title', data.title);
       formData.append('keywords', data.keywords);
       formData.append('annotation', data.annotation);
+      formData.append('references', data.references);
+      formData.append('anti_plagiarism_certificate', data.anti_plagiarism_certificate);  
+
 
       // Append the file
       formData.append('original_file', data.original_file);
