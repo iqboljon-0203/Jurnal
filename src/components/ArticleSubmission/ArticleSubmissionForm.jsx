@@ -246,6 +246,7 @@ const ArticleSubmissionForm = () => {
             <Plus className="w-5 h-5 text-white " />
             </div>
             <span className='sm:text-2xl text-xl font-bold leading-[1.80rem] text-left text-[#21466D] uppercase'>{t("add_author")}</span>
+          
           </button>
         </div>
 

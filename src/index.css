@@ -52,6 +52,9 @@
 
 body {
   background-color: #f5f6fa;
+  font-feature-settings: 'liga' off; /* Ligaturalarni o‘chirish */
+  vertical-align: baseline; /* Belgilarning vertikal holatini sozlaydi */
+  direction: ltr; /* Matnni chapdan o‘ngga yo‘naltiring */
   @apply font-sans;
 }
 @keyframes scroll {
