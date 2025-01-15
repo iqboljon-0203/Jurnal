@@ -121,7 +121,7 @@ const UniversityHeader = () => {
                   </li>
                   <li className='flex items-center'>
                     <img className='mr-2' src={Circle2} alt="" />
-                    <Link to="/guidelines" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
+                    <Link to="https://maps.app.goo.gl/B75TfzHVBtop9HLN9" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
                       {t("adress_new")}
                     </Link>
                   </li>
