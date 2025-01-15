@@ -134,7 +134,7 @@ const App = () => {
               {t("editorial_board")}
             </span>
           </div>
-          <h2 className="md:w-2/3 w-full main_article_title lg:text-5xl md:text-4xl text-3xl font-bold leading-[3.30rem] text-center text-white uppercase mb-12">
+          <h2 className="md:w-2/3 w-full main_article_title lg:text-5xl md:text-4xl text-3xl font-bold leading-[3.30rem] text-center text-white uppercase mb-4">
             {t("editorial_board")}
           </h2>
           <p className="w-10/12 mx-auto lg:text-lg text-md font-normal leading-[1.57rem] text-center text-white">

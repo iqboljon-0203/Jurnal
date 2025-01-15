@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Send, Instagram } from 'lucide-react'
+import { Mail, Phone, MapPin, Send } from 'lucide-react'
 import {Link} from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 export default function ContactSection() {
@@ -51,11 +51,11 @@ export default function ContactSection() {
 
           {/* Instagram */}
           <Link 
-            to="https://www.instagram.com/usatuz/" 
+            to="https://t.me/journal_usat_admin" 
             className="flex items-center gap-4 bg-white p-3 rounded-2xl group hover:bg-[#21466D] hover:text-white transition-colors duration-200"
           >
             <div className="bg-[#21466D] group-hover:bg-white group-hover:text-[#21466D] text-white p-3 rounded-lg">
-              <Instagram size={20} />
+              <Send size={20} />
             </div>
             <span className="text-base font-normal leading-[1.40rem] text-left">{t("instagram")}</span>
           </Link>
