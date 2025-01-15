@@ -33,7 +33,7 @@ const UniversityHeader = () => {
         {/* Social Media Icons */}
         <div className="flex sm:justify-start justify-center sm:mb-0 mb-6 gap-4">
           <Link
-            to="https://t.me/usatuzb"
+            to="https://t.me/journal_usat"
             className="w-16 h-10 flex items-center justify-center p-3  rounded-full border-2 border-white hover:bg-[#ffc107] transition-colors group"
           >
             <Send className="w-5 h-5 group-hover:text-[#1d4164]" />
