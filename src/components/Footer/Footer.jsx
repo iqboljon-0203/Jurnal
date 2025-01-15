@@ -56,7 +56,7 @@ const UniversityHeader = () => {
 
           {/* Navigation */}
           <nav className="xl:w-7/12 lg:w-7/12 sm:w-7/12 w-full flex justify-center">
-            <ul className="flex sm:flex-col lg:flex-row flex-col  lg:gap-12 sm:gap-8 gap-12">
+            <ul className="flex sm:flex-col lg:flex-row flex-col  xl:gap-20 lg:gap-12 sm:gap-8 gap-12">
               <li className="relative group">
                 <Link to="#" className="sm:text-xl text-lg font-bold leading-7 text-left hover:text-[#ffc107] hover:underline transition-colors">
                   {t("about_us")}

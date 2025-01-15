@@ -121,7 +121,7 @@ const App = () => {
               <img
                 src={Jurnal}
                 alt="University Journal"
-                className="w-64 h-80 object-cover rounded-lg"
+                className="w-64 h-80 rounded-lg"
               />
           </div>
         </main>
