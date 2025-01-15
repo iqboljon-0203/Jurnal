@@ -1,5 +1,6 @@
 import { Search, Menu, X } from 'lucide-react';
 import UsatLogo from "../../assets/logos/usat_logo.svg";
+import Logo from "../../assets/logos/logo.svg"
 import Jurnal from "../../assets/logos/jurnal.svg";
 import LanguageSelector from '../LanguageSelector/App';
 import NavItem from "../Navbar/Navbar";
@@ -12,6 +13,7 @@ const App = () => {
   const {t}=useTranslation();
   const [searchQuery, setSearchQuery] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const language=localStorage.getItem("i18nextLng")||'uz';
   const navigate = useNavigate();
   const handleSearch = (e) => {
     e.preventDefault();
@@ -38,7 +40,7 @@ const App = () => {
           <div className='w-full flex items-center justify-between  navbar_inner'>
             
           <Link to={"/"}>
-            <img src={UsatLogo} alt="University Logo" className="h-12 w-50" />
+            <img src={language==="uz"?UsatLogo:Logo} alt="University Logo" className="h-12 w-50" />
           </Link>
             
        
@@ -111,6 +113,7 @@ const App = () => {
           <div className="hero_item w-7/12 space-y-6">
             <h1 className="hero_title font-manrope xl:text-5xl lg:text-4xl sm:text-3xl text-3xl font-bold lg:leading-[3.30rem] leading-[2.80rem] text-left text-white">
               {t("hero_title")}
+              
             </h1>
             <p className="hero_text font-manrope text-white/80 md:text-lg text-base font-normal leading-[1.57rem] text-left sm:block hidden">
               {t("hero_text")}

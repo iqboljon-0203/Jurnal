@@ -10,7 +10,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";  
 import { fetchArticleDetails } from "../../features/articleDetailsSlice";
+import Logo from "../../assets/logos/logo.svg"
 const App = () => {
+  const language=localStorage.getItem("i18nextLng")||'uz';
   const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -66,7 +68,7 @@ const App = () => {
         <nav style={{position: 'relative', zIndex: 20}}  className=" py-4 navbar_main bg-[#FFFFFF1A] px-12">
         <div className="navbar_inner flex items-center justify-between">
         <Link to={"/"}>
-            <img src={UsatLogo} alt="University Logo" className="h-12 w-50" />
+            <img src={language==="uz"?UsatLogo:Logo} alt="University Logo" className="h-12 w-50" />
           </Link>
 
           <div className="flex items-center gap-6 list_inner">

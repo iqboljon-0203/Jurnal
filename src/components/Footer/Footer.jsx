@@ -1,5 +1,6 @@
 import { Facebook, Instagram, Send } from 'lucide-react';
 import UsatLogo from "../../assets/logos/usat_logo.svg";
+import Logo from "../../assets/logos/logo.svg"
 import Circle from "../../assets/logos/circle.svg";
 import Circle1 from "../../assets/logos/circle1.svg";
 import Circle2 from "../../assets/logos/circle2.svg";
@@ -9,7 +10,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 const UniversityHeader = () => {
   const {t}=useTranslation();  
-    
+  const language=localStorage.getItem("i18nextLng")||'uz';
   return (
     <div className="bg-[#1d4164] text-white rounded-tl-2xl rounded-tr-2xl">
       <div className="container mx-auto px-4 py-12">
@@ -18,7 +19,7 @@ const UniversityHeader = () => {
           {/* Logo and name */}
             <div className='xl:w-5/12 lg:w-4/12 sm:w-5/12 w-full'>
             <img
-              src={UsatLogo}
+              src={language==="uz"?UsatLogo:Logo}
               alt="University Logo"
               width={300}
               height={60}
@@ -63,12 +64,12 @@ const UniversityHeader = () => {
                 </Link>
                 <ul className="lg:mt-4 sm:mt-2 mt-4">
                   <li>
-                    <Link to="/journal" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
+                    <Link to="/about_journal" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
                       {t("about_journal")}
                     </Link>
                   </li>
                   <li>
-                    <Link to="/plans" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
+                    <Link to="/editorial" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
                       {t("editorial_board")}
                     </Link>
                   </li>

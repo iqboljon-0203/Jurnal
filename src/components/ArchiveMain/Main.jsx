@@ -7,7 +7,9 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useEffect } from 'react';
+import Logo from "../../assets/logos/logo.svg"
 const App = () => {
+  const language=localStorage.getItem("i18nextLng")||'uz';
   const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -35,7 +37,7 @@ const App = () => {
         <nav style={{position: 'relative', zIndex: 20}} className="navbar_main py-4 bg-[#FFFFFF1A] px-12 ">
           <div className="flex items-center justify-between navbar_inner">
           <Link to={"/"}>
-            <img src={UsatLogo} alt="University Logo" className="h-12 w-50" />
+            <img src={language==="uz"?UsatLogo:Logo} alt="University Logo" className="h-12 w-50" />
           </Link>
           <div className="flex items-center gap-6 list_inner">
             <NavItem text={t("home_page")}/>

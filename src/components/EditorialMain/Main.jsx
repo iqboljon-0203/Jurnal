@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
+import Logo from "../../assets/logos/logo.svg"
 const App = () => {
   const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState("");
@@ -21,7 +22,7 @@ const App = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
+  const language=localStorage.getItem("i18nextLng")||'uz';
   useEffect(() => {
     if (isMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -38,7 +39,7 @@ const App = () => {
         >
           <div className="navbar_inner flex items-center justify-between">
             <Link to={"/"}>
-              <img src={UsatLogo} alt="University Logo" className="h-12 w-50" />
+              <img src={language==="uz"?UsatLogo:Logo} alt="University Logo" className="h-12 w-50" />
             </Link>
 
             <div className="flex items-center gap-6 list_inner">

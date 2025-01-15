@@ -1,15 +1,29 @@
-import Wiley from "../../assets/logos/brand_logo.png";
-import IEEE from "../../assets/logos/brand_logo1.png";
-import Taylor from "../../assets/logos/brand_logo2.png";
-import Springer from "../../assets/logos/brand_logo3.png";
+import Doaj from "../../assets/logos/Mask group.png";
+import Crossref from "../../assets/logos/image 97.png";
+import WordJournals from "../../assets/logos/Mask group-1.png";
+import ResearchBib from "../../assets/logos/Mask group-2.png";
+import Crossreff from "../../assets/logos/Mask group-3.png";
+import Base from "../../assets/logos/Mask group-4.png";
+import eLibrary from "../../assets/logos/Mask group-5.png";
+import Cyberleninka from "../../assets/logos/Mask group-6.png";
+import Googlescholar from "../../assets/logos/Mask group-7.png";
+import Europup from "../../assets/logos/Mask group-8.png";
+import OpenAire from "../../assets/logos/Mask group-9.png";
 import { useTranslation } from 'react-i18next'; 
 const PublisherScroll = () => {
   const { t } = useTranslation();
   const publishers = [
-    { name: 'Wiley', logo: Wiley },
-    { name: 'IEEE', logo:IEEE },
-    { name: 'Taylor & Francis', logo: Taylor },
-    { name: 'Springer', logo: Springer }
+    { name: 'Doaj', logo: Doaj },
+    { name: 'Crossref', logo: Crossref },
+    { name: 'WordJournals', logo: WordJournals },
+    { name: 'ResearchBib', logo: ResearchBib },
+    { name: 'Crossreff', logo: Crossreff },
+    { name: 'Base', logo: Base },
+    { name: 'eLibrary', logo: eLibrary },
+    { name: 'Cyberleninka', logo: Cyberleninka },
+    { name: 'Googlescholar', logo: Googlescholar },
+    { name: 'Europup', logo: Europup },
+    { name: 'OpenAire', logo: OpenAire },
   ];
 
   // Double the array to create seamless loop
