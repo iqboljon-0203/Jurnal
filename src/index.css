@@ -90,7 +90,7 @@ body {
   top: 72px; /* Adjust this value to match your navbar height */
   left: 0;
   width: 100%;
-  height: calc(34.38rem - 72px); /* Subtract navbar height from total height */
+  height: calc(44.38rem - 72px); /* Subtract navbar height from total height */
   background-color: #1a365d;
   z-index: 5;
   transform: translateX(-100%);
@@ -105,6 +105,9 @@ body {
 .responsive-menu.open {
   transform: translateX(0);
 }
+.responsive-menu{
+  padding-top: 45px;
+}
 
 .responsive-menu-inner {
   padding-left: 30px;
@@ -117,6 +120,9 @@ body {
 .responsive-menu-inner button {
   padding-top: 20px;
   padding-bottom: 20px;
+}
+.navbar_form_inner{
+  display: none;
 }
 .responsive-menu-inner a {
   font-size: 16px;

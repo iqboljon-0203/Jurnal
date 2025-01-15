@@ -20,9 +20,7 @@ export default function NavItem({ text, hasDropdown = false, isResponsive = fals
             <Link to="/editorial" className="block px-4 py-2 font-manrope text-base font-normal leading-[1.37rem] text-left  hover:text-[#FFC82A]">
               {t("editorial_board")}
             </Link>
-            <Link to="/reviewers" className="block px-4 py-2 font-manrope text-base font-normal leading-[1.37rem] text-left  hover:text-[#FFC82A]">
-             {t("review_board")}
-            </Link>
+            
             
           </div>
         ): hasDropdown==="authors" ? (

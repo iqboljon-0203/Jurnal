@@ -202,7 +202,7 @@ function OrganizationStructure() {
       {/* Editorial Board Section */}
       <div className="w-full flex sm:flex-row flex-col justify-center items-center sm:items-start sm:justify-between mb-8">
         <h2 className="sm:w-1/2 lg:text-4xl md:text-3xl sm:text-2xl text-3xl sm:mb-0 mb-4 font-bold leading-[1.80rem] sm:text-left text-center text-[#21466D]">{t('muharrir')}</h2>
-        <ol className="sm:w-1/2 list-decimal sm:list-outside list-inside space-y-2 sm:ml-12 ml-0">
+        <ol className="sm:w-1/2  sm:list-outside list-inside space-y-2 sm:ml-12 ml-0 list-none">
           {(language==="uz"?editorMain:language==="ru"?editorMain_ru:editorMain_en).map((member, index) => (
             <li key={index} className="lg:text-xl text-lg  font-normal leading-[1.88rem] sm:text-left text-center text-[#21466D]">
               {member.title}
@@ -212,7 +212,7 @@ function OrganizationStructure() {
       </div>
       <div className="w-full flex sm:flex-row flex-col justify-center items-center sm:items-start sm:justify-between mb-8">
         <h2 className="sm:w-1/2 lg:text-4xl md:text-3xl sm:text-2xl text-3xl sm:mb-0 mb-4 font-bold leading-[1.80rem] sm:text-left text-center text-[#21466D]">{t('muharrir_zam')}</h2>
-        <ol className="sm:w-1/2 list-decimal sm:list-outside list-inside space-y-2 sm:ml-12 ml-0">
+        <ol className="sm:w-1/2 list-none sm:list-outside list-inside space-y-2 sm:ml-12 ml-0">
           {(language==="uz"?editorMainSecond:language==="ru"?editorMainSecond_ru:editorMainSecond_en).map((member, index) => (
             <li key={index} className="lg:text-xl text-lg  font-normal leading-[1.88rem] sm:text-left text-center text-[#21466D]">
               {member.title}
@@ -222,7 +222,7 @@ function OrganizationStructure() {
       </div>
       <div className="w-full flex sm:flex-row flex-col justify-center items-center sm:items-start sm:justify-between mb-8">
         <h2 className="sm:w-1/2 lg:text-4xl md:text-3xl sm:text-2xl text-3xl sm:mb-0 mb-4 font-bold leading-[1.80rem] sm:text-left text-center text-[#21466D]">{t('muharrir_main')}</h2>
-        <ol className="sm:w-1/2 list-decimal sm:list-outside list-inside space-y-2 sm:ml-12 ml-0">
+        <ol className="sm:w-1/2 list-none sm:list-outside list-inside space-y-2 sm:ml-12 ml-0">
           {(language==="uz"?editor:language==="ru"?editor_ru:editor_en).map((member, index) => (
             <li key={index} className="lg:text-xl text-lg  font-normal leading-[1.88rem] sm:text-left text-center text-[#21466D]">
               {member.title}
@@ -232,7 +232,7 @@ function OrganizationStructure() {
       </div>
       <div className="w-full flex sm:flex-row flex-col justify-center items-center sm:items-start sm:justify-between mb-8">
         <h2 className="sm:w-1/2 lg:text-4xl md:text-3xl sm:text-2xl text-3xl sm:mb-0 mb-4 font-bold leading-[1.80rem] sm:text-left text-center text-[#21466D]">{t('kotib')}</h2>
-        <ol className="sm:w-1/2 list-decimal sm:list-outside list-inside space-y-2 sm:ml-12 ml-0">
+        <ol className="sm:w-1/2 list-none sm:list-outside list-inside space-y-2 sm:ml-12 ml-0">
           {(language==="uz"?assistant:language==="ru"?assistant_ru:assistant_en).map((member, index) => (
             <li key={index} className="lg:text-xl text-lg  font-normal leading-[1.88rem] sm:text-left text-center text-[#21466D]">
               {member.title}
@@ -242,7 +242,7 @@ function OrganizationStructure() {
       </div>
       <div className="w-full flex sm:flex-row flex-col justify-center items-center sm:items-start sm:justify-between mb-12">
         <h2 className="sm:w-1/2 lg:text-4xl md:text-3xl sm:text-2xl text-3xl sm:mb-0 mb-4 font-bold leading-[1.80rem] sm:text-left text-center text-[#21466D]">{t('web-admin')}</h2>
-        <ol className="sm:w-1/2 list-decimal sm:list-outside list-inside space-y-2 sm:ml-12 ml-0">
+        <ol className="sm:w-1/2 list-none sm:list-outside list-inside space-y-2 sm:ml-12 ml-0">
           {(language==="uz"?webadmin:language==="ru"?webadmin_ru:webadmin_en).map((member, index) => (
             <li key={index} className="lg:text-xl text-lg  font-normal leading-[1.88rem] sm:text-left text-center text-[#21466D]">
               {member.title}

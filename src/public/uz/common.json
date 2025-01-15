@@ -46,9 +46,10 @@
   "pedagogics": "Pedagogika fanlari (13.00.00)",
   "it_management_graphics": "Axborot texnologiyalari, boshqaruv va kompyuter grafikasi (05.01.00)",
   "google_map_address": "Google xaritada bizning manzil",
-  "address": "Toshkent sh. Diydor ko'chasi, 71",
+  "address": "O‘zbekiston, 100208, Toshkent sh., Chilonzor tumani, Diydor ko‘chasi, 71-uy",
+  "adress_new":"Diydor ko‘chasi, 71-uy",
   "telegram": "Telegram",
-  "instagram": "Instagram",
+  "instagram": "Mas’ul kotib telegram akkaunti",
   "download": "Yuklab olish",
   "download_more": "Ko‘proq yuklash",
   "submitted": "Yuborildi",
@@ -61,13 +62,13 @@
   "hero_title": "“YANGI IQTISODIYOT, PEDAGOGIKA VA TEXNOLOGIYALAR SARI” ILMIY ELEKTRON JURNALI",
   "hero_text": "Jurnal Axborot va ommaviy kommunikatsiyalar agentligi tomonidan 2024-yil 6-dekabr kuni ro‘yxatga olingan (guvohnoma raqami №517474) va nashr faoliyatini boshlagan.Jurnal iqtisodiyot, pedagogika, raqamli texnologiyalar va ularning zamonaviy yo‘nalishlariga oid dolzarb mavzularda ilmiy maqolalarni chop etishni maqsad qilgan. Bizning jurnal, ilmiy-analitik yo‘nalishdagi tadqiqot natijalarini jahon ilmiy hamjamiyatiga yetkazishga xizmat qiladi. Jurnal har chorakda 1 marta nashr qilinadi va yil davomida 4 ta soni chop etiladi.",
   "footer_text": "“Yangi iqtisodiyot, pedagogika va texnologiyalar sari” ilmiy elektron jurnalning asosiy maqsadi respublikamizning yetuk olimlari va amaliyotchilarining nufuzli ilmiy ishlari natijalari bilan yosh olimlar, tayanch doktorant va doktorantlar hamda talaba va magistrantlarni yaqindan tanishtirib borish hisoblanadi.",
-  "article_title": "Jurnallarda chop etilgan barcha maqolalar to’plami",
+  "article_title": "Jurnallarda chop etilgan barcha maqolalar to‘plami",
   "search_text": "Qidiruv bo'yicha jurnallarda chop etilgan barcha maqolalar to'plami",
   "search_info": "so‘zi bo'yicha topilgan natijalar",
   "plans_text": "“Fan va Texnologiyalar universiteti” Ilmiy jurnali menejment, raqamli texnologiyalar, raqamli iqtisodiyot va pedagogika sohalariga ixtisoslashgan nashr bo‘lib, O‘zbekiston Respublikasi Prezidenti Administratsiyasi huzuridagi Axborot va ommaviy kommunikatsiyalar agentligi tomonidan 26.01.2024 sanada № 212842 raqamli guvohnoma bilan davlat ro‘yhatidan o‘tkazilgan",
   "plans_info_title": "BIZNING REJALARIMIZ",
   "plans_info_text": "Biz tadqiqotchilar, akademiklar, amaliyotchilar, siyosatchilar va keng jamoatchilikni o'zaro va xilma-xil auditoriyasini qamrab olish orqali global ta'sirga ega bo'lishga intilamiz. Bizning maqsadimiz xalqaro hamkorlikni rivojlantirish va bilimlarning global miqyosda tarqalishini rag'batlantirishni o'z ichiga oladi",
-  "editorial_info": "Fan va Texnologiyalar universiteti Ilmiy jurnali Tahririyat hay’ati va Jamoatchilik kengashi a’zolari",
+  "editorial_info": "Fan va texnologiyalar universiteti Ilmiy elektron jurnalining tahririyat hay’ati a’zolari",
   "editorial_social": "Jamoatchilik kengashi",
   "reviewers_info": "Fan va Texnologiyalar universiteti ilmiy jurnalida e’lon qilinadigan ilmiy maqolalarni ko‘rib chiqish bo‘yicha ekspertlar tarkibi",
   "authors_info": "Fan va Texnologiyalar universiteti ilmiy jurnalida e’lon qilinadigan ilmiy maqolalar mualliflari ro'yxati",
@@ -103,10 +104,10 @@
 
   "guidelines_title3": "Tematik rubrikator:",
 
-  "guidelines_title3_info1": "UO‘K – universal o‘nlik klassifikator (УДК). Har bir maqola boshida UO‘K raqami qo‘yilishi lozim. UO‘K raqamini aniqlash va u haqida qo‘shimcha ma’lumotni olish uchun quyidagi <a href='https://perviy-vestnik.ru/udc/' target='_blank'>havoladan</a> foydalanish mumkin <a href='https://perviy-vestnik.ru/udc/'>(https://perviy-vestnik.ru/udc/)</a>.Amerika Iqtisodiy Assotsiatsiyasi tomonidan ishlab chiqilgan va veb-saytida taqdim etilgan Journal of Economic Literature (JEL) mavzu klassifikatori iqtisodiyot bo'yicha nashrlar mavzusini belgilash uchun xalqaro miqyosda tan olingan kod tizimidir. Jahon davriy nashrlarida birorta ham zamonaviy maqola JEL kodlarisiz chop etilmaydi <a href='https://www.aeaweb.org/jel/guide/jel.php'>(https://www.aeaweb.org/jel/guide/jel.php)</a>, JEL raqamini aniqlash va u haqida qo‘shimcha ma’lumotni olish uchun quyidagi <a href='https://library.fa.ru/files/JEL.pdf' target='_blank'>havoladan</a> foydalanish mumkin <a href='https://library.fa.ru/files/JEL.pdf'>(https://library.fa.ru/files/JEL.pdf)</a>.",
+  "guidelines_title3_info1": " UO‘K - universal o‘nlik klassifikator (УДК). Har bir maqola boshida UO‘K raqami qo‘yilishi lozim. UO‘K raqamini aniqlash va u haqida qo‘shimcha ma’lumotni olish uchun quyidagi havoladan foydalanish mumkin (https://perviy-vestnik.ru/udc/).Amerika Iqtisodiy Assotsiatsiyasi tomonidan ishlab chiqilgan va veb-saytida taqdim etilgan Journal of Economic Literature (JEL) mavzu klassifikatori iqtisodiyot bo‘yicha nashrlar mavzusini belgilash uchun xalqaro miqyosda tan olingan kod tizimidir. Jahon davriy nashrlarida birorta ham zamonaviy maqola JEL kodlarisiz chop etilmaydi (https://www.aeaweb.org), JEL raqamini aniqlash va u haqida qo‘shimcha ma’lumotni olish uchun quyidagi havoladan foydalanish mumkin (https://library.fa.ru/files/JEL.pdf).",
 
   "guidelines_title4": "Maqola muallifi to‘g‘risida ma’lumot:",
-  "guidelines_title4_info1": "Ushbu qismda muallifning familiya, ism va sharifi, tegishliligi (ya’ni, ish joyi yoki tahsil olish joyi, bunda faqatgina tashkilot nomi qisqartmalarsiz to‘liq yoziladi), elektron pochta manzili, ORCID raqami va muloqot telefonlari (Telegram yoki WhatsApp) kiritiladi (barchasi o‘zbek, rus va ingliz tillarida). ORCID raqami <a href='https://orcid.org/' target ='_blank'>https://orcid.org/</a> saytida shakllantiriladi. Quyidagi <a href='https://www.youtube.com/watch?v=IssEZiVPDLo' target='_blank'>o‘zbekcha</a> va <a href='https://www.youtube.com/watch?v=2IbUC5DXA7I' target='_blank'>ruscha</a> video qo‘llanmalarda ORCID raqamni qayerdan olish va unda ro‘yxatdan o‘tish masalalari yoritilgan.",
+  "guidelines_title4_info1": " Ushbu qismda muallifning familiya, ism va sharifi, ish joyi yoki tahsil olish joyi (tashkilot nomi qisqartmalarsiz to‘liq yoziladi), elektron pochta manzili, ORCID raqami va muloqot telefonlari (Telegram yoki WhatsApp) kiritiladi. Barcha ma’lumotlar o‘zbek, rus va ingliz tillarida rasmiylashtirilishi zarur. ORCID raqami https://orcid.org/ saytida shakllantiriladi. Quyidagi o‘zbekcha va ruscha videoqo‘llanmalarda ORCID raqamni qayerdan olish va unda ro‘yxatdan o‘tish masalalari yoritilgan.",
 
   "guidelines_title5": "Annotatsiyasi:",
   "guidelines_title5_info1": "Maqola annotatsiyasi 100 ta so‘zdan kam bo‘lmasligi, maqolaning umumiy mazmunini qisqacha tarzda yoritib beruvchi qism hisoblanadi. Maqola annotatsiyasida tadqiqot muammosi, uning dolzarbligi, tadqiqot muammosini ochib berish uchun qo‘llanilgan metodologiya, tadqiqot natijalari, maqolaning to‘la mazmunidan kelib chiqqan holda muallifning ilmiy va amaliy hissasining qisqacha bayoni yoritiladi (o‘zbek, rus va ingliz tillarida).",
@@ -117,7 +118,7 @@
   "guidelines_title7": "Kirish:",
   "guidelines_title7_info1": "Mavzuning dolzarbligi asoslanib, tadqiqot muammosi, uning maqsad va vazifalari yoritiladi. Mazkur qism tadqiqot mavzusining tanlanish asosi, uning dolzarbligi va ilmiy ahamiyatini tushuntirib beradi. Bundan tashqari, kirish qismida tadqiqot obyekti va predmetining qisqacha tavsifi keltiriladi. Keyingi tarkibiy qismlar mazmuni ham aynan kirish qismida qisqacha izohlanadi.",
 
-  "guidelines_title8": "Adabiyotlar sharhi (uslubiy materiallar sharhi):",
+  "guidelines_title8": "Adabiyotlar sharhi",
   "guidelines_title8_info1": "Mavzuga oid adabiyotlar sharhi tadqiq etilayotgan muammo yuzasidan muallifning bilim va tasavvurlarga ega ekanini namoyon etuvchi qism hisoblanadi. Unda xorijiy va mahalliy olimlarimiz hamda tadqiqotchilarning ishlari tahlil etilib, ushbu ishlardan farqli ravishda muallif olib chiqayotgan masalaning o‘ziga xosligi tavsiflanadi. Adabiyotlar sharhi mavjud intellektual hudud doirasini baholash va shu asosda ma’lum xarita yaratishni anglatadi. Adabiyotlarning sharhida tanqidiy tahlil amalga oshirilib, uning maqsadi mazkur mavzu doirasidagi bilimlarni kuchaytirish va tadqiqot savollarini yanada oydinlashtirish hisoblanadi. O‘z mazmuniga ko‘ra har qanday tadqiqot ayni shu sohada yaratilgan avvalgi bilimlar negiziga quriladi. Adabiyotlar bo‘yicha tahlil asosan sohadagi eng yangi jurnal maqolalari va boshqa turdagi ma’lumot manbalari asosida amalga oshadi.",
 
   "guidelines_title9": "Tadqiqot metodologiyasi:",
@@ -130,22 +131,58 @@
   "guidelines_title11_info1": "Tadqiqotning maqsad, vazifalarining anglashilganligi hamda tadqiqot savollarining o‘z javobini topganligi, tadqiqotning asosiy natijalariga va tadqiqot jarayonidagi tahlil va natijalar asosida shakllantirilgan xulosa va aniqlangan muammolarni bartaraf etish bo‘yicha umumiy xulosalar, shu bilan birga, taklif va tavsiyalar keltiriladi.",
 
   "guidelines_title12": "Foydalanilgan adabiyotlar ro‘yxati:",
-  "guidelines_title12_info1": "mualliflar ismi-sharifi, ilmiy unvoni, ilmiy darajasi, (Rossiya, O'zbekiston va h.k.), lavozimi nomi, ish.",
-  "guidelines_title12_info2": "mualliflar ismi-sharifi, maqola nomi, jurnal nomi, soni, yili, betlari.",
-  "guidelines_title12_info3": "Maqola matn hajmi 'Times New Roman' shriftida terilgan 1 sahifadan 10 betgacha bo'lishi mumkin.",
-  "guidelines_title12_info4": "Maqolaning maksimal hajmi 15 bet, eng minimal hajmi 5 betdan kam bo'lmasligi kerak.",
-  "guidelines_title12_info5": "Maqolalar quyidagi tarkibiy qismlardan iborat bo'lishi kerak: maqola nomi (o'zbek, rus va ingliz tillarida).",
-  "guidelines_title12_info6": "Maqolaning tuzilishi quyidagicha bo'lishi kerak:",
-  "guidelines_title12_info7": "Maqola nomi (o'zbek, rus va ingliz tillarida) - maksimal 10 so'zdan iborat;",
-  "guidelines_title12_info8": "Mualliflar to'g'risida ma'lumot (Familiya va ismi) - maksimal 10 so'zdan iborat;",
-  "guidelines_title12_info9": "Mualliflar ish joyi (Tashkilot va davlat nomi) - maksimal 10 so'zdan iborat;",
-  "guidelines_title12_info10": "Annotatsiya (o'zbek, rus va ingliz tillarida) - 150-200 so'zdan iborat;",
-  "guidelines_title12_info11": "Kalit so'zlar (o'zbek, rus va ingliz tillarida) - 5-7 ta so'z yoki so'z birikmasi.",
-  "guidelines_title12_info12": "Maqolalar o'zbek, rus, yoki ingliz tillarida qabul qilinadi.",
-  "guidelines_title12_info13": "Bibliografiya (adabiyotlar ro'yxati) maqola oxirida, matnda keltirilgan tartibda va quyidagi talablarga muvofiq rasmiylashtiriladi.",
-  "guidelines_title12_info14": "Maqola matn terish muharriri Microsoft Word dasturida terilgan bo'lishi va elektron shaklda taqdim etilishi lozim.",
-  "guidelines_title13": "Murojaat uchun:",
-  "guidelines_title13_info1": "Telegram kanal: https://t.me/jurnal_usat",
-  "guidelines_title13_info2": "Web sayt: https://journal.usat.uz",
-  "guidelines_title13_info3": "E-mail: usat@unitut.uz"
+  "guidelines_title12_info1": "Bu qismda tadqiqot jarayonida foydalanilgan barcha adabiyotlar keltiriladi. Maqolada foydalanilgan adabiyotlarga barcha havolalar alifbo ketma-ketligida Garvard iqtiboslar tizimi talablari bo ‘yicha rasmiylashtirilishi zarur:",
+  "guidelines_title12_info2": "muallif(lar) ismi-sharifi, (nashr yili), kitob nomi, nashr manzili (davlat, shahar), nashriyot nomi, betlar.",
+  "guidelines_title12_info3": "muallif(lar) ismi-sharifi, (nashr yili), maqola nomi, jurnal nomi, nashr raqami, betlar.",
+  "guidelines_title12_info4": "Foydalanilgan adabiyotlar soni 20 tadan kam bo‘lmasligi, shundan kamida 50 foizi so‘nggi 5 yil davomida chop etilgan ilmiy adabiyotlar va kamida 30 foizi xorijiy adabiyotlar bo‘lishi maqsadga muvofiq. Shuningdek kamida 1 ta adabiyot mazkur jurnalda nashr qilingan bo‘lishi tavsiya etiladi. Foydalanilgan adabiyotlar matnda tartib raqamiga ko‘ra [1], [2], [3] shaklida bo‘ladi. ",
+  "guidelines_title12_info5": "Maqola matni kamida 75% muallifning shaxsiy izlanishlari natijasiga asoslanishi lozim. Muallif tomonidan antiplagiat sertifikati topshirilishi talab etiladi. ",
+  "guidelines_title12_info6": "Maqola matni shrifti “Times New Roman”da, 14 kegelda bo‘lib, qatorlar oraliqlari masofasi 1 intervalda bo‘lishi tavsiya etiladi. Maqola matni sahifasining barcha (o‘ng, chap, yuqori va pastki) tomonlaridan 2 santimetrdan iborat masofa qoldiriladi. Maqola “Microsoft Word” matn muharririda “*.docx” kengaytmalarida tayyorlanib, hajmi 6-12 bet oralig‘ida bo‘lishi tavsiya etiladi. ",
+  "guidelines_title12_info7": "Maqolada barcha jadval, grafik, diagramma va rasmlar aniq hamda sifatli ko‘rinishda taqdim etilishi shart. Jadval nomlari va raqamlari uning yuqori qismida, grafik, diagramma va rasmlar nomlari va raqamlari ularning quyi qismida beriladi. Maqolada barcha jadval, grafik, diagramma va rasmlar aniq hamda sifatli ko‘rinishda taqdim etilishi shart. Jadval nomlari va raqamlari uning yuqori qismida, grafik, diagramma va rasmlar nomlari va raqamlari ularning quyi qismida beriladi. ",
+  "guidelines_title12_info8": "Maqolalar o‘zbek, rus, yoki ingliz tillarida taqdim etilishi mumkin.",
+  "guidelines_title12_info9": "Belgilangan talablarga javob bermaydigan maqolalar taqrizchilarga taqdim etilmaydi va tahririyatning talablariga javob bermaslik haqidagi xulosasi bilan muallifga qayta ishlash uchun qaytarib yuboriladi.",
+  "guidelines_title12_info10": "Tahririyat tomonidan taqrizdan o‘tgan va nashrga tavsiya etilgan maqolalarda keltirilgan dalillar va ma’lumotlar uchun muallif javobgar hisoblanadi.",
+  "requirements_title": "“YANGI IQTISODIYOT, PEDAGOGIKA VA TEXNOLOGIYALAR SARI” ILMIY ELEKTRON JURNALINING AXBOROT XATI",
+  "requirements_title_info1": "“Yangi iqtisodiyot, pedagogika va texnologiyalar sari” ilmiy elektron jurnali O‘zbekiston Respublikasi Prezidenti Administratsiyasi huzuridagi Axborot va ommaviy kommunikatsiyalar agentligi tomonidan 2024-yil 6-dekabr kuni ro‘yxatga olingan (guvohnoma raqami №517474) va nashr faoliyatini boshlagan. ",
+  "requirements_title_info2": "Jurnal iqtisodiyot, pedagogika, raqamli texnologiyalar va ularning zamonaviy yo‘nalishlariga oid dolzarb mavzularda ilmiy maqolalarni chop etishni maqsad qilgan. Bizning jurnal, ilmiy-analitik yo‘nalishdagi tadqiqot natijalarini jahon ilmiy hamjamiyatiga yetkazishga xizmat qiladi.",
+  "requirements_title_info3": "Jurnal har chorakda 1 marta nashr qilinadi va yil davomida 4 ta soni chop etiladi.",
+  "requirements_title1": "Maqolalarni taqdim etish talablari:",
+  "requirements_title1_info1": "Maqolalar o‘zbek, rus yoki ingliz tillarida qabul qilinadi.",
+  "requirements_title1_info2": "Maqola mavzusi, annotatsiya, tayanch so‘z va iboralar o‘zbek, rus va ingliz tillarida bo‘lishi lozim.",
+  "requirements_title1_info3": "Maqolalar dolzarb mavzularga asoslangan, ilmiy, innovatsion va amaliy ahamiyatga ega bo‘lishi kerak.",
+  "requirements_title1_info4": "IMRAD uslubida yozilishi talab qilinadi: annotatsiya, kalit so‘zlar, kirish, mavzuga oid adabiyotlar sharhi, tadqiqot metodologiyasi, tahlil va natijalar, xulosa va takliflar, adabiyotlar ro‘yxati.",
+  "requirements_title1_info5": "Manba sifatidagi har bir havola to‘liq va to‘g‘ri ko‘rsatilishi lozim.",
+  "requirements_title1_info6": "Muallif familiya va ism-sharifi, ilmiy daraja va unvoni, ish joyi yoki tahsil olayotgan OTM nomi to‘liq ko‘rsatilishi kerak.",
+  "requirements_title1_info7": "Muallif fotosurati rasmiy kiyimda va yuqori sifatli bo‘lishi zarur (72-96 DPI PNG yoki JPEG formatda).",
+  "requirements_title1_info8": "Aloqa ma’lumotlari sifatida muallifning telefon raqami (Telegram yoki WhatsApp) va elektron pochtasi keltirilishi talab etiladi.",
+  "requirements_title1_info9": " Foydalanilgan adabiyotlar ro‘yxati ichki manbalar tartib raqamiga ko‘ra [1], [2], [3] shaklda berilishi, 20 tadan kam bo‘lmasligi, oxirgi 5 yillik va xalqaro bazalarda indekslangan manbalardan foydalanilgan bo‘lishi hamda haqqoniyligi ta’minlanishi shart, shuningdek, adabiyotlar ro‘yxatida keltirilgan barcha manbalar maqola matni ichida bo‘lishi kerak.",
+  "requirements_title1_info10": "Maqola hajmi 6-12 bet oralig‘ida bo‘lishi tavsiya etiladi, shundan, annotatsiya (100 ta so‘zgacha) va tayanch so‘zlar (12 ta so‘zgacha)",
+  "requirements_title1_info11": " Maqola “Microsoft Word” matn muharririda “*.docx” kengaytmalarida tayyorlanib, elektron nusxada taqdim etiladi.Maqola matni A4 format shaklida, “Times New Roman” shriftda, 14 kegel o‘lchamda, satrlar (qatorlar) oralig‘i - 1 sm kenglik bo‘yicha tekislash, satr boshi - 1,25 sm, hoshiyalar kengligi - tepadan, pastdan, chapdan va o‘ngdan - 2 sm, oriyentatsiya - kitob shaklida, bo‘g‘in ko‘chirilmagan holda rasmiylashtiriladi.",
+  "requirements_title1_info12": "Maqolada barcha jadval, grafik, diagramma va rasmlar aniq ko‘rinishda taqdim etilishi shart. Jadval nomlari va raqamlari uning yuqori qismida, grafik, diagramma va rasmlar nomlari va raqamlari ularning quyi qismida beriladi. Rasm va jadvallar nomlanishi arab raqamlari bilan belgilanishi (1-rasm, 1-jadval va h.k.), maqola matnida ularga havola bo‘lishi lozim, jadvallar ichidagi yozuvlar 12 kegel boʻlishi kerak.",
+  "requirements_title1_info13": "O‘zbek tilidagi o‘, g‘, q, h kabi harflar ilmiy maqola matnida to‘g‘ri yozilishi shart. Aks holda ilmiy maqola tahririyat tomonidan ko‘rib chiqilmaydi.",
+  "requirements_title1_info14": "Maqola matni kamida 75% muallifning shaxsiy izlanishlari natijasiga asoslanishi lozim. Muallif tomonidan antiplagiat sertifikati topshirilishi zarur (masalan: antiplag.uz, antiplagiat.ru va boshqalar).",
+
+
+  "requirements_title3": "Indekslash va DOI olish:",
+
+  "requirements_title3_info1": "“Yangi iqtisodiyot, pedagogika va texnologiyalar sari” ilmiy elektron jurnaliga qabul qilingan har bir maqola uchun DOI (Digital Object Identifier) raqam biriktiriladi. DOI orqali maqolalar xalqaro ilmiy bazalarda - DOAJ (Directory of Open Access Journals) (OAK 25), Ulrich’s Periodicals Directory (OAK 18), Index Copernicus (OAK 12), ReaserchBib (OAK 14), CrossRef (OAK 35), BASE (Bielefeld Academic Search Engine) (OAK 13), eLIBRARY.RU (РИНЦ), Cyberleninka, Europub, Google Scholar, OpenAIRE, OpenArchivesda indekslanadi. ",
+
+  "requirements_title4": "Ilmiy maqola quyidagi sohalar doirasida qabul qilinadi: ",
+  "requirements_title4_info1": "08.00.00 - Iqtisodiyot fanlari 13.00.00 - Pedagogika fanlari 05.01.00 - Axborot texnologiyalari, boshqaruv va kompyuter grafikasi",
+
+  "requirements_title5": "Ilmiy maqolani topshirish muddati:",
+  "requirements_title5_info1": "3 yanvardan - 15 fevralgacha 1 apreldan - 15 maygacha 1 iyuldan - 15 avgustgacha 2 oktyabrdan - 15 noyabrgacha",
+
+  "requirements_title6": "Jurnal chop etilish sanasi: ",
+  "requirements_title6_info1": "Yilning har choragi yakunida",
+
+  "requirements_title13": "Kontakt ma’lumotlari:",
+  "requirements_title13_info1": "Manzil: O‘zbekiston, 100208, Toshkent sh., Chilonzor tumani, Diydor ko‘chasi, 71-uy.",
+  "requirements_title13_info2": "Telefon: +998884112045",
+  "requirements_title13_info3": "E-mail: journal@usat.uz",
+  "requirements_title13_info4": "Telegram: @journal_usat_admin",
+  "requirements_title13_info5": "Telegram kanal: t.me/journal_usat",
+  "requirements_title13_info6": "Web-sayt: https://journal.usat.uz"
+
+
+
 }
