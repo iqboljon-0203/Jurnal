@@ -3,6 +3,8 @@ import UsatLogo from "../../assets/logos/usat_logo.svg";
 import Circle from "../../assets/logos/circle.svg";
 import Circle1 from "../../assets/logos/circle1.svg";
 import Circle2 from "../../assets/logos/circle2.svg";
+import Circle3 from "../../assets/logos/circle3.svg";
+import Circle4 from "../../assets/logos/circle4.svg";
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 const UniversityHeader = () => {
@@ -107,22 +109,34 @@ const UniversityHeader = () => {
                   {t("contacts")}
                 </Link>
                 <ul className="lg:mt-4 sm:mt-2 mt-4">
-                  <li className='flex items-center mb-2'>
+                <li className='flex items-center mb-3'>
+                    <img className='mr-2' src={Circle2} alt="" />
+                    <Link to="https://maps.app.goo.gl/B75TfzHVBtop9HLN9" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
+                      {t("adress_new")}
+                    </Link>
+                  </li>
+                  <li className='flex items-center mb-3'>
                     <img className='mr-2' src={Circle} alt="" />
                     <Link to="tel:+998884112045" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
                       88 411 20 45
                     </Link>
                   </li>
-                  <li className='flex items-center mb-2'>
+                  <li className='flex items-center mb-3'>
+                    <img className='mr-2' src={Circle3} alt="" />
+                    <Link to="mailto:journal@usat.uz" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
+                      journal@usat.uz
+                    </Link>
+                  </li>
+                  <li className='flex items-center mb-3'>
                     <img className='mr-2' src={Circle1} alt="" />
                     <Link to="https://t.me/journal_usat_admin" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
                       @journal_usat_admin
                     </Link>
                   </li>
                   <li className='flex items-center'>
-                    <img className='mr-2' src={Circle2} alt="" />
-                    <Link to="https://maps.app.goo.gl/B75TfzHVBtop9HLN9" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
-                      {t("adress_new")}
+                    <img className='mr-2' src={Circle4} alt="" />
+                    <Link to="https://t.me/journal_usat" className="block text-base font-normal leading-[1.40rem] text-left py-1 hover:text-[#ffc107] hover:underline transition-colors">
+                      t.me/journal_usat
                     </Link>
                   </li>
                   
