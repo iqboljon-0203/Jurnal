@@ -4,40 +4,40 @@ function OrganizationStructure() {
   const { t } = useTranslation();
   const language=localStorage.getItem("i18nextLng")||'uz';
   const editorMain=[
-    { title: "Xamdamov Anvar Norovich – rektor, f.f.n., dotsent" },
+    { title: "Xamdamov Anvar Norovich - Rektor, PhD, dotsent" },
   ]
   const editorMain_ru = [
-    { title: "Хамдамов Анвар Норович – ректор, кандидат физико-математических наук (к.ф.-м.н.), доцент" }
+    { title: "Хамдамов Анвар Норович - Ректор, PhD, доцент" }
   ];
   const editorMain_en = [
-    { title: "Khamdamov Anvar Norovich - Rector, PhD, Associate Professor" }
+    { title: "Anvar Xamdamov - Rector, PhD, Associate Professor" }
   ];
   
   const editorMainSecond=[
-    { title: "Gaibnazarova Zumrat Talatovna – ilmiy ishlar va innovatsiyalar bo‘yicha prorektor, iqtisodiyot fanlari doktori, professor" },
+    { title: "Gaibnazarova Zumrat Talatovna - ilmiy ishlar va innovatsiyalar bo‘yicha prorektor, iqtisodiyot fanlari doktori, professor " },
   ]
   const editorMainSecond_en = [
     
-    { title: "Gaibnazarova Zumrat Talatovna - Vice-Rector for Research and Innovation, Doctor of Economic Sciences, Professor" }
+    { title: "Zumrat Gaibnazarova - Vice-Rector for scientific affairs and innovations, Doctor of Economic Sciences, Professor" }
   ];
   const editorMainSecond_ru = [
-    { title: "Гаибназарова Зумрат Талатовна – проректор по научной работе и инновациям, доктор экономических наук, профессор" }
+    { title: "Гаибназарова Зумрат Талатовна - проректор по научной работе и инновациям, доктор экономических наук, профессор" }
   ];
   const editor=[
-    { title: "Ortiqova Xamida Maxmud qizi - filologiya fanlari bo‘yicha falsafa doktori (PhD)" },
+    { title: "Ortiqova Hamida Maxmud qizi - filologiya fanlari bo‘yicha falsafa doktori (PhD)" },
   ]
   const editor_ru = [
-    { title: "Ортикова Хамида Махмуд кизи – доктор философии пофилологии (PhD)" }
+    { title: "Ортикова Хамида Махмуд кизи - доктор философии по филологическим наукам (PhD)" }
   ];
   const editor_en = [
-    { title: "Ortikova Hamida Makhmud kizi - Doctor of Philosophy in Philology (PhD)" }
+    { title: "Khamida Ortikova - Doctor of Philosophy in Philology (PhD)" }
   ];
   
   const assistant=[
     { title: "Yo‘ldosheva Dilnoza G‘ayrat qizi" },
   ]
   const assistant_en = [
-    { title: "Yuldasheva Dilnoza Gayrat kizi" }
+    { title: "Dilnoza Yuldosheva" }
   ];
   const assistant_ru = [
     { title: "Йулдoшева Дилноза Гайрат кизи" }
@@ -47,21 +47,21 @@ function OrganizationStructure() {
     { title: "Musayev Jonibek Jambulovich" },
   ]
   const webadmin_ru = [
-    { title: "Мусаев Жонибек Джамбулович" }
+    { title: "Мусаев Жонибек Жамбулович" }
   ];
   const webadmin_en = [
-    { title: "Musaev Jonibek Jambulovich" }
+    { title: "Jonibek Musayev" }
   ];
   
   const economics = [
-    { title: "Gulyamov Saidaxror Saidaxmedovich - iqtisodiyot fanlari doktori, professor, akademik" },
+    { title: "Gulyamov Saidaxrar Saidaxmedovich - iqtisodiyot fanlari doktori, professor, akademik" },
     { title: "Gulamov Abdulaziz Abdullayevich - iqtisodiyot fanlari doktori, professor" },
-    { title: "Maxmudov Nosir Maxmudovich - iqtisodiyot fanlari doktori, professor" },
-    { title: "Irisbekova Mavlyuda Narinbayevna - iqtisodiyot fanlari doktori, professor" },
-    { title: "Raxmonboyeva Roza Abduraxmanovna - iqtisodiyot fanlari doktori, professor" },
-    { title: "Shodiyeva Gulnora Mardiyevna - iqtisodiyot fanlari doktori, professor" },
-    { title: "Xonkeldiyeva Guzal Sherovna - iqtisodiyot fanlari doktori, professor" },
-    { title: "Abdullayeva Matlyuba Nematovna - iqtisodiyot fanlari doktori, dotsent" },
+    { title: "Maxmudov Nosir - iqtisodiyot fanlari doktori, professor" },
+    { title: "Irisbekova Mavluda Narinbayevna - iqtisodiyot fanlari doktori, professor" },
+    { title: "Raxmanbayeva Roza Abduraxmanovna - iqtisodiyot fanlari doktori, professor" },
+    { title: "Shadiyeva Gulnora Mardiyevna - iqtisodiyot fanlari doktori, professor" },
+    { title: "Xankeldiyeva Guzal Sherovna - iqtisodiyot fanlari doktori, professor" },
+    { title: "Abdullayeva Matluba Nematovna - iqtisodiyot fanlari doktori, dotsent" },
     { title: "Musayeva Dilnoza Dilshatovna - iqtisodiyot fanlari bo‘yicha falsafa doktori (PhD)" },
     { title: "Jill J. McCluskey - PhD, professor, Vashington davlat universiteti, Pulman, AQSH" },
     { title: "Mark Beattie - PhD, dotsent, Vashington davlat universiteti, Everett, AQSH" },
@@ -72,95 +72,103 @@ function OrganizationStructure() {
     { title: "Morozevich Olga Anatolevna - iqtisodiyot fanlari nomzodi, dotsent, Belarus davlat iqtisodiyot universiteti, Minsk, Belarus" },
     { title: "Korolenok Gennadiy Antonovich - iqtisodiyot fanlari doktori, professor, Belarus davlat iqtisodiyot universiteti, Minsk, Belarus" },
     { title: "Klimchenya Lyudmila Sergeyevna - iqtisodiyot fanlari nomzodi, dotsent, Belarus davlat iqtisodiyot universiteti, Minsk, Belarus" },
-    { title: "Shalupayeva Natalya Sergeyevna - iqtisodiyot fanlari nomzodi, dotsent, Belarus davlat universiteti, Minsk, Belarus" }
+    { title: "Shalupayeva Natalya Sergeyevna - iqtisodiyot fanlari nomzodi, dotsent, Belarus davlat universiteti, Minsk, Belarus" },
+    { title: "Zurab Garakanidze - PhD, dotsent, Gruziya texnika universiteti, Tbilisi, Gruziya" },
   ];
+  
   const economics_ru = [
-    { title: "Гулямов Саидахрор Саидахмедович – доктор экономических наук, профессор, академик" },
-    { title: "Гуламов Абдулазиз Абдуллаевич – доктор экономических наук, профессор" },
-    { title: "Махмудов Носир Махмудович – доктор экономических наук, профессор" },
-    { title: "Ирисбекова Мавлюда Наринбаевна – доктор экономических наук, профессор" },
-    { title: "Рахмонбаева Роза Абдурахмановна – доктор экономических наук, профессор" },
-    { title: "Шодиева Гульнора Мардиевна – доктор экономических наук, профессор" },
-    { title: "Хонкелдиева Гузаль Шеровна – доктор экономических наук, профессор" },
-    { title: "Абдуллаева Матлюба Нематовна – доктор экономических наук, доцент" },
-    { title: "Мусаева Дилноза Дильшатовна - доктор философии по экономическим наукам" },
-    { title: "Джилл Дж. МакКласки – доктор философии (PhD), профессор, Университет штата Вашингтон, Пуллман, США" },
-    { title: "Марк Битти – доктор философии (PhD), доцент, Университет штата Вашингтон, Эверетт, США" },
-    { title: "Го Шухун – доктор экономических наук, профессор, Даляньский политехнический университет, Далянь, Китай" },
-    { title: "Келесбаев Динмухамед Нурмаханбетович – доктор философии (PhD), профессор, Казахско-Турецкий университет имени Ахмада Яссави, Туркестан, Казахстан" },
-    { title: "Якушенко Ксения Валентиновна – доктор экономических наук, доцент, Белорусский национальный технический университет, Минск, Беларусь" },
-    { title: "Шамардина Ирина Александровна – кандидат экономических наук, доцент, Белорусский национальный технический университет, Минск, Беларусь" },
-    { title: "Морозевич Ольга Анатольевна – кандидат экономических наук, доцент, Белорусский государственный экономический университет, Минск, Беларусь" },
-    { title: "Короленок Геннадий Антонович – доктор экономических наук, профессор, Белорусский государственный экономический университет, Минск, Беларусь" },
-    { title: "Климченя Людмила Сергеевна – кандидат экономических наук, доцент, Белорусский государственный экономический университет, Минск, Беларусь" },
-    { title: "Шалупаева Наталья Сергеевна – кандидат экономических наук, доцент, Белорусский государственный университет, Минск, Беларусь" }
+    { title: "Гулямов Саидахрар Саидахмедович - доктор экономических наук, профессор, академик" },
+    { title: "Гуламов Абдулазиз Абдуллаевич - доктор экономических наук, профессор" },
+    { title: "Махмудов Носир - доктор экономических наук, профессор" },
+    { title: "Ирисбекова Мавлуда Наринбаевна - доктор экономических наук, профессор" },
+    { title: "Рахманбаева Роза Абдурахмановна - доктор экономических наук, профессор" },
+    { title: "Шадиева Гулнора Мардиевна - доктор экономических наук, профессор" },
+    { title: "Ханкелдиева Гузал Шеровна - доктор экономических наук, профессор" },
+    { title: "Абдуллаева Матлуба Нематовна - доктор экономических наук, доцент" },
+    { title: "Мусаева Дилноза Дилшатовна - доктор философии по экономическим наукам (PhD)" },
+    { title: "Jill J. McCluskey - доктор философии (PhD), профессор, Университет штата Вашингтон, Пуллман, США" },
+    { title: "Mark Beatty - доктор философии (PhD), доцент, Университет штата Вашингтон, Эверетт, США" },
+    { title: "Guo Shuhong - доктор экономических наук, профессор, Даляньский политехнический университет, Далянь, Китай" },
+    { title: "Келесбаев Динмухамед Нурмаханбетович - доктор философии (PhD), профессор, Казахско-Турецкий университет имени Ахмада Яссави, Туркестан, Казахстан" },
+    { title: "Якушенко Ксения Валентиновна - доктор экономических наук, доцент, Белорусский национальный технический университет, Минск, Беларусь" },
+    { title: "Шамардина Ирина Александровна - кандидат экономических наук, доцент, Белорусский национальный технический университет, Минск, Беларусь" },
+    { title: "Морозевич Ольга Анатольевна - кандидат экономических наук, доцент, Белорусский государственный экономический университет, Минск, Беларусь" },
+    { title: "Короленок Геннадий Антонович - доктор экономических наук, профессор, Белорусский государственный экономический университет, Минск, Беларусь" },
+    { title: "Климченя Людмила Сергеевна - кандидат экономических наук, доцент, Белорусский государственный экономический университет, Минск, Беларусь" },
+    { title: "Шалупаева Наталья Сергеевна - кандидат экономических наук, доцент, Белорусский государственный университет, Минск, Беларусь" },
+    {title:"Zurab Garakanidze - кандидат экономических наук, доцент, Грузинский технический университет, Тбилиси, Грузия"}
   ];
+  
   const economics_en = [
-    { title: "Gulyamov Saidakhror Saidakhmedovich - Doctor of Economic Sciences, Professor, Academician" },
-    { title: "Gulamov Abdulaziz Abdullaevich - Doctor of Economic Sciences, Professor" },
-    { title: "Makhmudov Nosir Makhmudovich - Doctor of Economic Sciences, Professor" },
-    { title: "Irisbekova Mavlyuda Narinbaevna - Doctor of Economic Sciences, Professor" },
-    { title: "Rakhmonbaeva Roza Abdurakhmanovna - Doctor of Economic Sciences, Professor" },
-    { title: "Shodieva Gulnora Mardievna - Doctor of Economic Sciences, Professor" },
-    { title: "Khonkeldieva Guzal Sherovna - Doctor of Economic Sciences, Professor" },
-    { title: "Abdullaeva Matlyuba Nematovna - Doctor of Economic Sciences, Associate Professor" },
-    { title: "Musayeva Dilnoza Dilshatovna - Doctor of Philosophy in Economics (PhD)" },
+    { title: "Saidakhrar Gulyamov - Doctor of Economic Sciences, Professor, Academician" },
+    { title: "Abdulaziz Gulamov - Doctor of Economic Sciences, Professor" },
+    { title: "Nosir Maxmudov - Doctor of Economic Sciences, Professor" },
+    { title: "Mavluda Irisbekova - Doctor of Economic Sciences, Professor" },
+    { title: "Roza Raxmanbayeva - Doctor of Economic Sciences, Professor" },
+    { title: "Gulnora Shadiyeva - Doctor of Economic Sciences, Professor" },
+    { title: "Guzal Xankeldiyeva - Doctor of Economic Sciences, Professor" },
+    { title: "Matluba Abdullayeva - Doctor of Economic Sciences, Associate Professor" },
+    { title: "Dilnoza Musayeva - Doctor of Philosophy in Economics (PhD)" },
     { title: "Jill J. McCluskey - PhD, Professor, Washington State University, Pullman, USA" },
     { title: "Mark Beatty - PhD, Associate Professor, Washington State University, Everett, USA" },
     { title: "Guo Shuhong - Doctor of Economic Sciences, Professor, Dalian Polytechnic University, Dalian, China" },
-    { title: "Kelesbayev Dinmukhamed Nurmakhanbetovich - PhD, Professor, Akhmad Yassawi Kazakh-Turkish University, Turkestan, Kazakhstan" },
-    { title: "Yakushenko Ksenia Valentinovna - Doctor of Economic Sciences, Associate Professor, Belarusian National Technical University, Minsk, Belarus" },
-    { title: "Shamardina Irina Aleksandrovna - Candidate of Economic Sciences, Associate Professor, Belarusian National Technical University, Minsk, Belarus" },
-    { title: "Morozevich Olga Anatolyevna - Candidate of Economic Sciences, Associate Professor, Belarusian State University of Economics, Minsk, Belarus" },
-    { title: "Korolenok Gennady Antonovich - Doctor of Economic Sciences, Professor, Belarusian State University of Economics, Minsk, Belarus" },
-    { title: "Klimchenya Lyudmila Sergeevna - Candidate of Economic Sciences, Associate Professor, Belarusian State University of Economics, Minsk, Belarus" },
-    { title: "Shalupaeva Natalya Sergeevna - Candidate of Economic Sciences, Associate Professor, Belarusian State University, Minsk, Belarus" }
+    { title: "Dinmuxamed Kelesbayev - PhD, Professor, Akhmad Yassawi Kazakh-Turkish University, Turkestan, Kazakhstan" },
+    { title: "Ksenia Yakushenko - Doctor of Economic Sciences, Associate Professor, Belarusian National Technical University, Minsk, Belarus" },
+    { title: "Irina Shamardina - Candidate of Economic Sciences, Associate Professor, Belarusian National Technical University, Minsk, Belarus" },
+    { title: "Olga Morozevich - Candidate of Economic Sciences, Associate Professor, Belarusian State University of Economics, Minsk, Belarus" },
+    { title: "Gennadiy Korolenok - Doctor of Economic Sciences, Professor, Belarusian State University of Economics, Minsk, Belarus" },
+    { title: "Lyudmila Klimchenya - Candidate of Economic Sciences, Associate Professor, Belarusian State University of Economics, Minsk, Belarus" },
+    { title: "Natallia Shalupayeva - Candidate of Economic Sciences, Associate Professor, Belarusian State University, Minsk, Belarus" },
+    {title:"Zurab Garakanidze - PhD, Associate Professor, Georgian Technical University, Tbilisi, Georgia"},
   ];
   
+  
   const pedagogy = [
-    { title: "Djurayev Risboy Xaydarovich - pedagogika fanlari doktori, professor, akademik" },
+    { title: "Djurayev Risbay Xaydarovich - pedagogika fanlari doktori, professor, akademik" },
     { title: "Maxmudov Sarvar Yuldashevich - pedagogika fanlari doktori, professor" },
     { title: "Xalilova Shaxnoza Turgunovna - pedagogika fanlari doktori, dotsent" },
-    { title: "Mirdjalolova Lobar Rustamovna - pedagogika fanlari nomzodi, dotsent" },
     { title: "Xodjayev Begzod Xudoyberdiyevich - pedagogika fanlari doktori, professor" },
-    { title: "Mavlonova Klara Mahmudovna - pedagogika fanlari doktori, dotsent" },
+    { title: "Mavlonova Klaraxon Maxmutovna - pedagogika fanlari doktori, dotsent" },
     { title: "Abdullayev Safibullo Xabibullayevich - pedagogika fanlari doktori, professor" },
     { title: "Abdullayeva Ozoda Safibullayevna - pedagogika fanlari doktori, professor" },
+    { title: "Mirdjalalova Lobar Rustamovna - pedagogika fanlari nomzodi, dotsent" },
     { title: "Paul Whitney - PhD, Vashington davlat universiteti, Pulman, AQSH" },
     { title: "Joseph Sapienza - PhD, Raqamli iqtisodiyot va agrotexnologiyalar universiteti, O‘zbekiston" }
   ];
+  
   const pedagogy_ru = [
-    { title: "Джураев Рысбой Хайдарович – доктор педагогических наук, профессор, академик" },
-    { title: "Махмудов Сарвар Юлдашевич – доктор педагогических наук, профессор" },
-    { title: "Халилова Шахноза Тургуновна – доктор педагогических наук, доцент" },
-    { title: "Мирджалолова Лобар Рустамовна – кандидат педагогических наук, доцент" },
-    { title: "Ходжаев Бегзод Худойбердиевич – доктор педагогических наук, профессор" },
-    { title: "Мавлонова Клара Махмудовна – доктор педагогических наук, доцент" },
-    { title: "Абдуллаев Сафибулло Хабибуллаевич – доктор педагогических наук, профессор" },
-    { title: "Абдуллаева Озода Сафибуллаевна – доктор педагогических наук, профессор" },
-    { title: "Пол Уитни – доктор философии (PhD), Университет штата Вашингтон, Пуллман, США" },
-    { title: "Джозеф Сапиенца – доктор философии (PhD), Университет цифровой экономики и агротехнологий, Узбекистан" }
+    { title: "Джураев Рисбай Хайдарович - доктор педагогических наук, профессор, академик" },
+    { title: "Махмудов Сарвар Юлдашевич - доктор педагогических наук, профессор" },
+    { title: "Халилова Шахноза Тургуновна - доктор педагогических наук, доцент" },
+    { title: "Ходжаев Бегзод Худойбердиевич - доктор педагогических наук, профессор" },
+    { title: "Мавлонова Клара Махмудовна - доктор педагогических наук, доцент" },
+    { title: "Абдуллаев Сафибулло Хабибуллаевич - доктор педагогических наук, профессор" },
+    { title: "Абдуллаева Озода Сафибуллаевна - доктор педагогических наук, профессор" },
+    { title: "Мирджалолова Лобар Рустамовна - кандидат педагогических наук, доцент" },
+    { title: "Paul Whitney - доктор философии (PhD), Университет штата Вашингтон, Пуллман, США" },
+    { title: "Joseph Sapienza - доктор философии (PhD), Университет цифровой экономики и агротехнологий, Узбекистан" }
   ];
+  
   const pedagogy_en = [
-    { title: "Dzhuraev Rysboy Khaidarovich - Doctor of Pedagogical Sciences, Professor, Academician" },
-    { title: "Makhmudov Sarvar Yuldashevich - Doctor of Pedagogical Sciences, Professor" },
-    { title: "Khalilova Shakhnoza Turgunovna - Doctor of Pedagogical Sciences, Associate Professor" },
-    { title: "Mirjalolova Lobar Rustamovna - Candidate of Pedagogical Sciences, Associate Professor" },
-    { title: "Khojaev Begzod Khudoyberdievich - Doctor of Pedagogical Sciences, Professor" },
-    { title: "Mavlonova Klara Makhmudovna - Doctor of Pedagogical Sciences, Associate Professor" },
-    { title: "Abdullaev Safibullo Khabibullaevich - Doctor of Pedagogical Sciences, Professor" },
-    { title: "Abdullaeva Ozoda Safibullaevna - Doctor of Pedagogical Sciences, Professor" },
+    { title: "Risbay Dzhuraev - Doctor of Pedagogical Sciences, Professor, Academician" },
+    { title: "Sarvar Maxmudov - Doctor of Pedagogical Sciences, Professor" },
+    { title: "Shaxnoza Xalilova - Doctor of Pedagogical Sciences, Associate Professor" },
+    { title: "Begzod Xodjayev - Doctor of Pedagogical Sciences, Professor" },
+    { title: "Klaraxon Mavlonova - Doctor of Pedagogical Sciences, Associate Professor" },
+    { title: "Safibullo Abdullayev - Doctor of Pedagogical Sciences, Professor" },
+    { title: "Ozoda Abdullayeva - Doctor of Pedagogical Sciences, Professor" },
+    { title: "Lobar Mirdjalalova - Candidate of Pedagogical Sciences, Associate Professor" },
     { title: "Paul Whitney - PhD, Washington State University, Pullman, USA" },
     { title: "Joseph Sapienza - PhD, University of Digital Economy and Agrotechnology, Uzbekistan" }
   ];
   
   const it = [
-    { title: "Beknazarova Saida Safibullayevna - texnika fanlari doktori, professor" },
     { title: "Ravshanov Normaxmad - texnika fanlari doktori, professor" },
+    { title: "Beknazarova Saida Safibullayevna - texnika fanlari doktori, professor" },
     { title: "Magrupov Talat Madiyevich - texnika fanlari doktori, professor" },
+    { title: "Muxamediyeva Dilnoz Tulkunovna - texnika fanlari doktori, professor" },
     { title: "Nazirova Elmira Shodmonovna - texnika fanlari doktori, professor" },
     { title: "Muxamediyeva Dildora Kabilovna - texnika fanlari doktori, dotsent" },
-    { title: "Muxamediyeva Dilnoz Tulkunovna - texnika fanlari doktori, professor" },
     { title: "Muxamadiyev Abdivali Shukurovich - fizika-matematika fanlari doktori, dotsent" },
     { title: "Sergey Lapin - professor, Vashington davlat universiteti, Everett, AQSH" },
     { title: "Jacob Murray - PhD, professor, Vashington davlat universiteti, Everett, AQSH" },
@@ -168,34 +176,37 @@ function OrganizationStructure() {
     { title: "Brusakova Irina Aleksandrovna - texnika fanlari doktori, professor, Sankt-Peterburg davlat elektrotexnika universiteti, Sankt-Peterburg, Rossiya" },
     { title: "Yuldashev Zafar Muxammedovich - texnika fanlari doktori, professor, Sankt-Peterburg davlat elektrotexnika universiteti, Sankt-Peterburg, Rossiya" }
   ];
+  
   const it_ru = [
-    { title: "Бекназарова Саида Сафибуллаевна – доктор технических наук, профессор" },
-    { title: "Равшанов Нормахмад – доктор технических наук, профессор" },
-    { title: "Магрупов Талат Мадиевич – доктор технических наук, профессор" },
-    { title: "Назирова Эльмира Шодмоновна – доктор технических наук, профессор" },
-    { title: "Мухамедиева Дилдора Кабиловна – доктор технических наук, доцент" },
-    { title: "Мухамедиева Дильноз Тулкуновна – доктор технических наук, профессор" },
-    { title: "Мухамадиев Абдивали Шукурович – доктор физико-математических наук, доцент" },
-    { title: "Сергей Лапин – профессор, Университет штата Вашингтон, Эверетт, США" },
-    { title: "Джейкоб Мюррей – доктор философии (PhD), профессор, Университет штата Вашингтон, Эверетт, США" },
-    { title: "Ши-Лиен Лу – профессор, Университет штата Вашингтон, Эверетт, США" },
-    { title: "Брусакова Ирина Александровна – доктор технических наук, профессор, Санкт-Петербургский государственный электротехнический университет, Санкт-Петербург, Россия" },
-    { title: "Юлдашев Зафар Мухаммедович – доктор технических наук, профессор, Санкт-Петербургский государственный электротехнический университет, Санкт-Петербург, Россия" }
+    { title: "Равшанов Нормахмад - доктор технических наук, профессор" },
+    { title: "Бекназарова Саида Сафибуллаевна - доктор технических наук, профессор" },
+    { title: "Магрупов Талат Мадиевич - доктор технических наук, профессор" },
+    { title: "Мухамедиева Дилноз Тулкуновна - доктор технических наук, профессор" },
+    { title: "Назирова Эльмира Шодмоновна - доктор технических наук, профессор" },
+    { title: "Мухамедиева Дилдора Кабиловна - доктор технических наук, доцент" },
+    { title: "Мухамадиев Абдивали Шукурович - доктор физико-математических наук, доцент" },
+    { title: "Sergey Lapin - профессор, Университет штата Вашингтон, Эверетт, США" },
+    { title: "Jacob Murray - доктор философии (PhD), профессор, Университет штата Вашингтон, Эверетт, США" },
+    { title: "Shi-Lien Lu - профессор, Университет штата Вашингтон, Эверетт, США" },
+    { title: "Брусакова Ирина Александровна - доктор технических наук, профессор, Санкт-Петербургский государственный электротехнический университет, Санкт-Петербург, Россия" },
+    { title: "Юлдашев Зафар Мухаммедович - доктор технических наук, профессор, Санкт-Петербургский государственный электротехнический университет, Санкт-Петербург, Россия" }
   ];
+  
   const it_en = [
-    { title: "Beknazarova Saida Safibullaevna - Doctor of Technical Sciences, Professor" },
     { title: "Ravshanov Normakhmad - Doctor of Technical Sciences, Professor" },
-    { title: "Magrupov Talat Madievich - Doctor of Engineering Sciences, Professor" },
-    { title: "Nazirova Elmira Shodmonovna - Doctor of Engineering Sciences, Professor" },
-    { title: "Mukhamedieva Dildora Kabilovna - Doctor of Engineering Sciences, Associate Professor" },
-    { title: "Mukhamedieva Dilnoz Tulkunovna - Doctor of Engineering Sciences, Professor" },
-    { title: "Mukhamadiev Abdivali Shukurovich - Doctor of Physical and Mathematical Sciences, Associate Professor" },
+    { title: "Saida Beknazarova - Doctor of Technical Sciences, Professor" },
+    { title: "Talat Magrupov - Doctor of Engineering Sciences, Professor" },
+    { title: "Dilnoz Muxamediyeva - Doctor of Engineering Sciences, Professor" },
+    { title: "Elmira Nazirova - Doctor of Engineering Sciences, Professor" },
+    { title: "Dildora Muxamediyeva - Doctor of Engineering Sciences, Associate Professor" },
+    { title: "Abdivali Muxamadiyev - Doctor of Physical and Mathematical Sciences, Associate Professor" },
     { title: "Sergey Lapin - Professor, Washington State University, Everett, USA" },
     { title: "Jacob Murray - PhD, Professor, Washington State University, Everett, USA" },
     { title: "Shi-Lien Lu - Professor, Washington State University, Everett, USA" },
-    { title: "Brusakova Irina Aleksandrovna - Doctor of Engineering Sciences, Professor, Saint Petersburg State Electrotechnical University, Saint Petersburg, Russia" },
-    { title: "Yuldashev Zafar Mukhammedovich - Doctor of Engineering Sciences, Professor, Saint Petersburg State Electrotechnical University, Saint Petersburg, Russia" }
+    { title: "Irina Brusakova - Doctor of Engineering Sciences, Professor, Saint Petersburg State Electrotechnical University, Saint Petersburg, Russia" },
+    { title: "Zafar Yuldashev - Doctor of Engineering Sciences, Professor, Saint Petersburg State Electrotechnical University, Saint Petersburg, Russia" }
   ];
+  
   
   return (
     <div className="max-w-[75.00rem] mx-auto xl:px-4 px-8 py-12">

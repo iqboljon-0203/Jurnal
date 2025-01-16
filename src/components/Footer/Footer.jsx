@@ -26,7 +26,7 @@ const UniversityHeader = () => {
               className='mb-4 sm:ms-0 mx-auto'
             />
             {/* Description */}
-        <p className="text-base font-normal leading-[1.40rem] sm:text-left text-center text-white mb-6">
+        <p className="w-11/12 text-base font-normal leading-[1.40rem] sm:text-justify text-center text-white mb-6">
           {t("footer_text")}
         </p>
 

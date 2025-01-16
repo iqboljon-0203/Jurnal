@@ -115,7 +115,7 @@ const App = () => {
               {t("hero_title")}
               
             </h1>
-            <p className="hero_text font-manrope text-white/80 md:text-lg text-base font-normal leading-[1.57rem] text-left sm:block hidden">
+            <p className="hero_text font-manrope text-white/80 md:text-lg text-base font-normal leading-[1.57rem] text-justify sm:block hidden">
               {t("hero_text")}
             </p>
           </div>
