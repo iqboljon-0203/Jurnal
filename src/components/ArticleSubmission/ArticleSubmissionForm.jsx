@@ -131,11 +131,10 @@ const AuthorForm = ({ onRemove, index }) => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         <select
           required
-          defaultValue=""
           name={`academicDegree${index}`}
           className="w-full px-3 py-2 border text-gray-500 border-gray-300 rounded-md"
         >
-          <option  value={null} >
+          <option  value="" >
             {t("academic_degree")}
           </option>
           <option value="PHD_ECON">{t("phd_economics")}</option>
@@ -150,7 +149,7 @@ const AuthorForm = ({ onRemove, index }) => {
           name={`academicTitle${index}`}
           className="w-full px-3 py-2 border text-gray-500 border-gray-300 rounded-md"
         >
-          <option  value={null}>
+          <option  value="">
             {t("academic_title")}
           </option>
           <option value="DOCENT">{t("associate_professor")}</option>

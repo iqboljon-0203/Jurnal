@@ -124,7 +124,7 @@ const App = () => {
               <img
                 src={Jurnal}
                 alt="University Journal"
-                className="w-64 h-80 rounded-lg"
+                className="w-64 h-90 rounded-lg"
               />
           </div>
         </main>
