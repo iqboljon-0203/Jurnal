@@ -322,7 +322,18 @@ const ArticleSubmissionForm = () => {
             className="w-full px-3 py-2 border text-gray-500 border-gray-300 rounded-md"
           />
         </div>
-
+        <div className="space-y-4">
+          <h2 className="sm:text-2xl text-xl font-bold leading-[1.80rem] text-left text-[#21466D] uppercase">
+            {t("annotation")}
+          </h2>
+          <textarea
+            maxLength={800}
+            name="annotation"
+            placeholder={t("annotation")}
+            rows={6}
+            className="w-full px-3 py-2 border text-gray-500 border-gray-300 rounded-md resize-none"
+          />
+        </div>
         <div className="space-y-4">
           <h2 className="sm:text-2xl text-xl font-bold leading-[1.80rem] text-left text-[#21466D] uppercase">
             {t("keyword_title")}
@@ -335,18 +346,7 @@ const ArticleSubmissionForm = () => {
           />
         </div>
 
-        <div className="space-y-4">
-          <h2 className="sm:text-2xl text-xl font-bold leading-[1.80rem] text-left text-[#21466D] uppercase">
-            {t("annotation")}
-          </h2>
-          <textarea
-            maxLength={100}
-            name="annotation"
-            placeholder={t("annotation")}
-            rows={6}
-            className="w-full px-3 py-2 border text-gray-500 border-gray-300 rounded-md resize-none"
-          />
-        </div>
+       
 
         <div className="space-y-4">
           <h2 className="sm:text-2xl text-xl font-bold leading-[1.80rem] text-left text-[#21466D] uppercase">
