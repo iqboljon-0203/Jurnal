@@ -181,16 +181,16 @@ function SubmissionGuidelinesFull() {
             {t("guidelines_title12")}
           </h2>
           <ol className="list-decimal ml-6 space-y-2">
-            <li className="lg:text-xl text-lg font-normal leading-[1.88rem] text-justify text-[#21466D]">
+            <li className=" list-none lg:text-xl text-lg font-normal leading-[1.88rem] text-justify text-[#21466D]">
               {t("guidelines_title12_info1")}
             </li>
-            <li className="lg:text-xl text-lg font-normal leading-[1.88rem] text-justify text-[#21466D]">
+            <li className="list-none lg:text-xl text-lg font-normal leading-[1.88rem] text-justify text-[#21466D]">
               {t("guidelines_title12_info2")}
             </li>
-            <li className="lg:text-xl text-lg font-normal leading-[1.88rem] text-justify text-[#21466D]">
+            <li className="list-none lg:text-xl text-lg font-normal leading-[1.88rem] text-justify text-[#21466D]">
               {t("guidelines_title12_info3")}
             </li>
-            <li className="lg:text-xl text-lg font-normal leading-[1.88rem] text-justify text-[#21466D]">
+            <li className="list-none lg:text-xl text-lg font-normal leading-[1.88rem] text-justify text-[#21466D]">
               {t("guidelines_title12_info4")}
             </li>
             <li className="lg:text-xl text-lg font-normal leading-[1.88rem] text-justify text-[#21466D]">
