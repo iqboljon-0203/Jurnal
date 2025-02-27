@@ -6,7 +6,7 @@ export const fetchArticleDetails = createAsyncThunk(
   async (articleId,{ getState }) => {
     const state = getState();
     const language = state.language.currentLanguage;
-    const response = await fetch(`https://journal-admin.usat.uz/api/v1/articles/${articleId}/detail/`,{
+    const response = await fetch(`https://journal-admin.usat.uz/api/articles/v1/${articleId}/detail/`,{
       headers: {
         'Accept-Language': language,
       },
