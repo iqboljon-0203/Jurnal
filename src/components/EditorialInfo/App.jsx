@@ -24,13 +24,16 @@ function OrganizationStructure() {
     { title: "Гаибназарова Зумрат Талатовна - проректор по научной работе и инновациям, доктор экономических наук, профессор" }
   ];
   const editor=[
-    { title: "Ortiqova Hamida Maxmud qizi - filologiya fanlari bo‘yicha falsafa doktori (PhD)" },
+    { title: "Mamatova Dilnoza Bekpo'latovna - pedagogika fanlari bo‘yicha falsafa doktori (PhD)" },
+    { title: "Kurbanova Farog'at Subhonovna -  Magistr Lingvist" },
   ]
   const editor_ru = [
-    { title: "Ортикова Хамида Махмуд кизи - доктор философии по филологическим наукам (PhD)" }
+    { title: "Маматова Дилноза Бекпулатовна - доктор философии по педагогическим наукам (PhD)" },
+    { title: "Курбанова Фарогат Субхановна - Магистр Лингвист" },
   ];
   const editor_en = [
-    { title: "Khamida Ortikova - Doctor of Philosophy in Philology (PhD)" }
+    { title: "Dilnoza Bekpulatovna -Doctor of Philosophy in Pedagogical Sciences (PhD)" },
+    { title: "Farogat Subkhanovna - MA Linguist" },
   ];
   
   const assistant=[
