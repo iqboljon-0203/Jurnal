@@ -1,5 +1,5 @@
 import { Search, Menu, X } from "lucide-react";
-import UsatLogo from "../../assets/logos/usat_logo.svg";
+import UsatLogo from "../../assets/logos/eng_logo.png";
 import LanguageSelector from "../LanguageSelector/App";
 import NavItem from "../Navbar/Navbar";
 import { Link } from "react-router-dom";
@@ -68,7 +68,8 @@ const App = () => {
         <nav style={{position: 'relative', zIndex: 20}}  className=" py-4 navbar_main bg-[#FFFFFF1A] px-12">
         <div className="navbar_inner flex items-center justify-between">
         <Link to={"/"}>
-            <img src={language==="uz"?UsatLogo:Logo} alt="University Logo" className="h-12 w-50" />
+            {/* <img src={language==="uz"?UsatLogo:Logo} alt="University Logo" className="h-12 w-50" /> */}
+             <img src={UsatLogo} alt="University Logo" className="h-12 w-50" />
           </Link>
 
           <div className="flex items-center gap-6 list_inner">

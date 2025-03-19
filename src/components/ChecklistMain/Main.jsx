@@ -1,5 +1,5 @@
 import { Search, Menu, X } from "lucide-react";
-import UsatLogo from "../../assets/logos/usat_logo.svg";
+import UsatLogo from "../../assets/logos/eng_logo.png";
 import LanguageSelector from "../LanguageSelector/App";
 import { Download } from "lucide-react";
 import NavItem from "../Navbar/Navbar";
@@ -43,7 +43,8 @@ const App = () => {
         >
           <div className="navbar_inner flex items-center justify-between">
             <Link to={"/"}>
-              <img src={language==="uz"?UsatLogo:Logo} alt="University Logo" className="h-12 w-50" />
+              {/* <img src={language==="uz"?UsatLogo:Logo} alt="University Logo" className="h-12 w-50" /> */}
+               <img src={UsatLogo} alt="University Logo" className="h-12 w-50" />
             </Link>
 
             <div className="flex items-center gap-6 list_inner">
