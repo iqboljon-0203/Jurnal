@@ -98,7 +98,7 @@ const JournalLayout = () => {
   if (!issueDetail) return null;
   return (
     <div className="container mx-auto py-4 px-4">
-      <div ref={containerRef} className="max-w-[81.25rem] mx-auto lg:h-[40.25rem] h-auto  sticky top-0">
+      <div ref={containerRef} className="max-w-[81.25rem] mx-auto lg:h-[42.25rem] h-auto  sticky top-0">
         <div className="flex lg:flex-row flex-col h-full gap-8">
           {/* Left Sidebar - Fixed */}
           <div  className="xl:w-4/12 lg:w-5/12 w-full flex-shrink-0 h-full overflow-hidden">
