@@ -91,6 +91,8 @@ const JournalLayout = () => {
   }, []);
 
   const { issueDetail } = useSelector((state) => state.journalIssueDetail);
+  console.log(issueDetail);
+  
   
 
   if (!issueDetail) return null;
@@ -103,7 +105,7 @@ const JournalLayout = () => {
             <div className="space-y-4 overflow-y-auto">
               {/* Journal Cover */}
                 <img
-                  src={Jurnal}
+                  src={issueDetail?.image}
                   alt="Journal Cover"
                   className="w-full h-auto"
                 />

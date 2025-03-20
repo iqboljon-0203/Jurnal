@@ -1,5 +1,5 @@
 import { Search, Menu, X } from "lucide-react";
-import UsatLogo from "../../assets/logos/eng_logo.png";
+import UsatLogo from "../../assets/logos/eng_logo.svg";
 import LanguageSelector from "../LanguageSelector/App";
 import { Download } from "lucide-react";
 import NavItem from "../Navbar/Navbar";

@@ -1,5 +1,5 @@
 import { Search, Menu, X } from 'lucide-react';
-import UsatLogo from "../../assets/logos/eng_logo.png";
+import UsatLogo from "../../assets/logos/eng_logo.svg";
 import Logo from "../../assets/logos/logo.svg"
 import Jurnal from "../../assets/logos/jurnal.png";
 import LanguageSelector from '../LanguageSelector/App';
